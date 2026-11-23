@@ -8,12 +8,9 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Lê Thanh Tùng
+&emsp; **Full Name:** Le Thanh Tung
 
 &emsp; **Phone Number:** 0941672785
 
