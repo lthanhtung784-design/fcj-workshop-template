@@ -1,41 +1,40 @@
 ---
-title: "Internship Report"
+title: "Báo cáo thực tập"
 date: 2024-01-01
 weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Lê Thanh Tùng
 
-
-### Student Information:
-&emsp; **Full Name:** Lê Thanh Tùng
-
-&emsp; **Phone Number:** 0941672785
+&emsp; **Số điện thoại:** 0941672785
 
 &emsp; **Email:** lthanhtung784@gmail.com
 
-&emsp; **University:** FPT University Ho Chi Minh
+&emsp; **Trường:** FPT University Hồ Chí Minh
 
-&emsp; **Major:** Information Assurance 
+&emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Class:** FACJ-FPT- Season 4
+&emsp; **Lớp:**FACJ-FPT-Season 4
 
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 14/09/2026 to 14/12/2026
+&emsp; **Thời gian thực tập:** Từ ngày 14/09/2026 đến ngày 14/12/2026
 
-![Your profile picture](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.png)
 
-### Report Content
+
+
+### Nội dung báo cáo
 
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
+3.  [Các bài blogs đã đăng](3-BlogsPosted/)
+4.  [Các events đã tham gia](4-EventParticipated/)
 5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+6.  [Tự đánh giá](6-Self-evaluation/)
+7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
