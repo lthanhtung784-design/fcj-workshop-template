@@ -1,57 +1,31 @@
 ---
 title: "Week 8 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Automate operations with Lambda using least-privilege execution roles.
+- Manage infrastructure as code with CloudFormation and CDK.
+- Learn system patching with EC2 Image Builder.
+- Understand highly available web architectures.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Study the module Serverless Automation with AWS Lambda<br>- Create the first Lambda function with an execution role holding only the necessary permissions<br>- Configure a trigger (EventBridge or S3) and view logs in CloudWatch<br>- Learn the risk of attaching an overly broad role to Lambda | 02/11/2026 | 02/11/2026 | AWS Cloud Journey – Serverless Automation with AWS Lambda<br>AWS Docs – AWS Lambda Developer Guide |
+| 2 | - Study the module Infrastructure as Code with AWS CloudFormation<br>- Write a template creating a VPC, Security Group, or EC2 and deploy it as a stack<br>- Learn parameters, change sets, and drift detection<br>- Clean up by deleting the stack | 03/11/2026 | 03/11/2026 | AWS Cloud Journey – Infrastructure as Code with AWS CloudFormation<br>AWS Docs – AWS CloudFormation User Guide |
+| 3 | - Study the module Cloud Development Kit (AWS CDK) Essentials<br>- Initialize a CDK project and learn constructs, stacks, synth, and deploy<br>- Compare CDK with CloudFormation<br>- Note the benefits of infrastructure as code: repeatable, reviewable, fewer misconfigurations | 04/11/2026 | 04/11/2026 | AWS Cloud Journey – Cloud Development Kit (AWS CDK) Essentials<br>AWS Docs – AWS CDK Developer Guide |
+| 4 | - Study the module Systems Patching with EC2 Image Builder<br>- Create an image pipeline and recipe to build a standard AMI<br>- Relate it to Systems Manager Patch Manager and the customer's responsibility for patching the OS on EC2<br>- Record a routine for refreshing AMIs | 05/11/2026 | 05/11/2026 | AWS Cloud Journey – Systems Patching with EC2 Image Builder<br>AWS Docs – EC2 Image Builder User Guide |
+| 5 | - Study the modules Scaling Applications with EC2 Auto Scaling and Building Highly Available Web Applications<br>- Design an architecture with ALB + Auto Scaling + Multi-AZ + RDS Multi-AZ<br>- Define Security Groups for each tier (ALB, application, database)<br>- Delete resources after practice | 06/11/2026 | 06/11/2026 | AWS Cloud Journey – Scaling Applications with EC2 Auto Scaling<br>AWS Cloud Journey – Building Highly Available Web Applications<br>AWS Docs – Amazon EC2 Auto Scaling User Guide |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Granted minimal permissions to Lambda and understood the risk of overly broad roles.
+- Deployed infrastructure with CloudFormation/CDK and understood the benefits of consistency and reviewability.
+- Understood the role of standard AMIs and routine patching for EC2 workloads.
+- Designed a highly available web architecture with sensible Security Group layering.

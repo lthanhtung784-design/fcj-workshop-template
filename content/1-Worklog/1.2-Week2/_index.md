@@ -1,57 +1,32 @@
 ---
 title: "Week 2 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand the IAM model (users, groups, roles, policies) and the least-privilege principle.
+- Protect the account with MFA and avoid using the root user for daily work.
+- Learn VPC networking basics: subnets, route tables, Internet Gateway, NAT Gateway, Security Groups, NACLs.
+- Launch EC2 securely and use IAM roles instead of long-term access keys.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Study the module Access Management with AWS IAM<br>- Distinguish root user, IAM users, groups, roles, and policies<br>- Learn the JSON policy structure (Effect, Action, Resource, Condition) and the least-privilege principle<br>- Read the Shared Responsibility Model and IAM security best practices | 21/09/2026 | 21/09/2026 | AWS Cloud Journey – Access Management with AWS IAM<br>AWS Docs – Security best practices in IAM (<https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html>)<br>AWS – Shared Responsibility Model (<https://aws.amazon.com/compliance/shared-responsibility-model/>) |
+| 2 | - Enable MFA for the root user and create an admin IAM user to replace root for daily work<br>- Create a group, attach managed policies, and write a customer managed policy scoped to specific resources<br>- Use the IAM Policy Simulator to verify effective permissions<br>- Record results and the AccessDenied errors encountered | 22/09/2026 | 22/09/2026 | AWS Cloud Journey – Access Management with AWS IAM<br>AWS Docs – IAM Policy Simulator |
+| 3 | - Study the module Networking Essentials with Amazon VPC<br>- Learn public/private subnets, route tables, Internet Gateway, and NAT Gateway<br>- Compare Security Groups (stateful) with Network ACLs (stateless)<br>- Create a VPC with a public and a private subnet and check the route tables | 23/09/2026 | 23/09/2026 | AWS Cloud Journey – Networking Essentials with Amazon VPC<br>AWS Docs – Amazon VPC User Guide |
+| 4 | - Study the module Compute Essentials with Amazon EC2<br>- Launch an EC2 instance in a public subnet with a key pair and a Security Group allowing SSH only from my IP<br>- Connect over SSH and verify the configuration<br>- Learn instance types, EBS, and pricing; stop/terminate resources after practice | 24/09/2026 | 24/09/2026 | AWS Cloud Journey – Compute Essentials with Amazon EC2<br>AWS Docs – Amazon EC2 User Guide |
+| 5 | - Study the module Instance Profiling with IAM Roles for EC2<br>- Create an IAM role and instance profile with S3 read access and attach it to EC2<br>- Access S3 from EC2 with the AWS CLI without any access key<br>- Learn about temporary credentials and the instance metadata service (IMDS) | 25/09/2026 | 25/09/2026 | AWS Cloud Journey – Instance Profiling with IAM Roles for EC2<br>AWS Docs – IAM roles for Amazon EC2 |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood how IAM controls who can do what on which resources, and why the root user should only be used when strictly necessary.
+- Practiced enabling MFA, creating an admin IAM user, writing scoped policies, and testing them with the Policy Simulator.
+- Understood the basic VPC structure and the difference between Security Groups and Network ACLs.
+- Launched EC2 with SSH restricted by Security Group and cleaned up resources afterwards.
+- Understood why IAM roles (temporary credentials) are preferred over long-term access keys.

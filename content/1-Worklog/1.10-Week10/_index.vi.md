@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 10:
 
-### Mục tiêu tuần 10:
+- Hiểu các tùy chọn tối ưu chi phí: Savings Plans và Reserved Instances.
+- Phân tích và trực quan hóa chi phí, xem chi phí bất thường như một tín hiệu bảo mật.
+- Rà soát bảo mật toàn bộ tài khoản học tập theo checklist.
+- Tổng hợp 10 tuần học tập và hoàn thiện worklog.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học module Cost Savings with Savings Plans and Reserved Instances<br>- So sánh On-Demand, Savings Plans và Reserved Instances<br>- Ước tính chi phí cho một workload mẫu<br>- Ghi lại khi nào nên và không nên cam kết mức sử dụng (commitment) | 16/11/2026 | 16/11/2026 | AWS Cloud Journey – Cost Savings with Savings Plans and Reserved Instances<br>AWS Docs – Savings Plans User Guide |
+| 2 | - Học module Cost Visualization and Analytics<br>- Dùng Cost Explorer xem chi phí theo dịch vụ và theo tag<br>- Thiết lập AWS Budgets và Cost Anomaly Detection<br>- Liên hệ bảo mật: chi phí tăng đột biến có thể là dấu hiệu lộ credentials hoặc sai cấu hình | 17/11/2026 | 17/11/2026 | AWS Cloud Journey – Cost Visualization and Analytics<br>AWS Cloud Journey – Managing Costs with AWS Budgets<br>AWS Docs – AWS Cost Management User Guide |
+| 3 | - Học module Cost Data Analysis with AWS Glue and Amazon Athena<br>- Tìm hiểu cách truy vấn dữ liệu chi phí và mức sử dụng bằng SQL<br>- Ghi lại các bước chính và chi phí khi chạy phân tích<br>- Dọn dẹp tài nguyên sau khi thực hành | 18/11/2026 | 18/11/2026 | AWS Cloud Journey – Cost Data Analysis with AWS Glue and Amazon Athena<br>AWS Docs – Amazon Athena User Guide |
+| 4 | - Rà soát bảo mật tài khoản học tập theo checklist: root MFA, IAM users/roles, unused access keys, CloudTrail, Budgets, S3 Block Public Access, Security Groups, encryption<br>- Đối chiếu với findings từ Security Hub / IAM Access Analyzer<br>- Ghi lại các mục cần cải thiện<br>- Xóa các tài nguyên không còn sử dụng | 19/11/2026 | 19/11/2026 | AWS Docs – Security best practices in IAM (<https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html>)<br>AWS Docs – Security best practices for Amazon S3<br>AWS Docs – AWS Security Hub User Guide |
+| 5 | - Tổng hợp kiến thức 10 tuần theo chủ đề: identity, network, data, monitoring và detection, recovery, automation, cost<br>- Hoàn thiện worklog và kiểm tra tài liệu tham khảo<br>- Chuẩn bị nội dung chia sẻ với nhóm và lên kế hoạch bước tiếp theo | 20/11/2026 | 20/11/2026 | AWS Cloud Journey<br>FCAJ Worklog Week 1–10 |
 
+### Kết quả đạt được trong Tuần 10:
 
-### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu các mô hình tính phí và cách chọn phương án tối ưu chi phí phù hợp.
+- Sử dụng Cost Explorer, Budgets và Cost Anomaly Detection để theo dõi chi tiêu, coi bất thường chi phí là tín hiệu cần điều tra.
+- Hoàn tất rà soát bảo mật tài khoản học tập và ghi nhận các điểm cần cải thiện.
+- Hệ thống hóa kiến thức bảo mật AWS theo lớp: identity, network, data, monitoring, detection, recovery và cost.

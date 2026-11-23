@@ -1,59 +1,32 @@
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 4:
 
-### Mục tiêu tuần 4:
+- Hiểu cách truy cập riêng tư tới S3 thông qua VPC endpoints.
+- Giám sát lưu lượng mạng bằng VPC Flow Logs.
+- Quản trị EC2 mà không cần mở cổng SSH bằng Systems Manager Session Manager.
+- Tổ chức tài nguyên bằng tags và kiểm soát quyền theo tag.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học module Private Access to S3 with VPC Endpoints<br>- Tìm hiểu gateway endpoints và cách route tables được cập nhật<br>- Cấu hình endpoint policy để giới hạn các bucket có thể truy cập<br>- Kiểm chứng EC2 trong private subnet truy cập được S3 mà không đi qua Internet | 05/10/2026 | 05/10/2026 | AWS Cloud Journey – Private Access to S3 with VPC Endpoints<br>AWS Docs – Gateway endpoints for Amazon S3 |
+| 2 | - Học module Network Monitoring with VPC Flow Logs<br>- Bật Flow Logs và gửi log về CloudWatch Logs hoặc S3<br>- Đọc các bản ghi ACCEPT/REJECT và nhận diện lưu lượng dò quét cổng tự động (port-scanning)<br>- Liên hệ kết quả với việc siết chặt Security Groups và Network ACLs | 06/10/2026 | 06/10/2026 | AWS Cloud Journey – Network Monitoring with VPC Flow Logs<br>AWS Docs – Logging IP traffic using VPC Flow Logs |
+| 3 | - Học module Systems Management with AWS Systems Manager<br>- Tìm hiểu các tính năng chính (Run Command, Patch Manager, Parameter Store)<br>- Gắn role AmazonSSMManagedInstanceCore cho EC2 để Systems Manager quản lý<br>- Ghi lại các điều kiện để instance xuất hiện trong Fleet Manager | 07/10/2026 | 07/10/2026 | AWS Cloud Journey – Systems Management with AWS Systems Manager<br>AWS Docs – AWS Systems Manager User Guide |
+| 4 | - Học module Remote Server Access with Systems Manager Session Manager<br>- Kết nối tới EC2 mà không cần mở cổng 22 hoặc dùng key pair<br>- Tìm hiểu cách kiểm soát truy cập bằng IAM và cách ghi log phiên làm việc<br>- So sánh Session Manager với SSH truyền thống | 08/10/2026 | 08/10/2026 | AWS Cloud Journey – Remote Server Access with Systems Manager Session Manager<br>AWS Docs – AWS Systems Manager Session Manager |
+| 5 | - Học module Resource Organization with Tags and Resource Groups<br>- Thiết kế quy ước đặt tag (Project, Owner, Environment) và gom nhóm tài nguyên bằng Resource Groups<br>- Học module Access Control with IAM and Resource Tags<br>- Thực hành policy có điều kiện dựa trên tag (attribute-based access control) | 09/10/2026 | 09/10/2026 | AWS Cloud Journey – Resource Organization with Tags and Resource Groups<br>AWS Cloud Journey – Access Control with IAM and Resource Tags<br>AWS Docs – Tagging AWS resources<br>AWS Docs – Controlling access to AWS resources using tags |
 
+### Kết quả đạt được trong Tuần 4:
 
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu cách EC2 trong private subnet truy cập S3 qua gateway endpoint được giới hạn bởi endpoint policy.
+- Đọc được Flow Logs để nhận diện lưu lượng bị từ chối (REJECT) và kết nối bất thường.
+- Quản lý EC2 qua Session Manager mà không cần mở cổng SSH.
+- Thiết kế quy ước tag và áp dụng tag cho kiểm soát truy cập.
+- Hiểu mối liên hệ giữa giám sát mạng, thu hẹp bề mặt tấn công và quản trị tập trung.

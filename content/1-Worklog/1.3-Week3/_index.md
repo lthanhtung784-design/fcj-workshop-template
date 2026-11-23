@@ -1,57 +1,32 @@
 ---
 title: "Week 3 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Host a static website on S3 and understand key S3 security settings.
+- Use the AWS CLI with profiles for safe and repeatable operations.
+- Set up basic monitoring and alerting with CloudWatch.
+- Understand how to deploy RDS in a private subnet.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Study the module Static Website Hosting with Amazon S3<br>- Create a bucket, enable static website hosting, and upload index.html<br>- Configure a bucket policy that allows public read only where needed<br>- Learn common 403 errors when hosting static websites | 28/09/2026 | 28/09/2026 | AWS Cloud Journey – Static Website Hosting with Amazon S3<br>AWS Docs – Hosting a static website using Amazon S3 |
+| 2 | - Study the module S3 Security Best Practices<br>- Learn the 4 S3 Block Public Access options and how AWS applies the most restrictive combination<br>- Distinguish bucket policies, ACLs, and Object Ownership (bucket owner enforced)<br>- Learn default SSE-S3 encryption, versioning, and access logging (CloudTrail data events)<br>- Verify settings with aws s3api get-public-access-block | 29/09/2026 | 29/09/2026 | AWS Cloud Journey – S3 Security Best Practices<br>AWS Docs – Security best practices for Amazon S3<br>AWS Docs – Blocking public access to your Amazon S3 storage |
+| 3 | - Study the module Command Line Operations with AWS CLI<br>- Install the AWS CLI and configure profiles (aws configure / SSO)<br>- Practice commands for S3, EC2, and IAM using --query and --output<br>- Learn how to store credentials safely on a personal machine and keep them out of repositories | 30/09/2026 | 30/09/2026 | AWS Cloud Journey – Command Line Operations with AWS CLI<br>AWS Docs – AWS CLI User Guide |
+| 4 | - Study the module Monitoring with Amazon CloudWatch<br>- View EC2 metrics and learn CloudWatch Logs and dashboards<br>- Create a CPU alarm that sends notifications through Amazon SNS (email)<br>- Confirm the SNS subscription and verify that the alarm works | 01/10/2026 | 01/10/2026 | AWS Cloud Journey – Monitoring with Amazon CloudWatch<br>AWS Docs – Amazon CloudWatch User Guide |
+| 5 | - Study the module Database Essentials with Amazon RDS<br>- Learn Multi-AZ, automated backups, and DB subnet groups<br>- Create RDS in a private subnet with a Security Group allowing access only from the application server<br>- Learn encryption at rest and delete resources after practice to avoid charges | 02/10/2026 | 02/10/2026 | AWS Cloud Journey – Database Essentials with Amazon RDS<br>AWS Docs – Amazon RDS User Guide |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Hosted a static website on S3 and understood that a private bucket does not mean every access is blocked.
+- Learned the S3 protection layers: Block Public Access, bucket policies, encryption, versioning, and logging.
+- Used the basic AWS CLI with profiles and learned how to avoid exposing credentials.
+- Created a CloudWatch alarm with an SNS notification.
+- Understood the pattern of placing databases in private subnets and controlling access with Security Groups.
