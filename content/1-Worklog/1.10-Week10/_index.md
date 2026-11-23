@@ -1,57 +1,31 @@
 ---
 title: "Week 10 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand cost optimization options: Savings Plans and Reserved Instances.
+- Analyze and visualize costs and treat anomalous spend as a security signal.
+- Review the security of the whole learning account against a checklist.
+- Consolidate 10 weeks of learning and complete the worklog.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Study the module Cost Savings with Savings Plans and Reserved Instances<br>- Compare On-Demand, Savings Plans, and Reserved Instances<br>- Estimate costs for a sample workload<br>- Record when committing to usage is and is not advisable | 16/11/2026 | 16/11/2026 | AWS Cloud Journey – Cost Savings with Savings Plans and Reserved Instances<br>AWS Docs – Savings Plans User Guide |
+| 2 | - Study the module Cost Visualization and Analytics<br>- Use Cost Explorer to view costs by service and by tag<br>- Set up AWS Budgets and Cost Anomaly Detection<br>- Relate it to security: a sudden cost spike can indicate leaked credentials or misconfiguration | 17/11/2026 | 17/11/2026 | AWS Cloud Journey – Cost Visualization and Analytics<br>AWS Cloud Journey – Managing Costs with AWS Budgets<br>AWS Docs – AWS Cost Management User Guide |
+| 3 | - Study the module Cost Data Analysis with AWS Glue and Amazon Athena<br>- Learn how to query cost and usage data with SQL<br>- Note the main steps and the cost of running the analysis<br>- Clean up resources after practice | 18/11/2026 | 18/11/2026 | AWS Cloud Journey – Cost Data Analysis with AWS Glue and Amazon Athena<br>AWS Docs – Amazon Athena User Guide |
+| 4 | - Review the security of the learning account against a checklist: root MFA, IAM users/roles, unused access keys, CloudTrail, Budgets, S3 Block Public Access, Security Groups, encryption<br>- Compare with Security Hub / IAM Access Analyzer findings<br>- Record items to improve<br>- Delete resources that are no longer needed | 19/11/2026 | 19/11/2026 | AWS Docs – Security best practices in IAM (<https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html>)<br>AWS Docs – Security best practices for Amazon S3<br>AWS Docs – AWS Security Hub User Guide |
+| 5 | - Consolidate 10 weeks of knowledge by theme: identity, network, data, monitoring and detection, recovery, automation, cost<br>- Complete the worklog and verify references<br>- Prepare content to share with the team and plan the next steps | 20/11/2026 | 20/11/2026 | AWS Cloud Journey<br>FCAJ Worklog Week 1–10 |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood pricing models and how to choose appropriate cost-optimization options.
+- Used Cost Explorer, Budgets, and Cost Anomaly Detection to track spend and treated anomalies as signals to investigate.
+- Completed a security review of the learning account and recorded improvements.
+- Organized AWS security knowledge by layer: identity, network, data, monitoring, detection, recovery, and cost.
