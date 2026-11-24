@@ -1,125 +1,123 @@
 ---
 title: "Event 2"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo tổng hợp: “AWS Cloud & AI Day Hanoi 2026”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+- **Tên sự kiện:** AWS Cloud & AI Day Hanoi 2026
+- **Ngày & Giờ:** Ngày 29/09/2026 
+- **Địa điểm:** Hồ Chí Minh, Việt Nam
+- **Vai trò:** Người tham dự
 
-### Mục Đích Của Sự Kiện
+### Mục tiêu sự kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Hiểu cách cloud, Generative AI và Agentic AI đang chuyển từ công nghệ thử nghiệm thành các năng lực có thể triển khai trong môi trường doanh nghiệp thực tế
+- Tìm hiểu các phương pháp hiện đại về phát triển cloud-native, hạ tầng, nền tảng dữ liệu, workload identity, bảo mật và quản trị AI
+- Học hỏi từ các case thực tế của AWS và doanh nghiệp Việt Nam về quá trình hiện đại hóa hệ thống và vận hành ở quy mô lớn
+- Hiểu cách bảo mật, governance, observability và human oversight cần phát triển song song với mức độ tự chủ ngày càng cao của AI
+- Kết nối các nội dung của sự kiện với định hướng học tập của bản thân trong lĩnh vực cybersecurity và cloud security
 
-### Danh Sách Diễn Giả
+### Diễn giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Dr. Werner Vogels** – CTO, Amazon.com (diễn giả keynote)
+- **Eric Yeo** – Country General Manager phụ trách Malaysia, Vietnam & Indochina, AWS
+- **Mai Le** – Director of Product Management, Katalon
+- **Dr. Jens Lottner** – Chief Executive Officer, Techcombank
+- **Các chuyên gia AWS, kỹ sư, kiến trúc sư và lãnh đạo công nghệ** đến từ Katalon, Techcombank, TCBS, Techcom Life, VPBank và các tổ chức khác
 
-### Nội Dung Nổi Bật
+### Điểm nổi bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Từ Cloud-Native Architecture đến Agentic AI
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- Chuyển dịch từ việc chỉ đưa workload lên cloud sang xây dựng hệ thống cloud-native, tự động hóa và tự chủ hơn bằng **containers**, **Kubernetes**, **serverless**, **event-driven architectures** và **managed cloud services**
+- **Platform Engineering** và **Internal Developer Platforms (IDPs)** tạo ra các **“Golden Path”** chuẩn hóa giúp giảm thao tác hạ tầng thủ công và điểm nghẽn **TicketOps**
+- Các công nghệ như **Amazon EKS**, **Crossplane**, **Terragrunt**, **Backstage**, **FluxCD** và **GitOps** giúp triển khai hạ tầng và ứng dụng lặp lại được, tự động, nhất quán, dễ truy vết và kiểm soát
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Agentic AI: Từ Proof of Concept đến Production
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- Xây dựng AI agent dễ hơn vận hành an toàn trong production, đòi hỏi bốn yêu cầu chính:
+  - **Operational excellence**: Độ tin cậy, xử lý lỗi, độ trễ và giám sát vận hành
+  - **Data governance**: Quyền sở hữu dữ liệu, độ mới, chất lượng và phân quyền truy cập
+  - **Security and trust**: Kiểm soát danh tính, công cụ, quyền hạn và thông tin nhạy cảm
+  - **Human oversight**: Duy trì trách nhiệm của con người với các hành động tác động lớn hoặc không thể đảo ngược
+- Các phiên về **Amazon Bedrock**, **Amazon Bedrock AgentCore**, **Strands Agents**, **Model Context Protocol (MCP)**, mô hình **ReAct**, quản lý trạng thái và tích hợp công cụ cho thấy cách agent suy luận, truy xuất thông tin, gọi tool, giữ ngữ cảnh và hành động trong ranh giới phân quyền rõ ràng
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Identity, Least Privilege, và AI Security
 
-#### Domain-Driven Design (DDD)
+- Đi xa hơn việc loại bỏ long-lived access keys sang **workload identity** có thể xác minh xuyên qua các trust boundary
+- Các cơ chế chính: **AWS IAM**, **AWS STS** (credentials và session ngắn hạn), **trust policies**, **session policies và session tags**, **source identity**, và **ABAC** trên **EC2**, **ECS/Fargate**, **Lambda**, **EKS**, **CI/CD**, workload đa tài khoản và **AI agents**
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### AI Governance, Data Security, và Trust
 
-#### Event-Driven Architecture
+- AI doanh nghiệp là bài toán về dữ liệu và quản trị song song với model: độ chính xác, độ mới, nguồn gốc, quyền sở hữu, phân quyền truy cập, bằng chứng cho câu trả lời, khả năng truy vết quyết định và xử lý quyết định không an toàn
+- Tập trung vào data lineage, freshness, quality, permissions và provenance, khái quát thành chuỗi bảo mật: **Identity → Data → Model → Tools → Agent → Action → Audit**
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Security Observability cho AI Applications
 
-#### Compute Evolution
+- Mở rộng giám sát truyền thống (**Four Golden Signals**: Latency, Errors, Traffic, Saturation) sang các chiều của AI:
+  - **Cost**: Lượng token tiêu thụ và mức sử dụng bất thường
+  - **Safety**: Lộ PII, prompt injection và thực thi tool không an toàn
+  - **Quality**: Hallucination và đầu ra không chính xác
+- Kết hợp telemetry hạ tầng, sự kiện bảo mật, truy cập dữ liệu và hành vi AI agent
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Secure AI-Assisted Software Development
 
-#### Amazon Q Developer
+- **Kiro** và **AI-DLC** mở rộng AI sang toàn bộ SDLC (lập kế hoạch và thiết kế, sinh mã và kiểm thử, tài liệu và triển khai, quản lý nợ kỹ thuật, di chuyển và hiện đại hóa), với case **TCBS** ghi nhận giảm **26%** thời gian phát triển
+- Cần kiểm chứng, rà soát bảo mật, quản trị, phê duyệt của con người và tích hợp **DevSecOps**
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Cloud Modernization và Enterprise Security
 
-### Những Gì Học Được
+- Các case từ **Techcombank**, **Techcom Life**, **TCBS**, **VPBank** và **Katalon** làm nổi bật hiện đại hóa ứng dụng/database, containerization, hợp nhất nền tảng dữ liệu, tự động hóa hạ tầng, observability, bảo mật, tuân thủ, data residency và khả năng phục hồi vận hành
+- Đề cập **AWS Local Zone tại Hà Nội** và **AWS Outposts (thế hệ thứ hai)** cho yêu cầu lưu trữ dữ liệu tại chỗ (data residency) và tuân thủ quy định, cân bằng **Security + Compliance + Reliability + Performance + Cost + Business Agility**
 
-#### Tư Duy Thiết Kế
+### Bài học chính
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### Tư duy bảo mật
 
-#### Kiến Trúc Kỹ Thuật
+- **Identity là một ranh giới bảo mật**: Mọi workload, pipeline, dịch vụ và AI agent đều cần danh tính rõ ràng với credentials ngắn hạn theo nguyên tắc đặc quyền tối thiểu
+- **Bảo mật toàn chuỗi AI và giám sát của con người**: Bao phủ toàn bộ chuỗi (**Identity → Data → Model → Tools → Agent → Action → Audit**) và giữ sự giám sát của con người cho hành động rủi ro cao hoặc không thể đảo ngược
+- **Mở rộng khả năng quan sát AI**: Giám sát cả hành vi, truy cập dữ liệu, an toàn AI, chất lượng và chi phí bên cạnh các chỉ số truyền thống
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### Kiến trúc Cloud & Kỹ thuật
 
-#### Chiến Lược Hiện Đại Hóa
+- **Hạ tầng có thể tái lập và truy vết**: Ưu tiên managed services, containers, Kubernetes, serverless, tự động hóa, **GitOps** và **IDP** thay vì sửa thủ công qua SSH
+- **Nền tảng danh tính và dữ liệu vững chắc**: Kết hợp **IAM**, **STS**, workload identity, **ABAC**, truy cập đa tài khoản, dữ liệu đáng tin cậy và governance
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+#### AI & An ninh mạng
 
-### Ứng Dụng Vào Công Việc
+- **Vận hành an toàn bên cạnh năng lực**: Đánh giá xem agent có thực hiện tác vụ an toàn với đúng danh tính, quyền, dữ liệu và bằng chứng hay không trước các bề mặt tấn công mới (prompt injection, lộ dữ liệu nhạy cảm, thừa quyền, hành động trái phép, hallucination, chi phí khó kiểm soát)
+- **Giao thoa các mảng chuyên môn**: Kết nối **Cloud Security**, **DevSecOps**, **AI Security** và **Security Operations**
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+### Áp dụng vào công việc
 
-### Trải nghiệm trong event
+- **Áp dụng IAM đặc quyền tối thiểu và credentials ngắn hạn**: Rèn thực hành **AWS IAM**, **STS**, assume role, trust policies, **ABAC** và truy cập đa tài khoản (ví dụ lab nhỏ gồm role, trust policy và session tags rồi kiểm tra trên audit logs)
+- **Mở rộng giám sát bảo mật**: Kết hợp log hạ tầng, sự kiện danh tính, telemetry ứng dụng và hoạt động của AI agent, đồng thời tìm hiểu mở rộng **Wazuh** và **SIEM** sang bảo mật cloud và AI
+- **Áp dụng GitOps, IaC và ranh giới cho AI agent**: Giữ thay đổi hạ tầng dễ truy vết, kiểm toán, và đặt ranh giới rõ ràng về danh tính, quyền, truy cập dữ liệu, ghi log và phê duyệt khi thử nghiệm AI agent
+- **Duy trì rà soát của con người khi dùng công cụ AI**: Tăng năng suất phát triển với công cụ AI nhưng vẫn giữ kiểm chứng bảo mật và phê duyệt của con người, kết nối bảo mật mạng/endpoint với bảo mật cloud-native
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+### Trải nghiệm sự kiện
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Tham dự workshop **“AWS Cloud & AI Day Hanoi 2026”** rất giá trị, mang lại cho mình góc nhìn toàn diện về cách hiện đại hóa ứng dụng, cơ sở dữ liệu, agentic AI và bảo mật ở quy mô doanh nghiệp. Những trải nghiệm chính bao gồm:
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+#### Học hỏi từ chuyên gia trong ngành
+- Các chia sẻ từ lãnh đạo AWS và doanh nghiệp (**Techcombank**, **TCBS**, **VPBank**, **Techcom Life** và **Katalon**) giúp thấy cách doanh nghiệp hiện đại hóa hệ thống và cân bằng công nghệ với governance, vận hành, bảo mật và thay đổi tổ chức.
+- Các case thực tế giúp gắn kiến thức cloud và AI với quy mô sản xuất thực tế và yêu cầu tuân thủ.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+#### Tiếp cận kiến thức kỹ thuật
+- Làm quen ở mức khái niệm với **Amazon EKS**, **Kubernetes**, **GitOps**, **IAM**, **STS**, **Bedrock**, **AgentCore**, **MCP**, **AI-DLC**, data governance và **AI observability**.
+- Hiểu sâu hơn về workload identity, nguyên tắc đặc quyền tối thiểu, tự động hóa hạ tầng và giám sát độ an toàn, chất lượng lẫn chi phí của AI.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- Tự động hóa thiếu governance có thể làm tăng rủi ro nhanh không kém năng suất.
+- Hệ thống càng tự chủ thì kiểm soát danh tính và phân quyền càng phải chặt chẽ, dựa trên dữ liệu đáng tin cậy và bảo mật xuyên suốt vòng đời cũng như quản trị AI.
+- Người làm bảo mật cần biết cách bảo vệ, giám sát và quản trị chính các hệ thống AI bên cạnh việc phát hiện tấn công.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+#### Một số hình ảnh sự kiện
+*Thêm hình ảnh sự kiện tại đây*
+
+> Nhìn chung, sự kiện không chỉ mang lại kiến thức kỹ thuật và bảo mật rộng mở, mà còn giúp định hình tư duy của mình về cloud security, governance, observability và ứng dụng AI an toàn.
+```[cite: 5]
