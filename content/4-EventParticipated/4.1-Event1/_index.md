@@ -90,6 +90,6 @@ Attending the **“Buildrathon Kickoff: Code the Future with CMC Global”** eve
 - Hands-on building with mentor support helps turn AI concepts into practical solutions more effectively.
 
 #### Some event photos
-*Add your event photos here*  
+![Buildrathon Kickoff event photo](/images/4-EventParticipated/4.1-Event1/event1.jpg)
 
 > Overall, the event not only introduced the Buildathon challenge and AWS AI concepts, but also gave me practical guidance, hands-on exposure, and peer connections to kick off my work.

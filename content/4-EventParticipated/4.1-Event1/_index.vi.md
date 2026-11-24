@@ -90,6 +90,6 @@ Tham gia sự kiện **“Buildrathon Kickoff: Code the Future with CMC Global�
 - Thực hành trực tiếp có sự đồng hành của mentor giúp chuyển hóa kiến thức về **Generative AI** và **AI Agents** trên AWS thành trải nghiệm cụ thể.
 
 #### Một số hình ảnh sự kiện
-*Thêm hình ảnh sự kiện tại đây*  
+![Ảnh sự kiện Buildrathon Kickoff](/images/4-EventParticipated/4.1-Event1/event1.jpg)
 
 > Nhìn chung, sự kiện không chỉ giới thiệu thử thách Buildathon và kiến thức AWS AI, mà còn mang lại định hướng thực tế, trải nghiệm thực hành và kết nối hữu ích để mình bắt đầu.

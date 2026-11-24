@@ -9,8 +9,8 @@ pre: " <b> 4.3. </b> "
 # Báo cáo tổng hợp: “Fireside Chat with Dr. Werner”
 
 - **Tên sự kiện:** Fireside Chat with Dr. Werner
-- **Ngày & Giờ:** 08:30 – 12:00, Thứ Sáu, ngày 02/10/2026
-- **Địa điểm:** Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam
+- **Ngày & Giờ:** 08:30 – 12:00, ngày 02/10/2026
+- **Địa điểm:** Tầng 26 Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam 
 - **Vai trò:** Người tham dự
 
 ### Mục tiêu sự kiện
@@ -76,6 +76,6 @@ Tham dự buổi **“Fireside Chat with Dr. Werner”** tại Bitexco Financial
 - Chủ động lắng nghe, đặt câu hỏi trong Q&A và kết nối với cộng đồng giúp biến những buổi chia sẻ định hướng thành bài học cụ thể cho bản thân.
 
 #### Một số hình ảnh sự kiện
-*Thêm hình ảnh sự kiện tại đây*
+![Ảnh sự kiện Fireside Chat with Dr. Werner](/images/4-EventParticipated/4.4-Event4/event4.jpg)
 
 > Nhìn chung, buổi fireside chat mang lại những góc nhìn sâu sắc từ Dr. Werner Vogels về hệ thống quy mô toàn cầu, Cloud, AI và đổi mới sáng tạo, đồng thời giúp mình kết nối thêm với cộng đồng công nghệ.

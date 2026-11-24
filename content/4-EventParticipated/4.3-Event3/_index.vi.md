@@ -9,8 +9,8 @@ pre: " <b> 4.3. </b> "
 # Báo cáo tổng hợp: “First Cloud AI Journey: Weekly Meet Up”
 
 - **Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up  
-- **Ngày & Giờ:** 09:00 – 12:00, Thứ Bảy, ngày 24/10/2026  
-- **Địa điểm:** Tầng 26, Bitexco Financial Tower, TP. Hồ Chí Minh  
+- **Ngày & Giờ:** 09:00 – 12:00, ngày 24/10/2026  
+- **Địa điểm:** Tầng 26 Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam  
 - **Vai trò:** Người tham dự  
 
 ### Mục tiêu sự kiện
@@ -99,6 +99,6 @@ Sáng thứ Bảy ngày 24/10/2026 tại lầu 26, Bitexco Financial Tower tuy c
 - Sự tự tin kết nối, tính chủ động và sự kiên trì học hỏi sẽ giúp hành trình Cloud của bản thân thêm vững vàng và nhiều động lực.
 
 #### Một số hình ảnh sự kiện
-*Thêm hình ảnh sự kiện tại đây*  
+![ Ảnh sự kiện First Cloud AI Journey: Weekly Meet Up](/images/4-EventParticipated/4.3-Event3/event3.jpg)
 
 > Nhìn chung, buổi meet-up mang lại rất nhiều “chất xám” thực tế qua 5 session chất lượng—từ Voice AI và quản trị đa tài khoản đến pentest sớm và guardrails cho Agent—đồng thời tiếp thêm động lực để mình tự tin kết nối và học hỏi nhiều hơn.

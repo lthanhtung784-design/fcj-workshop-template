@@ -76,6 +76,6 @@ Attending the **“Fireside Chat with Dr. Werner”** session at Bitexco Financi
 - Engaging with diverse builders and asking questions during Q&A helps turn big-picture talks into concrete takeaways for personal growth.
 
 #### Some event photos
-*Add your event photos here*
+![Fireside Chat with Dr. Werner event photo](/images/4-EventParticipated/4.4-Event4/event4.jpg)
 
 > Overall, the fireside chat offered inspiring perspectives from Dr. Werner Vogels on global-scale systems, Cloud, AI, and innovation, while enriching my connection with the builder community.

@@ -99,6 +99,6 @@ Attending the **“First Cloud AI Journey: Weekly Meet Up”** on Saturday morni
 - Confidence in networking, proactive connection, and consistent learning effort are essential to keeping momentum in my cloud journey.
 
 #### Some event photos
-*Add your event photos here*  
+![First Cloud AI Journey: Weekly Meet Up event photo](/images/4-EventParticipated/4.3-Event3/event3.jpg)  
 
 > Overall, the meet-up packed a great deal of practical insight into a single morning—from Voice AI and multi-account governance to early security testing and 24/7 agent guardrails—while motivating me to network and learn more proactively.
