@@ -1,31 +1,23 @@
 ---
 title: "Blog 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+# HAS AMAZON S3 BLOCK PUBLIC ACCESS ALREADY MADE YOUR DATA SAFE?
 
-Key points to know:
+When learning AWS security, Amazon S3 Block Public Access is one of the first controls you encounter. Yet an important question arises: if a valid IAM access key with S3 read permissions is exposed, will Block Public Access stop unauthorized data access? Not necessarily—it primarily blocks public access granted via bucket policies or ACLs, not authorized calls made with leaked credentials or missing least-privilege controls. This post frames S3 data protection across three layers: Prevention, Auditing, and Detection & Alerting.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+Key points to remember:
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- **Prevention:** Enable all four Block Public Access settings (`BlockPublicAcls`, `IgnorePublicAcls`, `BlockPublicPolicy`, `RestrictPublicBuckets`), where S3 applies the most restrictive combination across levels; remember that private buckets still allow principals with valid `s3:GetObject` permissions, so enforce least privilege. Note also that new buckets default to *Bucket owner enforced* (ACLs disabled) and default SSE-S3 encryption (since January 5, 2023), which protects data at rest without replacing access control.
+- **Auditing:** Investigating unexpected reads or deletions requires object-level API logs (`GetObject`, `PutObject`, `DeleteObject`) via AWS CloudTrail S3 Data Events, which are not enabled by default on trails—route logs to a dedicated audit bucket and scope tracked events/buckets to control cost.
+- **Detection & Alerting:** GuardDuty S3 Protection analyzes S3 object-level API activity for anomalies such as `Exfiltration:S3/AnomalousBehavior` without requiring you to manually enable S3 Data Events on your CloudTrail trail; route findings via EventBridge to SNS (with confirmed email subscriptions and realistic filtering) and verify evidence before taking action.
+- **CLI & Safe Testing:** Inspect settings read-only with `aws s3api get-public-access-block --bucket YOUR_BUCKET_NAME`, test alert pipelines safely using GuardDuty *Generate sample findings*, and watch costs for CloudTrail data events and GuardDuty S3 Protection.
 
-...Image...
+Conclusion: Turning on Block Public Access is only a starting point. Combining Prevention, Auditing, and Detection & Alerting provides defense in depth so you can restrict access, trace actions, and spot anomalous behavior together.
 
-...Link...
-
-...Guide...
+https://www.facebook.com/groups/awsstudygroupfcj/permalink/2341941026570856/
