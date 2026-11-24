@@ -23,11 +23,11 @@ pre: " <b> 4.2. </b> "
 
 ### Diễn giả
 
-- **Dr. Werner Vogels** – CTO, Amazon.com (diễn giả keynote)
-- **Eric Yeo** – Country General Manager phụ trách Malaysia, Vietnam & Indochina, AWS
-- **Mai Le** – Director of Product Management, Katalon
-- **Dr. Jens Lottner** – Chief Executive Officer, Techcombank
-- **Các chuyên gia AWS, kỹ sư, kiến trúc sư và lãnh đạo công nghệ** đến từ Katalon, Techcombank, TCBS, Techcom Life, VPBank và các tổ chức khác
+- **Dr. Werner Vogels** – Giám đốc Công nghệ (CTO), Amazon.com (diễn giả keynote)
+- **Eric Yeo** – Tổng Giám đốc quốc gia phụ trách Malaysia, Việt Nam và Đông Dương, AWS
+- **Mai Le** – Giám đốc Quản lý Sản phẩm (Director of Product Management), Katalon
+- **Dr. Jens Lottner** – Tổng Giám đốc (CEO), Techcombank
+- Các chuyên gia AWS, kỹ sư, kiến trúc sư và lãnh đạo công nghệ đến từ Katalon, Techcombank, TCBS, Techcom Life, VPBank và các tổ chức khác
 
 ### Điểm nổi bật
 
