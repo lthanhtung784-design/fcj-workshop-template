@@ -32,4 +32,4 @@ Những điểm chính cần nhớ:
 
 Kết luận: “Exactly-once delivery/deduplication” ở tầng queue khác với “exactly-once business effect” ở tầng ứng dụng. Một quy trình hướng sự kiện đáng tin cậy đòi hỏi thiết kế đồng bộ giữa ngữ nghĩa FIFO, tối ưu visibility timeout, xử lý retry/DLQ, idempotency và kiểm soát các tác động phụ (side effects).
 
-https://www.facebook.com/share/p/1BmMVcWPia/
+https://www.facebook.com/groups/awsstudygroupfcj/permalink/2344641672967458/
