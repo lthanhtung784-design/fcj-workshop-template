@@ -120,4 +120,3 @@ Attending the **“AWS Cloud & AI Day Hanoi 2026”** workshop was extremely val
 ![AWS Cloud & AI Day Hanoi 2026 event photo](/images/4-EventParticipated/4.2-Event2/event2.jpg)
 
 > Overall, the event not only provided broad technical and security insights, but also helped shape my approach to cloud security, governance, observability, and safe AI adoption.
-```[cite: 5]

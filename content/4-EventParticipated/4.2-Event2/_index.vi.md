@@ -120,4 +120,3 @@ Tham dự workshop **“AWS Cloud & AI Day Hanoi 2026”** rất giá trị, man
 ![Ảnh sự kiện AWS Cloud & AI Day Hanoi 2026](/images/4-EventParticipated/4.2-Event2/event2.jpg)
 
 > Nhìn chung, sự kiện không chỉ mang lại kiến thức kỹ thuật và bảo mật rộng mở, mà còn giúp định hình tư duy của mình về cloud security, governance, observability và ứng dụng AI an toàn.
-```[cite: 5]

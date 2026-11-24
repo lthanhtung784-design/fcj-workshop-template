@@ -31,7 +31,5 @@ Nội dung từng tuần:
 **Tuần 9:** [Bảo mật với Docker và Amazon ECS, CI/CD bằng CodePipeline, SQS/SNS và truy vết với X-Ray](1.9-week9/)
 
 **Tuần 10:** [Savings Plans và Reserved Instances, xem chi phí và phát hiện bất thường, Glue và Athena, rà soát bảo mật tài khoản và tổng kết 10 tuần](1.10-week10/)
-```[cite: 2, 3, 4, 5, 6, 7, 8, 9]
 
----
 
