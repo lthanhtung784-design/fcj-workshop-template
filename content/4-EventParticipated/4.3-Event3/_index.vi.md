@@ -25,8 +25,8 @@ pre: " <b> 4.3. </b> "
 - **Anh Kiệt Trần** – Revve AI
 - **Anh Long Huỳnh** – Styl Solution
 - **Anh Thịnh Nguyễn** – Styl Solution
-- **Anh Xuân An** – Leader AWS Student Builder Group HCMUTE
-- **Anh Khoa Kiều** – Tech Lead ACB
+- **Anh Xuân An** – Trưởng nhóm AWS Student Builder Group HCMUTE
+- **Anh Khoa Kiều** – Tech Lead tại ACB
 - **Anh Nghi Danh** – AWS Community Builder
 
 ### Điểm nổi bật

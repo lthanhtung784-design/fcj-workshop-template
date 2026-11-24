@@ -22,7 +22,7 @@ pre: " <b> 4.3. </b> "
 
 ### Diễn giả
 
-- **Dr. Werner Vogels** – Chief Technology Officer (CTO), Amazon.com
+- **Dr. Werner Vogels** – Giám đốc Công nghệ (CTO), Amazon.com
 
 ### Điểm nổi bật
 
