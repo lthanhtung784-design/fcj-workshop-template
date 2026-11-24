@@ -9,8 +9,8 @@ pre: " <b> 4.1. </b> "
 # Summary Report: “Buildrathon Kickoff: Code the Future with CMC Global”
 
 - **Event Name:** Buildrathon Kickoff: Code the Future with CMC Global  
-- **Date & Time:** 09:00 – 12:00, Saturday, September 26, 2026  
-- **Location:** Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City 700000, Vietnam  
+- **Date & Time:** 09:00 – 12:00, September 26, 2026  
+- **Location:** 26th Floor Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City 700000, Vietnam
 - **Role:** Attendee  
 
 ### Event Objectives

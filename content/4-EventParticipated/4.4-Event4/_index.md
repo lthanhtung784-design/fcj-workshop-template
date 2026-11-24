@@ -9,8 +9,8 @@ pre: " <b> 4.3. </b> "
 # Summary Report: “Fireside Chat with Dr. Werner”
 
 - **Event Name:** Fireside Chat with Dr. Werner
-- **Date & Time:** 08:30 – 12:00, Friday, October 2, 2026
-- **Location:** Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City 700000, Vietnam
+- **Date & Time:** 08:30 – 12:00, October 2, 2026
+- **Location:** 26th Floor Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City 700000, Vietnam
 - **Role:** Attendee
 
 ### Event Objectives

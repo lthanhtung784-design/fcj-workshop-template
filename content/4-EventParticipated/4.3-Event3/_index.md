@@ -9,8 +9,8 @@ pre: " <b> 4.3. </b> "
 # Summary Report: “First Cloud AI Journey: Weekly Meet Up”
 
 - **Event Name:** First Cloud AI Journey: Weekly Meet Up  
-- **Date & Time:** 09:00 – 12:00, Saturday, October 24, 2026  
-- **Location:** 26th Floor, Bitexco Financial Tower, Ho Chi Minh City  
+- **Date & Time:** 09:00 – 12:00, October 24, 2026  
+- **Location:** 26th Floor Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City 700000, Vietnam 
 - **Role:** Attendee  
 
 ### Event Objectives

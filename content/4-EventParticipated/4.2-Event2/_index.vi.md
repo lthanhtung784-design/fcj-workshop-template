@@ -9,8 +9,8 @@ pre: " <b> 4.2. </b> "
 # Báo cáo tổng hợp: “AWS Cloud & AI Day Hanoi 2026”
 
 - **Tên sự kiện:** AWS Cloud & AI Day Hanoi 2026
-- **Ngày & Giờ:** Ngày 29/09/2026 
-- **Địa điểm:** Hồ Chí Minh, Việt Nam
+- **Ngày & Giờ:** 09:00-17:00, ngày 29/09/2026 
+- **Địa điểm:** Tầng 26 Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam 
 - **Vai trò:** Người tham dự
 
 ### Mục tiêu sự kiện

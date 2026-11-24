@@ -9,8 +9,8 @@ pre: " <b> 4.1. </b> "
 # Báo cáo tổng hợp: “Buildrathon Kickoff: Code the Future with CMC Global”
 
 - **Tên sự kiện:** Buildrathon Kickoff: Code the Future with CMC Global  
-- **Ngày & Giờ:** 09:00 – 12:00, Thứ Bảy, ngày 26/09/2026  
-- **Địa điểm:** Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam  
+- **Ngày & Giờ:** 09:00 – 12:00, ngày 26/09/2026  
+- **Địa điểm:** Tầng 26 Bitexco Financial Tower, 2 Đ. Hải Triều, Sài Gòn, Hồ Chí Minh 700000, Việt Nam  
 - **Vai trò:** Người tham dự  
 
 ### Mục tiêu sự kiện
