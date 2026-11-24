@@ -31,5 +31,5 @@ Những điểm chính cần nhớ:
   4. Đội vận hành sẽ phát hiện lỗi vĩnh viễn, kiểm tra dữ liệu và redrive message từ DLQ như thế nào?
 
 Kết luận: “Exactly-once delivery/deduplication” ở tầng queue khác với “exactly-once business effect” ở tầng ứng dụng. Một quy trình hướng sự kiện đáng tin cậy đòi hỏi thiết kế đồng bộ giữa ngữ nghĩa FIFO, tối ưu visibility timeout, xử lý retry/DLQ, idempotency và kiểm soát các tác động phụ (side effects).
-
+![Blog 1 screenshot](/images/3-BlogsPosted/3.1-Blog1/blog1.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2344641672967458/

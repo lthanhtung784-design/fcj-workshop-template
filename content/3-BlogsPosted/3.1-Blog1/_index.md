@@ -29,5 +29,5 @@ Key points to remember:
   4. How will operators detect permanent failures, inspect payloads, and redrive messages from the DLQ?
 
 Conclusion: “Exactly-once delivery/deduplication” at the queue layer is not the same as “exactly-once business effect” at the application layer. Reliable event-driven workflows require combining FIFO ordering/deduplication, visibility timeout tuning, retry/DLQ handling, idempotency, and side-effect control.
-
+![Blog 1 screenshot](/images/3-BlogsPosted/3.1-Blog1/blog1.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2344641672967458/
