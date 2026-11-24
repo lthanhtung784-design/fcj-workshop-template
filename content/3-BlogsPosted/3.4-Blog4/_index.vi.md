@@ -5,9 +5,7 @@ weight: 4
 chapter: false
 pre: " <b> 3.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin bên dưới chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
+
 
 # MỘT QUYỀN IAM NHỎ CÓ THỂ GÂY RA RỦI RO LỚN NHƯ THẾ NÀO?
 
@@ -18,5 +16,5 @@ Key points to remember:
 - `AdministratorAccess` là AWS Managed Policy trao quyền quản trị gần như toàn bộ tài khoản; nếu bị chiếm quyền, kẻ tấn công có thể truy xuất/xóa dữ liệu S3, tạo EC2 trái phép (như đào tiền mã hóa / cryptojacking) hoặc làm gián đoạn máy chủ, xóa/sửa RDS instance và snapshot, tạo thêm IAM user/role/access key để duy trì truy cập, và can thiệp hoặc tắt ghi log CloudTrail.
 - Hạn chế phạm vi ảnh hưởng bằng cách áp dụng least privilege thay vì lạm dụng `AdministratorAccess`, bật MFA cho các tài khoản quan trọng, và ưu tiên temporary credentials qua IAM roles thay vì access key dài hạn.
 - Thiết lập permission boundaries để giới hạn trần quyền tối đa cho IAM user/role, giám sát thay đổi IAM và cấu hình bảo mật qua AWS CloudTrail (kết hợp bảo vệ log độc lập), và rà soát quyền định kỳ để thu hồi quyền dư thừa hoặc quá rộng.
-
+![Blog 4 screenshot](/images/3-BlogsPosted/3.4-Blog4/blog4.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2346868572744768/

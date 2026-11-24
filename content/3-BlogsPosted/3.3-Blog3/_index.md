@@ -19,5 +19,5 @@ Key points to remember:
 - **CLI & Safe Testing:** Inspect settings read-only with `aws s3api get-public-access-block --bucket YOUR_BUCKET_NAME`, test alert pipelines safely using GuardDuty *Generate sample findings*, and watch costs for CloudTrail data events and GuardDuty S3 Protection.
 
 Conclusion: Turning on Block Public Access is only a starting point. Combining Prevention, Auditing, and Detection & Alerting provides defense in depth so you can restrict access, trace actions, and spot anomalous behavior together.
-
+![Blog 3 screenshot](/images/3-BlogsPosted/3.3-Blog3/blog3.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2341941026570856/

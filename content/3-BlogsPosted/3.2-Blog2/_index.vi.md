@@ -22,5 +22,5 @@ Key points to remember:
 - Bốn câu hỏi rà soát bảo mật khi thiết kế: (1) `s3:GetObject` và `kms:Decrypt` đã tuân thủ least privilege chưa? (2) Chính sách kiểm soát theo object, prefix hay bucket và phụ thuộc encryption context nào? (3) Giả định về KMS policy và độ chi tiết CloudTrail còn đúng không khi bật S3 Bucket Keys? (4) Quản trị khóa, bảo vệ credentials và giám sát hoạt động đã được thiết kế đồng bộ chưa?
 
 Conclusion: Mã hóa không phải “lá chắn tuyệt đối” trước mọi hành vi dùng quyền hợp lệ. Giá trị của AWS KMS nằm ở quản trị vòng đời khóa, kiểm soát quyền sử dụng khóa và khả năng audit—do đó mọi tối ưu chi phí hay hiệu năng đều cần được đánh giá lại về kiểm soát và khả năng truy vết bảo mật.
-
+![Blog 2 screenshot](/images/3-BlogsPosted/3.2-Blog2/blog2.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2342975263134099/

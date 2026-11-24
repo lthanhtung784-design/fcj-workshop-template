@@ -22,5 +22,5 @@ Key points to remember:
 - Four security review questions for KMS/S3 designs: (1) Are `s3:GetObject` and `kms:Decrypt` scoped to least privilege? (2) Do policies enforce object-, prefix-, or bucket-level access and rely on specific encryption context keys? (3) Do KMS policy assumptions and CloudTrail granularity still hold if S3 Bucket Keys are enabled? (4) Are key management, credential protection, and activity monitoring designed together?
 
 Conclusion: Encryption is not a silver bullet against unauthorized use of valid credentials. AWS KMS adds value through key lifecycle management, access control, and auditability—meaning every cost or performance optimization must be reviewed for security control and traceability trade-offs.
-
+![Blog 2 screenshot](/images/3-BlogsPosted/3.2-Blog2/blog2.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2342975263134099/

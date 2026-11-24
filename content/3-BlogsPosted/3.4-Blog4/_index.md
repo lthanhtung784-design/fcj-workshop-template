@@ -16,5 +16,5 @@ Key points to remember:
 - `AdministratorAccess` is an AWS Managed Policy granting near-full administrative control across the account; if compromised, attackers can exfiltrate or delete S3 data, launch unauthorized EC2 instances (such as for cryptojacking) or disrupt running workloads, modify/delete RDS instances or snapshots, create persistent IAM users/roles/access keys, and tamper with or disable CloudTrail logging.
 - Reduce blast radius by enforcing least privilege instead of defaulting to `AdministratorAccess`, requiring MFA on privileged identities, and preferring temporary credentials via IAM roles over long-lived access keys.
 - Use permission boundaries to cap maximum permissions an IAM user or role can obtain, monitor IAM and security configuration changes via AWS CloudTrail (with independent log protection), and conduct regular access reviews to revoke unused or overly broad permissions.
-
+![Blog 4 screenshot](/images/3-BlogsPosted/3.4-Blog4/blog4.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2346868572744768/

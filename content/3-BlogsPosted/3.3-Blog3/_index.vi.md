@@ -5,9 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin bên dưới chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
+
 
 # S3 ĐÃ BẬT BLOCK PUBLIC ACCESS THÌ DỮ LIỆU ĐÃ AN TOÀN CHƯA?
 
@@ -21,5 +19,5 @@ Key points to remember:
 - **Kiểm tra & thử nghiệm an toàn:** Dùng lệnh chỉ đọc `aws s3api get-public-access-block --bucket TEN_BUCKET_CUA_BAN` để kiểm tra cấu hình, dùng *Generate sample findings* của GuardDuty để thử luồng cảnh báo an toàn, và lưu ý chi phí phát sinh từ CloudTrail data events cũng như GuardDuty S3 Protection.
 
 Conclusion: Bật Block Public Access chỉ là bước nền tảng. Kết hợp đủ ba lớp Prevention, Auditing và Detection & Alerting giúp ngăn chặn rủi ro, lưu vết điều tra và phát hiện bất thường bổ trợ cho nhau.
-
+![Blog 3 screenshot](/images/3-BlogsPosted/3.3-Blog3/blog3.png)
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2341941026570856/
