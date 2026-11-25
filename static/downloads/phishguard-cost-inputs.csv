@@ -1,0 +1,40 @@
+﻿Service,Billing unit (November 2026 scenario),Quantity in billing units per month,Unit price USD,Estimated USD/month,AWS rate source
+WAF,web ACL-month,1,5,5.000000000,https://aws.amazon.com/waf/pricing/
+WAF,rate rule-month,1,1,1.000000000,https://aws.amazon.com/waf/pricing/
+WAF,standard AWS managed group-month,1,1,1.000000000,https://aws.amazon.com/waf/pricing/
+WAF,million inspected requests,0.02,0.6,0.012000000,https://aws.amazon.com/waf/pricing/
+CloudFront,GB and requests within remaining PAYG allowance (1 GB; 20000 HTTPS),1,0,0.000000000,https://aws.amazon.com/cloudfront/pricing/
+Route 53,public hosted zone-month (scenario),1,0.5,0.500000000,https://aws.amazon.com/route53/pricing/
+Route 53,million standard DNS queries,0.001,0.4,0.000400000,https://aws.amazon.com/route53/pricing/
+KMS,symmetric customer managed key-month,1,1,1.000000000,https://aws.amazon.com/kms/pricing/
+KMS,10000 symmetric requests,0.24,0.03,0.007200000,https://aws.amazon.com/kms/pricing/
+CloudWatch,standard resolution alarm-metric/month,2,0.1,0.200000000,https://aws.amazon.com/cloudwatch/pricing/
+CloudWatch,GB log ingestion (Standard),0.1,0.5,0.050000000,https://aws.amazon.com/cloudwatch/pricing/
+CloudWatch,GB-month log storage,0.05,0.03,0.001500000,https://aws.amazon.com/cloudwatch/pricing/
+API Gateway,million HTTP API requests,0.012,1,0.012000000,https://aws.amazon.com/api-gateway/pricing/
+Lambda,million requests (x86 on demand),0.01338,0.2,0.002676000,https://aws.amazon.com/lambda/pricing/
+Lambda,GB-seconds,1860,0.0000166667,0.031000062,https://aws.amazon.com/lambda/pricing/
+Step Functions,standard state transitions,3600,0.000025,0.090000000,https://aws.amazon.com/step-functions/pricing/
+Amazon Nova Lite v1,million input text tokens,0.6,0.06,0.036000000,https://aws.amazon.com/bedrock/pricing/
+Amazon Nova Lite v1,million output text tokens,0.3,0.24,0.072000000,https://aws.amazon.com/bedrock/pricing/
+Bedrock Guardrails,1000 content filter text units,1.8,0.15,0.270000000,https://aws.amazon.com/bedrock/pricing/
+Titan Text Embeddings V2,million tokens (documents and queries),0.13,0.02,0.002600000,https://aws.amazon.com/bedrock/pricing/
+S3 Vectors,GB-month stored,0.01,0.06,0.000600000,https://aws.amazon.com/s3/pricing/
+S3 Vectors,billable GB written,0.01,0.2,0.002000000,https://aws.amazon.com/s3/pricing/
+S3 Vectors,million queries,0.0003,2.5,0.000750000,https://aws.amazon.com/s3/pricing/
+S3 Vectors,TB processed (first 100k vector tier),0.00146484375,0.004,0.000005859,https://aws.amazon.com/s3/pricing/
+S3 Standard,GB-month incl. object versions,1,0.023,0.023000000,https://aws.amazon.com/s3/pricing/
+S3 Standard,1000 PUT/COPY/POST/LIST,1.5,0.005,0.007500000,https://aws.amazon.com/s3/pricing/
+S3 Standard,1000 GET,6,0.0004,0.002400000,https://aws.amazon.com/s3/pricing/
+DynamoDB,million on-demand write units,0.006,0.625,0.003750000,https://aws.amazon.com/dynamodb/pricing/
+DynamoDB,million on-demand read units,0.03,0.125,0.003750000,https://aws.amazon.com/dynamodb/pricing/
+DynamoDB,GB-month Standard storage,0.05,0.25,0.012500000,https://aws.amazon.com/dynamodb/pricing/
+DynamoDB,GB-month PITR,0.05,0.2,0.010000000,https://aws.amazon.com/dynamodb/pricing/
+SES,1000 incoming messages,0.06,0.1,0.006000000,https://aws.amazon.com/ses/pricing/
+SES,1000 billable incoming chunks,0.06,0.09,0.005400000,https://aws.amazon.com/ses/pricing/
+SNS,million standard publishes,0.00009,0.5,0.000045000,https://aws.amazon.com/sns/pricing/
+SNS,100000 email deliveries,0.0009,2,0.001800000,https://aws.amazon.com/sns/pricing/
+SQS,million standard requests,0.001,0.4,0.000400000,https://aws.amazon.com/sqs/pricing/
+Cognito,direct MAU within remaining eligible allowance,10,0,0.000000000,https://aws.amazon.com/cognito/pricing/
+AWS Budgets,notification-only cost budget (scenario),1,0,0.000000000,https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/
+TOTAL,,,,9.367276921,"Planning estimate only. Before tax, domain renewal and account credits."

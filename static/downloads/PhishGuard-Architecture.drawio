@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="PhishGuard AI" id="YYGbg8KSA5lbaB8n5Hmm">
+    <mxGraphModel dx="1106" dy="711" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--1" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=41;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="PhishGuard AI" vertex="1">
+          <mxGeometry height="51" width="620" x="29" y="11" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--2" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=23;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Phishing triage and human-approved response" vertex="1">
+          <mxGeometry height="27" width="1000" x="31" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--3" parent="1" style="shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;grIconSize=29;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#232F3E;strokeWidth=1.7;dashed=0;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="1407" width="2010" x="205" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--4" parent="p-3SZoKH5IxQxbGdWWH--3" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS Cloud" vertex="1">
+          <mxGeometry height="27" width="950" x="40" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--5" parent="p-3SZoKH5IxQxbGdWWH--3" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="135" width="1264" x="29" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--6" parent="p-3SZoKH5IxQxbGdWWH--5" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Global edge" vertex="1">
+          <mxGeometry height="27" width="950" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--7" parent="p-3SZoKH5IxQxbGdWWH--5" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="83" width="230" x="316" y="9" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="PhishGuard-Web. Default behavior serves the private S3 origin using OAC. /api/* routes to the HTTP API." id="p-3SZoKH5IxQxbGdWWH--8">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--7" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#8C4FFF;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="88" y="29" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--9" parent="p-3SZoKH5IxQxbGdWWH--7" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon CloudFront" vertex="1">
+          <mxGeometry height="25" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--10" parent="p-3SZoKH5IxQxbGdWWH--5" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="74" width="505" x="744" y="27" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="PhishGuardEdge web ACL. AWSManagedRulesCommonRuleSet plus IP rate limiting (120 requests per 60 seconds) on POST /api/reports and /api/uploads/presign. The workshop probe is off." id="p-3SZoKH5IxQxbGdWWH--11">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--10" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#DD344C;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" y="11" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--12" parent="p-3SZoKH5IxQxbGdWWH--10" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS WAF" vertex="1">
+          <mxGeometry height="27" width="432" x="73" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--13" parent="p-3SZoKH5IxQxbGdWWH--10" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="PhishGuardEdge · managed Common Rule Set" vertex="1">
+          <mxGeometry height="21" width="432" x="73" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--14" parent="p-3SZoKH5IxQxbGdWWH--10" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="IP rate limit · 120/min on submission routes" vertex="1">
+          <mxGeometry height="21" width="432" x="73" y="53" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--15" parent="p-3SZoKH5IxQxbGdWWH--3" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="135" width="659" x="1321" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--16" parent="p-3SZoKH5IxQxbGdWWH--15" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Account services" vertex="1">
+          <mxGeometry height="27" width="599" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--17" parent="p-3SZoKH5IxQxbGdWWH--15" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53" width="297" x="49" y="46" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="identity_and_access_management" id="p-3SZoKH5IxQxbGdWWH--18">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--17" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#DD344C;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="50" width="50" y="3" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--19" parent="p-3SZoKH5IxQxbGdWWH--17" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS IAM" vertex="1">
+          <mxGeometry height="27" width="233" x="64" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--20" parent="p-3SZoKH5IxQxbGdWWH--17" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Service roles" vertex="1">
+          <mxGeometry height="21" width="233" x="64" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--21" parent="p-3SZoKH5IxQxbGdWWH--15" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53" width="299" x="347" y="46" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="cost_explorer" id="p-3SZoKH5IxQxbGdWWH--22">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--21" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cost_explorer;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="50" width="50" y="3" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--23" parent="p-3SZoKH5IxQxbGdWWH--21" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS Cost Explorer" vertex="1">
+          <mxGeometry height="27" width="239" x="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--24" parent="p-3SZoKH5IxQxbGdWWH--21" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Billing and usage" vertex="1">
+          <mxGeometry height="21" width="239" x="60" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--25" parent="p-3SZoKH5IxQxbGdWWH--3" style="shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;grIconSize=29;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#008F91;strokeWidth=1.7;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="1175" width="1952" x="28" y="207" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--26" parent="p-3SZoKH5IxQxbGdWWH--25" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#007F81;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="US East (N. Virginia)  ·  us-east-1" vertex="1">
+          <mxGeometry height="27" width="950" x="40" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--27" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="201" width="1240" x="22" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--28" parent="p-3SZoKH5IxQxbGdWWH--27" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Web portal and access" vertex="1">
+          <mxGeometry height="27" width="950" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--29" parent="p-3SZoKH5IxQxbGdWWH--27" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="222" x="-12" y="57" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Reporter, SecOps Admin and Auditor. The HTTP API JWT authorizer validates the Cognito token." id="p-3SZoKH5IxQxbGdWWH--30">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--29" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cognito;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#DD344C;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="84" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--31" parent="p-3SZoKH5IxQxbGdWWH--29" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon Cognito" vertex="1">
+          <mxGeometry height="25" width="222" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--32" parent="p-3SZoKH5IxQxbGdWWH--29" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="3 role groups" vertex="1">
+          <mxGeometry height="20" width="222" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--33" parent="p-3SZoKH5IxQxbGdWWH--27" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="222" x="195" y="57" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="The CloudFront default origin accesses the web bucket using Origin Access Control." id="p-3SZoKH5IxQxbGdWWH--34">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--33" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="84" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--35" parent="p-3SZoKH5IxQxbGdWWH--33" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon S3" vertex="1">
+          <mxGeometry height="25" width="222" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--36" parent="p-3SZoKH5IxQxbGdWWH--33" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Private React SPA" vertex="1">
+          <mxGeometry height="20" width="222" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--37" parent="p-3SZoKH5IxQxbGdWWH--27" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="222" x="483" y="57" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="CloudFront /api/* behavior sends requests to the regional HTTP API." id="p-3SZoKH5IxQxbGdWWH--38">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--37" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="84" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--39" parent="p-3SZoKH5IxQxbGdWWH--37" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="API Gateway" vertex="1">
+          <mxGeometry height="25" width="222" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--40" parent="p-3SZoKH5IxQxbGdWWH--37" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="HTTP API · JWT" vertex="1">
+          <mxGeometry height="20" width="222" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--41" parent="p-3SZoKH5IxQxbGdWWH--27" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="222" x="732" y="57" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Stores submitted text or sample copies in intake and issues presigned POSTs for direct file uploads." id="p-3SZoKH5IxQxbGdWWH--42">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--41" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="84" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--43" parent="p-3SZoKH5IxQxbGdWWH--41" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Reporter API" vertex="1">
+          <mxGeometry height="25" width="222" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--44" parent="p-3SZoKH5IxQxbGdWWH--41" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Text, samples, presign" vertex="1">
+          <mxGeometry height="20" width="222" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--45" parent="p-3SZoKH5IxQxbGdWWH--27" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="222" x="1001" y="57" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Checks role and incident state; sends approved or rejected decisions to Step Functions via SendTaskSuccess. Audits short-lived raw evidence access." id="p-3SZoKH5IxQxbGdWWH--46">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--45" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="84" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--47" parent="p-3SZoKH5IxQxbGdWWH--45" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Admin API" vertex="1">
+          <mxGeometry height="25" width="222" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--48" parent="p-3SZoKH5IxQxbGdWWH--45" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Decisions and raw access" vertex="1">
+          <mxGeometry height="20" width="222" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--49" parent="p-3SZoKH5IxQxbGdWWH--27" style="ellipse;aspect=fixed;html=0;fillColor=#FFFFFF;strokeColor=#6D507D;strokeWidth=1.8;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#6D507D;align=center;verticalAlign=middle;spacing=0;" value="A" vertex="1">
+          <mxGeometry height="26" width="26" x="1203" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--50" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="201" width="633" x="1297" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--51" parent="p-3SZoKH5IxQxbGdWWH--50" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Case records" vertex="1">
+          <mxGeometry height="27" width="573" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--52" parent="p-3SZoKH5IxQxbGdWWH--50" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="74" width="560" x="53" y="41" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Three application tables. Incident state, canonical indicators, and conditional append-only audit records. The portal and the triage and response functions read or write these tables." id="p-3SZoKH5IxQxbGdWWH--53">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--52" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#C925D1;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" y="16" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--54" parent="p-3SZoKH5IxQxbGdWWH--52" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=20;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon DynamoDB" vertex="1">
+          <mxGeometry height="27" width="485" x="75" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--55" parent="p-3SZoKH5IxQxbGdWWH--52" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Incidents  ·  Blocklist  ·  AuditLogs" vertex="1">
+          <mxGeometry height="21" width="485" x="75" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--56" parent="p-3SZoKH5IxQxbGdWWH--52" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Case state and append-only decision history" vertex="1">
+          <mxGeometry height="21" width="485" x="75" y="53" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--57" parent="p-3SZoKH5IxQxbGdWWH--50" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Used by the portal, triage and response functions." vertex="1">
+          <mxGeometry height="22" width="484" x="128" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--58" parent="p-3SZoKH5IxQxbGdWWH--50" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Raw evidence access uses an audited 60-second S3 URL." vertex="1">
+          <mxGeometry height="26" width="596" x="20" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--59" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="205" width="1240" x="22" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--60" parent="p-3SZoKH5IxQxbGdWWH--59" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Report intake and raw evidence" vertex="1">
+          <mxGeometry height="27" width="950" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--61" parent="p-3SZoKH5IxQxbGdWWH--59" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="245" x="-29.5" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="SES stores the original message in inbound/ first, then invokes Ingest with receipt context." id="p-3SZoKH5IxQxbGdWWH--62">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--61" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.simple_email_service;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#DD344C;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="95.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--63" parent="p-3SZoKH5IxQxbGdWWH--61" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon SES" vertex="1">
+          <mxGeometry height="25" width="245" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--64" parent="p-3SZoKH5IxQxbGdWWH--61" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="SOC email receipt" vertex="1">
+          <mxGeometry height="20" width="245" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--65" parent="p-3SZoKH5IxQxbGdWWH--59" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="127" width="245" x="338.5" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Browser POSTs to S3 directly. Only the uploads/ prefix has an ObjectCreated notification for Ingest." id="p-3SZoKH5IxQxbGdWWH--66">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--65" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="95.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--67" parent="p-3SZoKH5IxQxbGdWWH--65" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon S3" vertex="1">
+          <mxGeometry height="25" width="245" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--68" parent="p-3SZoKH5IxQxbGdWWH--65" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Intake · uploads/ and inbound/" vertex="1">
+          <mxGeometry height="20" width="245" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--69" parent="p-3SZoKH5IxQxbGdWWH--65" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="3-day lifecycle" vertex="1">
+          <mxGeometry height="20" width="245" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--70" parent="p-3SZoKH5IxQxbGdWWH--59" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="245" x="660.5" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Ingest verifies and hashes the submission, writes raw evidence and records its key, version and digest before starting one named execution." id="p-3SZoKH5IxQxbGdWWH--71">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--70" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="95.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--72" parent="p-3SZoKH5IxQxbGdWWH--70" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Ingest" vertex="1">
+          <mxGeometry height="25" width="245" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--73" parent="p-3SZoKH5IxQxbGdWWH--70" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Validate · SHA-256" vertex="1">
+          <mxGeometry height="20" width="245" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--74" parent="p-3SZoKH5IxQxbGdWWH--59" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="127" width="245" x="989.5" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Raw evidence is independently versioned, retained in GOVERNANCE mode for seven days, and encrypted with the project KMS key." id="p-3SZoKH5IxQxbGdWWH--75">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--74" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="95.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--76" parent="p-3SZoKH5IxQxbGdWWH--74" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon S3" vertex="1">
+          <mxGeometry height="25" width="245" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--77" parent="p-3SZoKH5IxQxbGdWWH--74" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Raw evidence · versioned" vertex="1">
+          <mxGeometry height="20" width="245" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--78" parent="p-3SZoKH5IxQxbGdWWH--74" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Object Lock · Governance 7d" vertex="1">
+          <mxGeometry height="20" width="245" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--79" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="205" width="633" x="1297" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--80" parent="p-3SZoKH5IxQxbGdWWH--79" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Failure monitoring" vertex="1">
+          <mxGeometry height="27" width="573" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--81" parent="p-3SZoKH5IxQxbGdWWH--79" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="107" width="226" x="4" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Asynchronous Ingest invocation failures are sent here after retries." id="p-3SZoKH5IxQxbGdWWH--82">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--81" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="86" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--83" parent="p-3SZoKH5IxQxbGdWWH--81" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon SQS" vertex="1">
+          <mxGeometry height="25" width="226" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--84" parent="p-3SZoKH5IxQxbGdWWH--81" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Ingest dead-letter queue" vertex="1">
+          <mxGeometry height="20" width="226" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--85" parent="p-3SZoKH5IxQxbGdWWH--79" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="107" width="325" x="273.5" y="63" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="CloudWatch monitors execution failures and visible messages in the Ingest DLQ, and sends both alarm actions to the SecOps SNS topic." id="p-3SZoKH5IxQxbGdWWH--86">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--85" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="135.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--87" parent="p-3SZoKH5IxQxbGdWWH--85" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon CloudWatch" vertex="1">
+          <mxGeometry height="25" width="325" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--88" parent="p-3SZoKH5IxQxbGdWWH--85" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Workflow failures · DLQ depth" vertex="1">
+          <mxGeometry height="20" width="325" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--89" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="520" width="1240" x="22" y="519" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--90" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Triage and human approval" vertex="1">
+          <mxGeometry height="27" width="950" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--91" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="105" width="255" x="-34.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Starts after the raw S3 version has been persisted. Coordinates the Lambda tasks, data-quality gate, proposal branches and approval timeout." id="p-3SZoKH5IxQxbGdWWH--92">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--91" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.step_functions;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="100.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--93" parent="p-3SZoKH5IxQxbGdWWH--91" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS Step Functions" vertex="1">
+          <mxGeometry height="25" width="255" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--94" parent="p-3SZoKH5IxQxbGdWWH--91" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Standard workflow" vertex="1">
+          <mxGeometry height="20" width="255" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--95" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="126" width="255" x="241.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Reads the raw version; parses EML, text or image. Reads QR HTTP(S) URLs locally, removes sensitive parts and defangs them. Writes redacted analysis to a separate bucket." id="p-3SZoKH5IxQxbGdWWH--96">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--95" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="100.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--97" parent="p-3SZoKH5IxQxbGdWWH--95" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Extract &amp; Redact" vertex="1">
+          <mxGeometry height="25" width="255" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--98" parent="p-3SZoKH5IxQxbGdWWH--95" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Tesseract OCR · VI/EN" vertex="1">
+          <mxGeometry height="20" width="255" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--99" parent="p-3SZoKH5IxQxbGdWWH--95" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="ZXing-C++ · QR URLs" vertex="1">
+          <mxGeometry height="20" width="255" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--100" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="126" width="255" x="542.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Evaluates deterministic signals and matches active blocklist indicators against sanitized input." id="p-3SZoKH5IxQxbGdWWH--101">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--100" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="100.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--102" parent="p-3SZoKH5IxQxbGdWWH--100" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Triage" vertex="1">
+          <mxGeometry height="25" width="255" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--103" parent="p-3SZoKH5IxQxbGdWWH--100" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Rules · risk score" vertex="1">
+          <mxGeometry height="20" width="255" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--104" parent="p-3SZoKH5IxQxbGdWWH--100" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Internal blocklist lookup" vertex="1">
+          <mxGeometry height="20" width="255" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--105" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="126" width="255" x="871.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Uses Bedrock Retrieve and Converse with guardrails when configured and available. Returns an eligible action, manual-review request, or no action." id="p-3SZoKH5IxQxbGdWWH--106">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--105" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="100.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--107" parent="p-3SZoKH5IxQxbGdWWH--105" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Synthesize" vertex="1">
+          <mxGeometry height="25" width="255" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--108" parent="p-3SZoKH5IxQxbGdWWH--105" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Playbook-grounded proposal" vertex="1">
+          <mxGeometry height="20" width="255" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--109" parent="p-3SZoKH5IxQxbGdWWH--105" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Deterministic fallback" vertex="1">
+          <mxGeometry height="20" width="255" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--110" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53" width="323" x="347" y="216" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Stores sanitized analysis.json separately from the Object Lock raw evidence bucket, using SSE-KMS." id="p-3SZoKH5IxQxbGdWWH--111">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--110" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="46" width="46" y="7" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--112" parent="p-3SZoKH5IxQxbGdWWH--110" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon S3" vertex="1">
+          <mxGeometry height="27" width="262" x="61" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--113" parent="p-3SZoKH5IxQxbGdWWH--110" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="PII-redacted analysis · SSE-KMS" vertex="1">
+          <mxGeometry height="21" width="262" x="61" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--114" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Insufficient image evidence" vertex="1">
+          <mxGeometry height="23" width="255" x="23" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--115" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="NEEDS_MORE_INFO" vertex="1">
+          <mxGeometry height="24" width="250" x="23" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--116" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="No action  →  NO_ACTION" vertex="1">
+          <mxGeometry height="23" width="330" x="750" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--117" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Manual review  →  NEEDS_REVIEW" vertex="1">
+          <mxGeometry height="23" width="346" x="750" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--118" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="108" width="330" x="834" y="340" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="PrepareApproval receives the Step Functions task token. It persists PENDING_APPROVAL and the token before SNS publish. The Lambda invocation finishes while the state machine waits." id="p-3SZoKH5IxQxbGdWWH--119">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--118" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="138" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--120" parent="p-3SZoKH5IxQxbGdWWH--118" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Prepare approval" vertex="1">
+          <mxGeometry height="25" width="330" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--121" parent="p-3SZoKH5IxQxbGdWWH--118" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Persist token + pending state" vertex="1">
+          <mxGeometry height="20" width="330" y="88" as="geometry" />
+        </mxCell>
+        <UserObject label="Wait for approval" tooltip="Step Functions Standard holds the waitForTaskToken task, with a 48-hour timeout. The Admin API submits a human decision using SendTaskSuccess." id="p-3SZoKH5IxQxbGdWWH--122">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--89" style="rounded=1;arcSize=13;html=0;fillColor=#FBF6FA;strokeColor=#985A85;strokeWidth=1.6;fontStyle=1;fontColor=#382D46;fontFamily=Arial;fontSize=19;align=center;verticalAlign=middle;spacing=0;" vertex="1">
+            <mxGeometry height="50" width="242" x="531" y="342" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--123" parent="p-3SZoKH5IxQxbGdWWH--89" style="ellipse;aspect=fixed;html=0;fillColor=#FFFFFF;strokeColor=#6D507D;strokeWidth=1.8;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#6D507D;align=center;verticalAlign=middle;spacing=0;" value="A" vertex="1">
+          <mxGeometry height="26" width="26" x="639" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--124" parent="p-3SZoKH5IxQxbGdWWH--89" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="129" width="345" x="77.5" y="340" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Approved eligible actions use the Containment Lambda in DRY_RUN. Simulated internal records and the decision are audited. It does not update an email gateway, firewall or WAF." id="p-3SZoKH5IxQxbGdWWH--125">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--124" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#ED7100;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="145.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--126" parent="p-3SZoKH5IxQxbGdWWH--124" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Containment" vertex="1">
+          <mxGeometry height="25" width="345" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--127" parent="p-3SZoKH5IxQxbGdWWH--124" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="DRY_RUN · simulated response" vertex="1">
+          <mxGeometry height="20" width="345" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--128" parent="p-3SZoKH5IxQxbGdWWH--124" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Write outcome and audit trail" vertex="1">
+          <mxGeometry height="20" width="345" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--129" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#2F4458;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="REJECTED" vertex="1">
+          <mxGeometry height="26" width="170" x="478" y="452" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--130" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#2F4458;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="ESCALATED_TIMEOUT" vertex="1">
+          <mxGeometry height="26" width="268" x="712" y="452" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--131" parent="p-3SZoKH5IxQxbGdWWH--89" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#6D507D;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Admin · SendTaskSuccess" vertex="1">
+          <mxGeometry height="24" width="237" x="678" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--132" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="281" width="633" x="1297" y="519" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--133" parent="p-3SZoKH5IxQxbGdWWH--132" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Bedrock and knowledge retrieval" vertex="1">
+          <mxGeometry height="27" width="573" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--134" parent="p-3SZoKH5IxQxbGdWWH--132" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="205" x="1.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="bedrock" id="p-3SZoKH5IxQxbGdWWH--135">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--134" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.bedrock;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#01A88D;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="70.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--136" parent="p-3SZoKH5IxQxbGdWWH--134" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon Bedrock" vertex="1">
+          <mxGeometry height="25" width="205" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--137" parent="p-3SZoKH5IxQxbGdWWH--134" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Nova Lite · Guardrails" vertex="1">
+          <mxGeometry height="20" width="205" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--138" parent="p-3SZoKH5IxQxbGdWWH--132" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="106" width="277" x="278.5" y="73" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Amazon Bedrock Knowledge Bases uses Titan Text Embeddings V2 to index S3 playbooks in S3 Vectors and retrieve supporting passages." id="p-3SZoKH5IxQxbGdWWH--139">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--138" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.bedrock;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#01A88D;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="111.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--140" parent="p-3SZoKH5IxQxbGdWWH--138" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Bedrock Knowledge Bases" vertex="1">
+          <mxGeometry height="25" width="277" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--141" parent="p-3SZoKH5IxQxbGdWWH--138" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Titan Text Embeddings V2" vertex="1">
+          <mxGeometry height="20" width="277" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--142" parent="p-3SZoKH5IxQxbGdWWH--132" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53.5" width="322.5" x="34.5" y="200" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="s3" id="p-3SZoKH5IxQxbGdWWH--143">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--142" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="47" width="47" y="6.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--144" parent="p-3SZoKH5IxQxbGdWWH--142" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="S3 playbooks" vertex="1">
+          <mxGeometry height="27" width="263" x="59.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--145" parent="p-3SZoKH5IxQxbGdWWH--142" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="5 source documents" vertex="1">
+          <mxGeometry height="21" width="263" x="59.5" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--146" parent="p-3SZoKH5IxQxbGdWWH--132" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53.5" width="233.5" x="396.5" y="200" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="s3_vectors" id="p-3SZoKH5IxQxbGdWWH--147">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--146" style="shape=mxgraph.aws4.s3_vectors;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=none;fillColor=#7AA116;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="47" width="47" y="6.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--148" parent="p-3SZoKH5IxQxbGdWWH--146" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="S3 Vectors" vertex="1">
+          <mxGeometry height="27" width="174" x="59.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--149" parent="p-3SZoKH5IxQxbGdWWH--146" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Playbooks index" vertex="1">
+          <mxGeometry height="21" width="174" x="59.5" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--150" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="210" width="633" x="1297" y="829" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--151" parent="p-3SZoKH5IxQxbGdWWH--150" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="SecOps notifications" vertex="1">
+          <mxGeometry height="27" width="573" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--152" parent="p-3SZoKH5IxQxbGdWWH--150" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="108" width="204" x="255" y="30" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Shared SecOps topic. Publishes approval and manual-review notifications and receives both CloudWatch alarm actions." id="p-3SZoKH5IxQxbGdWWH--153">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--152" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="54" width="54" x="75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--154" parent="p-3SZoKH5IxQxbGdWWH--152" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Amazon SNS" vertex="1">
+          <mxGeometry height="25" width="204" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--155" parent="p-3SZoKH5IxQxbGdWWH--152" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="SecOps topic" vertex="1">
+          <mxGeometry height="20" width="204" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--156" parent="p-3SZoKH5IxQxbGdWWH--150" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="104.5" width="158" x="473" y="33.5" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="email_notification" id="p-3SZoKH5IxQxbGdWWH--157">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--156" style="shape=mxgraph.aws4.email_notification;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=none;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="47" width="47" x="63.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--158" parent="p-3SZoKH5IxQxbGdWWH--156" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Subscription" vertex="1">
+          <mxGeometry height="25" width="158" y="56.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--159" parent="p-3SZoKH5IxQxbGdWWH--156" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="SecOps email" vertex="1">
+          <mxGeometry height="20" width="158" y="84.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--160" parent="p-3SZoKH5IxQxbGdWWH--150" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="The analyst opens the portal to review evidence and decide." vertex="1">
+          <mxGeometry height="24" width="589" x="21" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--161" parent="p-3SZoKH5IxQxbGdWWH--25" style="rounded=0;container=1;collapsible=0;connectable=0;recursiveResize=0;fillColor=none;strokeColor=#A5B0BB;strokeWidth=1.2;dashed=1;dashPattern=5 4;pointerEvents=0;html=0;" value="" vertex="1">
+          <mxGeometry height="90" width="1908" x="22" y="1062" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--162" parent="p-3SZoKH5IxQxbGdWWH--161" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=18;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Deployment and encryption" vertex="1">
+          <mxGeometry height="27" width="950" x="15" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--163" parent="p-3SZoKH5IxQxbGdWWH--161" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53.5" width="450.5" x="289.5" y="15" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="key_management_service" id="p-3SZoKH5IxQxbGdWWH--164">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--163" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#DD344C;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="43" width="43" y="10.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--165" parent="p-3SZoKH5IxQxbGdWWH--163" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS KMS" vertex="1">
+          <mxGeometry height="27" width="395" x="55.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--166" parent="p-3SZoKH5IxQxbGdWWH--163" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Encrypts raw and sanitized S3 objects" vertex="1">
+          <mxGeometry height="21" width="395" x="55.5" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--167" parent="p-3SZoKH5IxQxbGdWWH--161" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="53.5" width="438.5" x="829.5" y="15" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="cloudformation" id="p-3SZoKH5IxQxbGdWWH--168">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--167" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudformation;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=#ffffff;fillColor=#E7157B;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="43" width="43" y="10.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--169" parent="p-3SZoKH5IxQxbGdWWH--167" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="AWS CloudFormation" vertex="1">
+          <mxGeometry height="27" width="385" x="53.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--170" parent="p-3SZoKH5IxQxbGdWWH--167" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="AWS SAM application and edge WAF stack" vertex="1">
+          <mxGeometry height="21" width="385" x="53.5" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--171" parent="p-3SZoKH5IxQxbGdWWH--161" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=17;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Network placement" vertex="1">
+          <mxGeometry height="27" width="569" x="1328" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--172" parent="p-3SZoKH5IxQxbGdWWH--161" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=17;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Lambda uses AWS-managed networking." vertex="1">
+          <mxGeometry height="21" width="569" x="1328" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--173" parent="1" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="132.5" width="180" x="3" y="187.5" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="Browser users sign in to the React portal with Amazon Cognito." id="p-3SZoKH5IxQxbGdWWH--174">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--173" style="shape=mxgraph.aws4.users;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=none;fillColor=#232F3D;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="55" width="55" x="60.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--175" parent="p-3SZoKH5IxQxbGdWWH--173" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Portal users" vertex="1">
+          <mxGeometry height="25" width="180" y="63.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--176" parent="p-3SZoKH5IxQxbGdWWH--173" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Reporter · SecOps" vertex="1">
+          <mxGeometry height="20" width="180" y="91.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--177" parent="p-3SZoKH5IxQxbGdWWH--173" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Auditor" vertex="1">
+          <mxGeometry height="20" width="180" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--178" parent="1" style="group;container=1;connectable=0;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="131" width="180" x="4" y="645" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="An employee forwards a suspicious email to the project SOC mailbox." id="p-3SZoKH5IxQxbGdWWH--179">
+          <mxCell parent="p-3SZoKH5IxQxbGdWWH--178" style="shape=mxgraph.aws4.email_2;sketch=0;aspect=fixed;outlineConnect=0;strokeColor=none;fillColor=#232F3D;gradientColor=none;html=0;perimeter=rectanglePerimeter;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1">
+            <mxGeometry height="52" width="52" x="61" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--180" parent="p-3SZoKH5IxQxbGdWWH--178" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#172B40;fontSize=19;fontStyle=1;fontFamily=Arial;connectable=0;resizable=1;" value="Employee" vertex="1">
+          <mxGeometry height="25" width="180" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--181" parent="p-3SZoKH5IxQxbGdWWH--178" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Email client" vertex="1">
+          <mxGeometry height="20" width="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--182" parent="p-3SZoKH5IxQxbGdWWH--178" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#42576A;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="soc@ourprj.site" vertex="1">
+          <mxGeometry height="20" width="180" y="111" as="geometry" />
+        </mxCell>
+        <UserObject label="" tooltip="HTTPS to the CloudFront distribution." id="p-3SZoKH5IxQxbGdWWH--183">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--174" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--8">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="CLOUDFRONT-scope web ACL associated with this distribution." id="p-3SZoKH5IxQxbGdWWH--184">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--11" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=none;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--8">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Default CloudFront behavior uses Origin Access Control for the private S3 web bucket." id="p-3SZoKH5IxQxbGdWWH--185">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--8" style="edgeStyle=none;rounded=0;html=0;exitX=0.25;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--34">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="651.5" y="347" />
+                <mxPoint x="561" y="347" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="CloudFront routes /api/* to the API Gateway HTTP API." id="p-3SZoKH5IxQxbGdWWH--186">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--8" style="edgeStyle=none;rounded=0;html=0;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--38">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="678.5" y="329" />
+                <mxPoint x="849" y="329" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Portal users authenticate with Cognito. The web application uses their JWT when calling the HTTP API." id="p-3SZoKH5IxQxbGdWWH--187">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--174" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.92;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="161" y="238.1" />
+                <mxPoint x="161" y="400" />
+                <mxPoint x="354" y="400" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="API Gateway JWT authorizer uses the Cognito issuer and audience." id="p-3SZoKH5IxQxbGdWWH--188">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--30" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.5;entryX=0;entryY=0.71;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--38">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="270" y="439" />
+                <mxPoint x="270" y="531" />
+                <mxPoint x="782" y="531" />
+                <mxPoint x="782" y="450.34" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="reporter routes" id="p-3SZoKH5IxQxbGdWWH--189">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--38" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--42">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="admin routes" id="p-3SZoKH5IxQxbGdWWH--190">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--38" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.23;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="919" y="424.42" />
+                <mxPoint x="919" y="390" />
+                <mxPoint x="1367" y="390" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Admin API reads incident and audit records and records authorized decisions." id="p-3SZoKH5IxQxbGdWWH--191">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--46" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--53">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Admin API sends the authenticated human decision using SendTaskSuccess. Continue at A in the workflow." id="p-3SZoKH5IxQxbGdWWH--192">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--46" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.76;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--49">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1471" y="453.04" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Reporter writes pasted text or copies a fixture into the uploads/ prefix. For uploaded files it issues a direct S3 presigned POST." id="p-3SZoKH5IxQxbGdWWH--193">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--42" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.73;entryX=0.78;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--66">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1194" y="451.42" />
+                <mxPoint x="1194" y="565" />
+                <mxPoint x="731.12" y="565" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="The browser uploads the file directly to S3 using the presigned POST." id="p-3SZoKH5IxQxbGdWWH--194">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--174" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.81;entryX=0.2;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--66">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="176" y="232.05" />
+                <mxPoint x="176" y="626" />
+                <mxPoint x="699.8" y="626" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Employee forwards an email by SMTP to soc@ourprj.site." id="p-3SZoKH5IxQxbGdWWH--195">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--179" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--62">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="First SES receipt action stores the raw email under inbound/." id="p-3SZoKH5IxQxbGdWWH--196">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--62" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--66">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="S3 ObjectCreated triggers Ingest for uploads/ only." id="p-3SZoKH5IxQxbGdWWH--197">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--66" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--71">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Second SES receipt action invokes Ingest for inbound/ with mail verdicts." id="p-3SZoKH5IxQxbGdWWH--198">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--62" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.77;entryX=0;entryY=0.77;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--71">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="453" y="685.58" />
+                <mxPoint x="453" y="778" />
+                <mxPoint x="964" y="778" />
+                <mxPoint x="964" y="685.58" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Persist raw object, version ID and SHA-256 before workflow execution." id="p-3SZoKH5IxQxbGdWWH--199">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--71" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--75">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Lambda asynchronous failure destination after Ingest retries." id="p-3SZoKH5IxQxbGdWWH--200">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--71" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.25;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--82">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1118" y="657.5" />
+                <mxPoint x="1118" y="626" />
+                <mxPoint x="1647" y="626" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="ApproximateNumberOfMessagesVisible drives the Ingest DLQ alarm." id="p-3SZoKH5IxQxbGdWWH--201">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--82" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--86">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="StartExecution with incident ID, raw S3 key and version, evidence SHA-256 and source channel." id="p-3SZoKH5IxQxbGdWWH--202">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--71" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.79;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--92">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1157" y="686.66" />
+                <mxPoint x="1157" y="808" />
+                <mxPoint x="550" y="808" />
+                <mxPoint x="550" y="881" />
+                <mxPoint x="348" y="881" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="state extract" id="p-3SZoKH5IxQxbGdWWH--203">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--92" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--96">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Images with insufficient readable evidence and no usable QR URL finish as NEEDS_MORE_INFO." id="p-3SZoKH5IxQxbGdWWH--204">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--96" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.77;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--114">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="535" y="944.58" />
+                <mxPoint x="535" y="1056.5" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Proceed to deterministic triage when evidence quality is sufficient." id="p-3SZoKH5IxQxbGdWWH--205">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--96" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--101">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="state synthesis" id="p-3SZoKH5IxQxbGdWWH--206">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--101" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--106">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Write PII-redacted analysis to a separate S3 bucket using SSE-KMS." id="p-3SZoKH5IxQxbGdWWH--207">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--96" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.79;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--111">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="746" y="945.66" />
+                <mxPoint x="746" y="1038" />
+                <mxPoint x="625" y="1038" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Use Bedrock Converse with Amazon Nova Lite and the project Guardrail." id="p-3SZoKH5IxQxbGdWWH--208">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--106" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--135">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Retrieve relevant playbook passages from Bedrock Knowledge Bases." id="p-3SZoKH5IxQxbGdWWH--209">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--106" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.23;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--139">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1358" y="915.42" />
+                <mxPoint x="1358" y="885" />
+                <mxPoint x="1947" y="885" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Sync the five source documents into the knowledge base for indexing." id="p-3SZoKH5IxQxbGdWWH--210">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--143" style="edgeStyle=none;rounded=0;html=0;exitX=0.5;exitY=0;entryX=0;entryY=0.76;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--139">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1588" y="1024" />
+                <mxPoint x="1815" y="1024" />
+                <mxPoint x="1815" y="944.04" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="The knowledge base uses a vector index in a separate S3 vector bucket." id="p-3SZoKH5IxQxbGdWWH--211">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--139" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--147">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2116" y="930" />
+                <mxPoint x="2116" y="1019" />
+                <mxPoint x="1984" y="1019" />
+                <mxPoint x="1984" y="1060" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Proposals without an eligible action end as NO_ACTION or may notify SecOps for manual review." id="p-3SZoKH5IxQxbGdWWH--212">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--106" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.78;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--116">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1110" y="945.12" />
+                <mxPoint x="1110" y="1026" />
+                <mxPoint x="1170" y="1026" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Enter the approval task only for an eligible action." id="p-3SZoKH5IxQxbGdWWH--213">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--106" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.78;entryX=1;entryY=0.28;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--119">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1409" y="945.12" />
+                <mxPoint x="1409" y="1185.12" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="PrepareApproval saves the token and PENDING_APPROVAL first, then publishes to the SNS topic. Manual review also notifies SecOps." id="p-3SZoKH5IxQxbGdWWH--214">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--119" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.69;entryX=0;entryY=0.69;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--153">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="The Step Functions Lambda callback integration holds the execution until the decision or timeout." id="p-3SZoKH5IxQxbGdWWH--215">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--119" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--122">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Continuation A from the Admin API. SendTaskSuccess carries the approve or reject decision to the waiting execution." id="p-3SZoKH5IxQxbGdWWH--216">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--123" style="edgeStyle=none;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--122">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="An approved decision invokes containment. Rejection and timeout follow their own terminal paths." id="p-3SZoKH5IxQxbGdWWH--217">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--122" style="edgeStyle=none;rounded=0;html=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--125">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="A rejected decision records REJECTED." id="p-3SZoKH5IxQxbGdWWH--218">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--122" style="edgeStyle=none;rounded=0;html=0;exitX=0.25;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--129">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="846.5" y="1253" />
+                <mxPoint x="818" y="1253" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="After 172800 seconds the approval task times out and the case becomes ESCALATED_TIMEOUT." id="p-3SZoKH5IxQxbGdWWH--219">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--122" style="edgeStyle=none;rounded=0;html=0;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=2.0;strokeColor=#33495C;dashed=0;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--130">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="967.5" y="1253" />
+                <mxPoint x="1101" y="1253" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="Both incident-processing alarms notify the same SecOps topic." id="p-3SZoKH5IxQxbGdWWH--220">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--86" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--153">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2174" y="671" />
+                <mxPoint x="2174" y="1124" />
+                <mxPoint x="1887" y="1124" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" tooltip="SNS delivers to the confirmed SecOps email subscription." id="p-3SZoKH5IxQxbGdWWH--221">
+          <mxCell edge="1" parent="1" source="p-3SZoKH5IxQxbGdWWH--153" style="edgeStyle=none;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;endArrow=block;endFill=1;endSize=8;strokeWidth=1.8;strokeColor=#6D507D;dashed=1;dashPattern=6 4;jumpStyle=arc;jumpSize=8;" target="p-3SZoKH5IxQxbGdWWH--157">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--222" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="HTTPS" vertex="1">
+          <mxGeometry height="20" width="61" x="354.5" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--223" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Web ACL association" vertex="1">
+          <mxGeometry height="20" width="153" x="770" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--224" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Default · S3 OAC" vertex="1">
+          <mxGeometry height="20" width="127" x="498.5" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--225" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="/api/*" vertex="1">
+          <mxGeometry height="20" width="46" x="826" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--226" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="JWT authorizer" vertex="1">
+          <mxGeometry height="20" width="113" x="501.5" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--227" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Reporter routes" vertex="1">
+          <mxGeometry height="20" width="113" x="921" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--228" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Admin routes" vertex="1">
+          <mxGeometry height="20" width="100" x="1070" y="377" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--229" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Read / write" vertex="1">
+          <mxGeometry height="20" width="90" x="1459" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--230" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Text / sample copy" vertex="1">
+          <mxGeometry height="20" width="136" x="878" y="554" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--231" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Direct presigned POST" vertex="1">
+          <mxGeometry height="20" width="166" x="409" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--232" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="SMTP forward" vertex="1">
+          <mxGeometry height="20" width="107" x="185" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--233" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="1 · Store inbound/" vertex="1">
+          <mxGeometry height="20" width="131" x="466.5" y="644" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--234" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Sign in" vertex="1">
+          <mxGeometry height="20" width="57" x="193.5" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--235" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="ObjectCreated · uploads/" vertex="1">
+          <mxGeometry height="20" width="178" x="789.5" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--236" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="1 · Write raw" vertex="1">
+          <mxGeometry height="20" width="96" x="1183" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--237" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="After async retries" vertex="1">
+          <mxGeometry height="20" width="132" x="1286" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--238" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="2 · SES invokes with receipt verdicts" vertex="1">
+          <mxGeometry height="20" width="254" x="577" y="768" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--239" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="2 · StartExecution with evidence reference" vertex="1">
+          <mxGeometry height="20" width="293" x="605" y="796" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--240" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Queue depth" vertex="1">
+          <mxGeometry height="20" width="98" x="1763" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--241" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Raw version ref." vertex="1">
+          <mxGeometry height="20" width="120" x="431" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--242" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Converse" vertex="1">
+          <mxGeometry height="20" width="76" x="1407" y="913" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--243" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Retrieve" vertex="1">
+          <mxGeometry height="20" width="67" x="1631" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--244" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Eligible action" vertex="1">
+          <mxGeometry height="20" width="104" x="1357" y="1101" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--245" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Alarm action" vertex="1">
+          <mxGeometry height="20" width="95" x="2058" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--246" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Reject" vertex="1">
+          <mxGeometry height="20" width="54" x="765" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--247" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="48-hour timeout" vertex="1">
+          <mxGeometry height="20" width="117" x="1017" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--248" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Approve" vertex="1">
+          <mxGeometry height="20" width="67" x="618" y="1174" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--249" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="waitForTaskToken" vertex="1">
+          <mxGeometry height="20" width="132" x="1061.5" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--250" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Publish after token save" vertex="1">
+          <mxGeometry height="20" width="172" x="1534.5" y="1196" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--251" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#6D507D;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Email" vertex="1">
+          <mxGeometry height="20" width="49" x="1982" y="1173" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--252" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Index" vertex="1">
+          <mxGeometry height="20" width="48" x="2033" y="1009" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--253" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=center;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=#FFFFFF;fontColor=#2F4458;fontSize=15;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;pointerEvents=0;" value="Sync" vertex="1">
+          <mxGeometry height="20" width="45" x="1714" y="1013" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--254" parent="1" style="shape=line;html=0;strokeColor=#33495C;strokeWidth=2;dashed=0;dashPattern=6 4;" value="" vertex="1">
+          <mxGeometry height="1" width="37" x="1336" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--255" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#2F4458;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Request or processing" vertex="1">
+          <mxGeometry height="26" width="202" x="1381" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--256" parent="1" style="shape=line;html=0;strokeColor=#6D507D;strokeWidth=2;dashed=1;dashPattern=6 4;" value="" vertex="1">
+          <mxGeometry height="1" width="37" x="1598" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--257" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#2F4458;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Control or notification" vertex="1">
+          <mxGeometry height="26" width="202" x="1643" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--258" parent="1" style="ellipse;aspect=fixed;html=0;fillColor=#FFFFFF;strokeColor=#6D507D;strokeWidth=1.8;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#6D507D;align=center;verticalAlign=middle;spacing=0;" value="A" vertex="1">
+          <mxGeometry height="26" width="26" x="1885" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="p-3SZoKH5IxQxbGdWWH--259" parent="1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;rounded=0;strokeColor=none;fillColor=none;fontColor=#2F4458;fontSize=16;fontStyle=0;fontFamily=Arial;connectable=0;resizable=1;" value="Same approval callback" vertex="1">
+          <mxGeometry height="26" width="265" x="1922" y="31" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
