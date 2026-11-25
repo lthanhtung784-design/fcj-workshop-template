@@ -1,31 +1,20 @@
 ---
-title: "Workshop"
-date: 2024-01-01
+title: "5. Workshop"
 weight: 5
 chapter: false
-pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+An employee forwards a suspicious email while a colleague submits a screenshot of the same campaign. SecOps needs to preserve both originals, establish who can read each report and record the reason for a decision. This lab builds that process in US East (N. Virginia).
 
-#### Overview
+**Outcome.** Submit text, an image or an email, trace one incident from intake to evidence and verify an approved dry-run action or a documented alternative outcome. For a fresh account follow sections in order. For an existing demo, begin with the account inventory in 5.5.1 and revisit the setup steps that differ.
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
-
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
-
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
-
-#### Content
-
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+| Section | Outcome |
+|---|---|
+| [5.1 · Problem and architecture](overview/) | Trace a report and see where evidence is preserved. |
+| [5.2 · Prerequisites](prepare/) | Prepare the account, access, tooling and lab bundle. |
+| [5.3 · Deploy the application](deploy/) | Deploy the backend, portal and edge protection in order. |
+| [5.4 · Connect email and AI](integrations/) | Configure mail intake, sync playbooks and verify retrieval. |
+| [5.5 · Verify the deployment](verify/) | Run the account, access, approval and image checks. |
+| [5.6 · Well-Architected review](operations/) | Examine operational risks and evidence against six pillars. |
+| [5.7 · COST · Estimate and billing](cost/) | Rebuild the monthly estimate and reconcile the billing export. |
+| [5.8 · Clean up resources](cleanup/) | Remove billable resources in dependency order. |

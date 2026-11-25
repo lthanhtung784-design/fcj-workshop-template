@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin bên dưới chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
+
 
 Phần này liệt kê và giới thiệu các bài blog đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj), tập trung vào cơ chế bảo mật AWS, nguyên tắc least privilege, bảo vệ dữ liệu và ứng phó sự cố.
 
