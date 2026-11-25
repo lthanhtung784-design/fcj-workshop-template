@@ -1,9 +1,9 @@
----
+﻿---
 title: "WAF, RAG và giải mã QR"
 weight: 10
 ---
 
-[PhishGuard-WAF-RAG-QR.zip]({{< asset "downloads/PhishGuard-WAF-RAG-QR.zip" >}})
+[PhishGuard-WAF-RAG-QR.zip](/downloads/PhishGuard-WAF-RAG-QR.zip)
 
 Bắt đầu trên stack PhishGuard demo đang chạy ở us-east-1, profile phishguard, chế độ DRY_RUN. File này hướng dẫn thao tác trên Windows. Các kết quả live bên dưới là tiêu chí để người vận hành kiểm tra. Gói có mã và mẫu đã thử cục bộ. Các thao tác deploy WAF, ingest tài liệu và gửi report phát sinh hoạt động trên tài khoản của bạn.
 
@@ -243,3 +243,4 @@ Test-Path .\public\vi\5-workshop\index.html
 Kết quả cuối là True. Commit nguồn trên main theo phần GitHub Pages của README. GitHub Actions tạo lại thư mục public khi xuất bản. Theme đã có trong ZIP. Nếu muốn dùng Git để push và máy chưa có Git, cài bằng `winget install --id Git.Git -e`, mở lại PowerShell rồi chạy `git --version`.
 
 [Tải Hugo v0.134.3](https://github.com/gohugoio/hugo/releases/tag/v0.134.3) · [Cài Hugo cho Windows](https://gohugo.io/installation/windows/)
+

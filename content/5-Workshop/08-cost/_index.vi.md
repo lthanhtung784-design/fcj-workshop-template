@@ -1,4 +1,4 @@
----
+﻿---
 title: "COST · Dự toán và chi phí quan sát"
 weight: 8
 chapter: false
@@ -35,7 +35,7 @@ Bảng lấy biểu WAF theo ACL/rule áp dụng cho kỳ workshop tháng 11/202
 
 Bảng sử dụng giá niêm yết cho phần lớn dịch vụ, dành riêng hai giả định về hạn mức cho CloudFront và Cognito. Credit, ưu đãi còn lại, phí truy vấn Billing và thuế phụ thuộc tài khoản. Nếu DNS dùng chung và không phân bổ phần nào cho lab, tổng cơ sở còn **8,87 USD**. Nếu thực sự dùng thêm một dashboard trả phí và một custom metric, cộng khoảng **3,30 USD/tháng** theo giá niêm yết để ra **12,67 USD**. Phí tên miền quy đổi theo **giá gia hạn thực tế mỗi năm ÷ 12**. [CloudFront PAYG](https://aws.amazon.com/cloudfront/faqs/) · [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/) · [Route 53](https://aws.amazon.com/route53/pricing/)
 
-[Tải bảng tính từng đơn vị và nguồn giá (CSV)]({{< asset "downloads/phishguard-cost-inputs.csv" >}})
+[Tải bảng tính từng đơn vị và nguồn giá (CSV)](/downloads/phishguard-cost-inputs.csv)
 
 ## 3. Lập lại dự toán trong AWS Pricing Calculator
 
@@ -66,7 +66,7 @@ File `costs.csv` xuất theo ngày và nhóm theo **Service**, có 20 cột dị
 | Cột Bedrock ngày 23/11 | `-0` |
 | Bedrock / Bedrock Managed Knowledge Base cả kỳ | 0 USD / 0 USD |
 
-Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)]({{< asset "downloads/phishguard-cost-observed.csv" >}})
+Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)](/downloads/phishguard-cost-observed.csv)
 
 ### Chốt phần chỉ chủ tài khoản nhìn thấy
 
@@ -79,3 +79,4 @@ Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của fi
 - **WAF chiếm khoảng 75% mức cơ sở.** Với lab ít request, giữ probe trong thời gian kiểm thử cần thiết và dùng alarm đã có để theo dõi lỗi. Chỉ thêm dashboard trả phí khi có người sử dụng thường xuyên.
 - **Đo AI và OCR ở đúng bước.** Tách ảnh khỏi văn bản khi đo `Billed Duration` của Extract. Với Synthesize, đo token thực tế và số ca thật sự tới bước này trước khi chỉnh độ dài ngữ cảnh hoặc đổi model. Hai lớp kiểm soát dễ bị tính sót là Guardrails và truy vấn KB. [Lambda](https://aws.amazon.com/lambda/pricing/) · [Bedrock](https://aws.amazon.com/bedrock/pricing/) · [S3 Vectors](https://aws.amazon.com/s3/pricing/)
 - **Dọn theo vòng đời dữ liệu.** Kiểm tra log retention, các phiên bản object cũ và bucket intake sau demo. Giữ thời hạn bảo toàn bằng chứng của bucket evidence. So sánh lại dự toán khi có số đo dung lượng hoặc thời lượng OCR mới. [S3](https://aws.amazon.com/s3/pricing/) · [KMS](https://aws.amazon.com/kms/pricing/)
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Reconcile the AWS account"
 weight: 6
 chapter: false
@@ -25,9 +25,10 @@ $recipient = Read-Host 'SES lab recipient'
 .\.venv\Scripts\python.exe ..\tools\audit_phishguard.py --profile phishguard --region us-east-1 --stack phishguard-ai --recipient $recipient --output .\phishguard-account.json
 ```
 
-![Both PhishGuard alarms were OK with actions enabled at the time of capture.]({{< asset "images/phishguard/alarms.png" >}})
+![Both PhishGuard alarms were OK with actions enabled at the time of capture.](/images/phishguard/alarms.png)
 
 An OK alarm confirms current state. To attest email delivery, retain an actual notification matched to the incident. To attest model traffic, use the runtime metrics in the cost chapter.
 
 
 **Additional evidence from the implementation notes.** The General screenshot shows PAYG at capture time. The Behaviors screenshot documents /api/*. Check the attached web ACL in Security and the OAC on the S3 origin to complete the account record.
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.5.1 · Account and monitoring"
 weight: 1
 chapter: false
@@ -27,10 +27,11 @@ $recipient = Read-Host 'SES lab recipient'
 .\.venv\Scripts\python.exe ..\tools\audit_phishguard.py --profile $pgProfile --region us-east-1 --stack phishguard-ai --recipient $recipient --output .\phishguard-account.json
 ```
 
-![Both PhishGuard alarms were OK with actions enabled at the time of capture.]({{< asset "images/phishguard/alarms.png" >}})
+![Both PhishGuard alarms were OK with actions enabled at the time of capture.](/images/phishguard/alarms.png)
 
 An OK alarm confirms current state. To attest email delivery, retain an actual notification matched to the incident. To attest model traffic, use the runtime metrics in the cost chapter.
 
 ### Later evidence · 23–24 November
 
 The separate web ACL was associated and the probe produced 200/403. The final ordinary/marked pair returned 200/200. The KB ingestion job scanned five documents and added two with zero failures. The portal recorded the four image cases in 5.5.3. Keep these dated checks alongside the earlier read-only snapshot. An AccessDenied result from the earlier identity leaves that particular API check unverified.
+

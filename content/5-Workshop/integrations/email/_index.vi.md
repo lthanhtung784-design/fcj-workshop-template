@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.4.1 · Nhận thư qua SES"
 weight: 1
 chapter: false
@@ -16,10 +16,11 @@ chapter: false
 
 SES hiển thị DKIM configuration là Successful và chữ ký Enabled. Tiếp theo, kiểm tra rule trong bộ đang active rồi đối chiếu một email chuyển tiếp với incident.
 
-![Kiểm tra domain nhận thư]({{< asset "images/phishguard/mail-dkim.png" >}})
+![Kiểm tra domain nhận thư](/images/phishguard/mail-dkim.png)
 
 ### Gọi Ingest sau khi giao thư vào S3
 
 Ở action thứ hai của receipt rule, chọn PhishGuard-Ingest và Event invocation. Action thứ nhất phải lưu thư MIME vào inbound/. Ảnh ghi nhận lựa chọn trong lúc cấu hình.
 
-![Gọi Ingest sau khi giao thư vào S3]({{< asset "images/phishguard/ses-invoke.png" >}})
+![Gọi Ingest sau khi giao thư vào S3](/images/phishguard/ses-invoke.png)
+

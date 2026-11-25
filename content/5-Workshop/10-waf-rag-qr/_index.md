@@ -1,9 +1,9 @@
----
+﻿---
 title: "CloudFront WAF, playbooks and QR images"
 weight: 10
 ---
 
-Use [PhishGuard-WAF-RAG-QR.zip]({{< asset "downloads/PhishGuard-WAF-RAG-QR.zip" >}}) for the incremental patch, native Linux QR layer, two playbooks, test fixtures and WAF template. Extract to Downloads/PhishGuard-WAF-RAG-QR. Work from the existing Tesseract-based demo project in the same PowerShell session. The following are live acceptance criteria. The account owner performs deployment and association.
+Use [PhishGuard-WAF-RAG-QR.zip](/downloads/PhishGuard-WAF-RAG-QR.zip) for the incremental patch, native Linux QR layer, two playbooks, test fixtures and WAF template. Extract to Downloads/PhishGuard-WAF-RAG-QR. Work from the existing Tesseract-based demo project in the same PowerShell session. The following are live acceptance criteria. The account owner performs deployment and association.
 
 ## Account and distribution
 
@@ -180,3 +180,4 @@ $hugo = Join-Path $toolsDir 'hugo.exe'
 if ($LASTEXITCODE -ne 0) { throw 'Hugo build failed.' }
 Test-Path .\public\vi\5-workshop\index.html
 ```
+

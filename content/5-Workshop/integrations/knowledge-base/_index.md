@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.4.2 · Playbooks and Bedrock"
 weight: 2
 chapter: false
@@ -44,4 +44,5 @@ Inspect the completed job’s added and failed counts. The demo job scanned five
 
 Record the filename and passage returned. Then inspect the actual citations or fallback reason for H05/H11 in the portal. The application generates its own query, so its citations can differ from the interactive test.
 
-![Latest ingestion scanned five documents, added two and reported zero failures.]({{< asset "images/phishguard/kb-sync.png" >}})
+![Latest ingestion scanned five documents, added two and reported zero failures.](/images/phishguard/kb-sync.png)
+

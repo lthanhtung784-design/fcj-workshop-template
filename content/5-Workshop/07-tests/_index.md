@@ -1,4 +1,4 @@
----
+﻿---
 title: "Verify H01–H15"
 weight: 7
 chapter: false
@@ -36,9 +36,9 @@ The last two commands create test reports. On a DRY_RUN deployment the admin and
 .\.venv\Scripts\python.exe scripts/check_phase_h_live.py --profile phishguard --expired (Read-Host "Expired incident ID")
 ```
 
-![H14 · expired approval in the dashboard]({{< asset "images/phishguard/h14.png" >}})
+![H14 · expired approval in the dashboard](/images/phishguard/h14.png)
 
-![Execution for the benign path reaches MarkNoAction and Done.]({{< asset "images/phishguard/workflow.png" >}})
+![Execution for the benign path reaches MarkNoAction and Done.](/images/phishguard/workflow.png)
 
 ## Reproduce from the portal
 
@@ -48,34 +48,35 @@ As a reporter, upload `fixtures/phase-h/H05-return-path.eml` and `H11-manual-rev
 
 Read the two IDs on the H02 line, then the two pairs of owner-read and foreign-read checks. H01 verifies retry handling for one reporter. H02 tests isolation across reporters. H03 records the expected 409 and 400 responses.
 
-![H01–H03 · Follow the incident IDs]({{< asset "images/phishguard/h01-h03.png" >}})
+![H01–H03 · Follow the incident IDs](/images/phishguard/h01-h03.png)
 
 ### H05 · Inspect forwarded headers
 
 Open the email authentication panel. The differing From and Return-Path domains are visible, and the reported verdict is INDETERMINATE with source EMBEDDED_UNVERIFIED.
 
-![H05 · Inspect forwarded headers]({{< asset "images/phishguard/h05-auth.png" >}})
+![H05 · Inspect forwarded headers](/images/phishguard/h05-auth.png)
 
 ### H11 · Submit the review fixture
 
 Sign in as Reporter and select H11-manual-review.eml in the upload tab. Submit once and save the returned incident ID.
 
-![H11 · Submit the review fixture]({{< asset "images/phishguard/h11-upload.png" >}})
+![H11 · Submit the review fixture](/images/phishguard/h11-upload.png)
 
 ### H11 · Find the result
 
 The dashboard row shows a risk score of 50/100 and the review status. Open this row to see why it reached the manual-review branch.
 
-![H11 · Find the result]({{< asset "images/phishguard/h11-incident.png" >}})
+![H11 · Find the result](/images/phishguard/h11-incident.png)
 
 ### H11 · Explain the result
 
 The detail panel names three triggered rules and two playbook references. Use the rules to explain the score. Match the SNS notification separately using this incident ID.
 
-![H11 · Explain the result]({{< asset "images/phishguard/h11-rules.png" >}})
+![H11 · Explain the result](/images/phishguard/h11-rules.png)
 
 ### H14 · Verify a late decision
 
 After the approval expired for INC-0607364b5c8f, the terminal recorded H14_LATE_DECISION_409: PASS. Together with the expired dashboard row, this verifies both parts of H14.
 
-![H14 · Verify a late decision]({{< asset "images/phishguard/h14-late.png" >}})
+![H14 · Verify a late decision](/images/phishguard/h14-late.png)
+

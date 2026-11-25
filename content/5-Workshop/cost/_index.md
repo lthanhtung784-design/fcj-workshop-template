@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.7 · COST · Estimate and billing"
 weight: 7
 chapter: false
@@ -37,7 +37,7 @@ The baseline uses the ACL/rule tariff for the November 2026 workshop. Check the 
 
 Most lines use list rates. CloudFront and Cognito assume an eligible allowance is available. Credits, other free allowances, billing query fees and tax depend on the account. If DNS is shared and no DNS cost is allocated to the lab, the baseline is **USD 8.87**. One billable dashboard and one billable custom metric would add about **USD 3.30**, bringing the original full-zone scenario to **USD 12.67**. Add the registrar’s **actual annual renewal divided by 12** to budget for the domain. [CloudFront PAYG](https://aws.amazon.com/cloudfront/faqs/) · [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/) · [Route 53](https://aws.amazon.com/route53/pricing/)
 
-[Download the unit-by-unit estimate with rate sources (CSV)]({{< asset "downloads/phishguard-cost-inputs.csv" >}})
+[Download the unit-by-unit estimate with rate sources (CSV)](/downloads/phishguard-cost-inputs.csv)
 
 ## 3. Reproduce the estimate in AWS Pricing Calculator
 
@@ -68,7 +68,7 @@ The daily `costs.csv` export is grouped by **Service**. It has 20 service/catego
 | Bedrock column, 23 November | `-0` |
 | Bedrock / Bedrock Managed Knowledge Base, period total | 0 USD / 0 USD |
 
-Summing the 23 daily totals reproduces the export’s *Service total*. At cent precision the reported amount is **USD 0.00**. The file groups by service and does not record the selected cost metric, tag filters, token counts or credit breakdown. This is the **total within the exported report’s scope**. The exact project attribution and the reason for the tiny negative balance require further billing detail. [Download the relevant rows extracted from the report (CSV)]({{< asset "downloads/phishguard-cost-observed.csv" >}})
+Summing the 23 daily totals reproduces the export’s *Service total*. At cent precision the reported amount is **USD 0.00**. The file groups by service and does not record the selected cost metric, tag filters, token counts or credit breakdown. This is the **total within the exported report’s scope**. The exact project attribution and the reason for the tiny negative balance require further billing detail. [Download the relevant rows extracted from the report (CSV)](/downloads/phishguard-cost-observed.csv)
 
 ### Finish reconciliation from the billing account
 
@@ -81,3 +81,4 @@ Summing the 23 daily totals reproduces the export’s *Service total*. At cent p
 - **WAF accounts for about 75% of the baseline.** Keep the probe only while testing and use the existing alarms to monitor failures. Add a paid dashboard when someone has a recurring need for it.
 - **Measure AI and OCR at the step that incurs the charge.** Separate image and text cases when sampling Extract’s `Billed Duration`. For Synthesize, measure tokens and the number of cases that reach this step before changing model or context length. Include Guardrails and KB queries when comparing alternatives. [Lambda](https://aws.amazon.com/lambda/pricing/) · [Bedrock](https://aws.amazon.com/bedrock/pricing/) · [S3 Vectors](https://aws.amazon.com/s3/pricing/)
 - **Clean up according to retention requirements.** Review log retention, older object versions and intake storage after the demo. Preserve the evidence retention period. Recalculate when new measurements of storage volume or OCR duration are available. [S3](https://aws.amazon.com/s3/pricing/) · [KMS](https://aws.amazon.com/kms/pricing/)
+

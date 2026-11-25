@@ -1,10 +1,10 @@
----
+﻿---
 title: "Trình bày và thu dọn"
 weight: 9
 chapter: false
 ---
 
-![Ba fixture demo có sẵn trên cổng báo cáo của PhishGuard]({{< asset "images/phishguard/samples.png" >}})
+![Ba fixture demo có sẵn trên cổng báo cáo của PhishGuard](/images/phishguard/samples.png)
 
 *Hình 7. Các fixture giúp hai người chạy trên cùng một bản deploy so sánh cùng đầu vào.*
 
@@ -16,7 +16,7 @@ chapter: false
 
 Khi chỉ có ba phút, dùng mẫu 1 trong khoảng 90 giây, rồi cho xem một lượt H02 và nhật ký của đúng incident trong khoảng 60 giây. Dùng phần còn lại để mở chi phí và nói rõ hiệu lực của `DRY_RUN`. Đính kèm link video hoặc live demo do nhóm kiểm soát.
 
-![Phần hiển thị chữ tiếng Việt sau OCR của một báo cáo ảnh vô hại]({{< asset "images/phishguard/ocr-vi.png" >}})
+![Phần hiển thị chữ tiếng Việt sau OCR của một báo cáo ảnh vô hại](/images/phishguard/ocr-vi.png)
 
 *Hình 8. Thông báo bảo trì máy in cho thấy hệ thống đọc được dấu tiếng Việt và hiển thị rủi ro thấp trên đầu vào đối chứng.*
 
@@ -33,3 +33,4 @@ PhishGuard đặt ra một câu hỏi ở cấp tổ chức: “Báo cáo này �
 5. Rà CloudFormation, S3, S3 Vectors, Bedrock Guardrail, IAM role, Cognito domain, CloudWatch logs/alarms, SQS, SNS, Route 53, Budgets và bucket artifact SAM nếu dành riêng cho lab. Chỉ lên lịch xóa KMS key sau khi xác định dữ liệu nào còn cần giải mã. Kiểm tra Bills/Cost Explorer lại sau khi số liệu cập nhật, gồm phí domain gia hạn tự động nếu mua riêng.
 
 **Hồ sơ nộp.** Workshop và sơ đồ chỉnh sửa được, minh chứng H01–H15, ảnh hai alarm, kết quả đối chiếu WAF/CloudFront, estimate có link hoặc bản xuất, số chi theo kỳ và video hoặc link demo. Sáu tiêu chí trình bày dùng theo barem FCAJ mà nhóm cung cấp. [Barem Workshop](https://hcm-rules.awsfcaj.com/scoring/workshop) · [Quy định về Workshop](https://hcm-rules.awsfcaj.com/3-project/)
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.5.2 · Nghiệm thu H01–H15"
 weight: 2
 chapter: false
@@ -34,11 +34,11 @@ Bảng dưới ghi **điều kiện đạt của từng ca**. Các ảnh và log
 
 Hai lệnh sau lệnh chạy cục bộ tạo dữ liệu thử trên account lab. Người đã có minh chứng đúng phiên bản có thể dùng lại. Với bộ mẫu cần phê duyệt, dùng `verify_admin_api.py` cho DEMO_1 và `verify_group2_samples.py` cho DEMO_2/3 trên stack ở `DRY_RUN`. Khi script ghi `SKIPPED` hoặc `UNVERIFIED`, dùng đúng trạng thái này cho phần chưa quan sát.
 
-![Lịch sử các bước của một execution đi qua MarkNoAction và Done]({{< asset "images/phishguard/workflow.png" >}})
+![Lịch sử các bước của một execution đi qua MarkNoAction và Done](/images/phishguard/workflow.png)
 
 *Ở nhánh thông báo nội bộ, MarkNoAction rồi Done giải thích vì sao Step Functions báo Succeeded trong khi nghiệp vụ là NO_ACTION.*
 
-![H14 · expired approval in the dashboard]({{< asset "images/phishguard/h14.png" >}})
+![H14 · expired approval in the dashboard](/images/phishguard/h14.png)
 
 Lưu riêng ảnh “Quá hạn duyệt” và phản hồi 409 khi thử quyết định muộn. Dòng 172800 giây trong kết quả audit xác nhận giá trị hiện tại.
 
@@ -52,34 +52,35 @@ Với H14 trên stack demo, ghi lại timeout cũ, dùng hàm `Update-PgStack` �
 
 Tìm hai mã trên dòng H02, rồi đọc hai cặp kiểm tra quyền ngay dưới. H01 kiểm tra gửi lặp của cùng người. H02 kiểm tra quyền giữa hai người báo cáo. H03 ghi nhận đúng hai phản hồi 409 và 400.
 
-![H01–H03 · Đọc kết quả theo mã sự cố]({{< asset "images/phishguard/h01-h03.png" >}})
+![H01–H03 · Đọc kết quả theo mã sự cố](/images/phishguard/h01-h03.png)
 
 ### H05 · Đọc kết quả xác thực email
 
 Trong bảng xác thực, hai miền From và Return-Path khác nhau. Hệ thống ghi INDETERMINATE với nguồn EMBEDDED_UNVERIFIED cho các header khai báo.
 
-![H05 · Đọc kết quả xác thực email]({{< asset "images/phishguard/h05-auth.png" >}})
+![H05 · Đọc kết quả xác thực email](/images/phishguard/h05-auth.png)
 
 ### H11 · Gửi mẫu cần kiểm tra
 
 Đăng nhập Reporter, chọn H11-manual-review.eml ở tab tải bằng chứng, bấm Gửi phân tích một lần và lưu mã sự cố.
 
-![H11 · Gửi mẫu cần kiểm tra]({{< asset "images/phishguard/h11-upload.png" >}})
+![H11 · Gửi mẫu cần kiểm tra](/images/phishguard/h11-upload.png)
 
 ### H11 · Tìm kết quả
 
 Dòng tương ứng trên dashboard hiện 50/100 và trạng thái Cần kiểm tra. Mở chính dòng này để đọc các luật đã kích hoạt.
 
-![H11 · Tìm kết quả]({{< asset "images/phishguard/h11-incident.png" >}})
+![H11 · Tìm kết quả](/images/phishguard/h11-incident.png)
 
 ### H11 · Giải thích kết quả
 
 Trang chi tiết có ba luật kích hoạt và hai nguồn RAG là playbook 03 (dấu hiệu lừa đảo) và 02 (xác minh chuyển khoản). Sự cố ngày 18/11 có trước lần đồng bộ bổ sung playbook 04 và 05 ngày 23/11. Dùng các luật để giải thích điểm. Đối chiếu riêng thư SNS bằng cùng mã sự cố.
 
-![H11 · Giải thích kết quả]({{< asset "images/phishguard/h11-rules.png" >}})
+![H11 · Giải thích kết quả](/images/phishguard/h11-rules.png)
 
 ### H14 · Kiểm tra quyết định muộn
 
 Sau khi INC-0607364b5c8f quá hạn, terminal hiện H14_LATE_DECISION_409: PASS. Ghép kết quả này với dòng Quá hạn duyệt trên dashboard để chứng minh cả hai điều kiện H14.
 
-![H14 · Kiểm tra quyết định muộn]({{< asset "images/phishguard/h14-late.png" >}})
+![H14 · Kiểm tra quyết định muộn](/images/phishguard/h14-late.png)
+

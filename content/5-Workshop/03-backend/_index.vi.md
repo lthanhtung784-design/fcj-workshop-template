@@ -1,4 +1,4 @@
----
+﻿---
 title: "Triển khai backend"
 weight: 3
 chapter: false
@@ -19,7 +19,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Kiem tra su kien CloudFormation.' }
 
 Nếu Python cục bộ thiếu native dependency phù hợp cho Lambda, khởi động Docker rồi dùng `sam build --use-container` và triển khai lại bản vừa build. Kiểm tra change set trước khi xác nhận. Trên stack mới, việc tạo tài nguyên là dự kiến. Với stack đang có dữ liệu, xem kỹ bất kỳ mục `Remove` hoặc `Replacement=True` nào liên quan đến bảng và bucket.
 
-![Một change set cập nhật của backend, có cột Operation và Replacement để đối chiếu]({{< asset "images/phishguard/sam-changeset.png" >}})
+![Một change set cập nhật của backend, có cột Operation và Replacement để đối chiếu](/images/phishguard/sam-changeset.png)
 
 *Hình 2. Change set của một lần cập nhật trên bản demo. Stack mới sẽ hiện Add; hình minh họa vị trí đọc tác động của thay đổi.*
 
@@ -40,3 +40,4 @@ $pgOut['WebBucketName']
 ```
 
 **Mốc kiểm tra.** CloudFormation hiện `CREATE_COMPLETE` hoặc `UPDATE_COMPLETE`. Ghi tên web bucket, hostname HTTP API, UserPoolId, UserPoolClientId và SecOpsTopicArn từ **chính stack của bạn**.
+

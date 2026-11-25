@@ -1,4 +1,4 @@
----
+﻿---
 title: "Receive email and connect Bedrock"
 weight: 5
 chapter: false
@@ -33,10 +33,11 @@ Run DEMO_2 and inspect its synthesis source and fallback_reason. A successful KB
 
 The SES identity shows DKIM configuration Successful and signatures Enabled. Next, verify the receipt rule in the active rule set and trace one forwarded email to an incident.
 
-![Verify the receiving domain]({{< asset "images/phishguard/mail-dkim.png" >}})
+![Verify the receiving domain](/images/phishguard/mail-dkim.png)
 
 ### Invoke Ingest after the S3 action
 
 In step 2 of the receipt rule, choose PhishGuard-Ingest and Event invocation. The preceding action must have written the MIME object to inbound/. The screenshot shows the selected settings during setup.
 
-![Invoke Ingest after the S3 action]({{< asset "images/phishguard/ses-invoke.png" >}})
+![Invoke Ingest after the S3 action](/images/phishguard/ses-invoke.png)
+

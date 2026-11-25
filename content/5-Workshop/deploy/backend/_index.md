@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.3.1 · Backend and image processing"
 weight: 1
 chapter: false
@@ -18,7 +18,7 @@ sam deploy --template-file .aws-sam/build/template.yaml --stack-name $pgStack --
 if ($LASTEXITCODE -ne 0) { throw 'Kiem tra su kien CloudFormation.' }
 ```
 
-![Inspect Operation and Replacement in the CloudFormation change set.]({{< asset "images/phishguard/sam-changeset.png" >}})
+![Inspect Operation and Replacement in the CloudFormation change set.](/images/phishguard/sam-changeset.png)
 
 Review the change set. A fresh stack creates resources. For an update, examine replacements and removals of buckets/tables before confirming. If native dependencies fail to build, use Docker with `sam build --use-container` and deploy that build.
 
@@ -45,3 +45,4 @@ aws lambda get-function-configuration --function-name PhishGuard-ExtractRedact -
 ```
 
 Check for the OCR and QR layer versions, 512 MiB and x86_64. If publishing a layer fails, inspect the first CREATE_FAILED event, identify the denied action and resource and have the deployment role reviewed before retrying. Exercise the decoder after portal setup in 5.5.3.
+
