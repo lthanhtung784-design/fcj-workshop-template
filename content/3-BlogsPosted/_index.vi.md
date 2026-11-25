@@ -10,8 +10,8 @@ pre: " <b> 3. </b> "
 
 Phần này liệt kê và giới thiệu các bài blog đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj), tập trung vào cơ chế bảo mật AWS, nguyên tắc least privilege, bảo vệ dữ liệu và ứng phó sự cố.
 
-### [Blog 1 - ...](3.1-Blog1/)
-Điền tóm tắt ngắn cho Blog 1 tại đây khi hoàn thiện nội dung bài gốc trong chuỗi series.
+### [Blog 1 - SQS FIFO CÓ THỰC SỰ ĐẢM BẢO “XỬ LÝ ĐÚNG MỘT LẦN” (EXACTLY-ONCE PROCESSING)?](3.1-Blog1/)
+Bài viết làm rõ lý do xử lý trùng lặp vẫn có thể xảy ra trên hàng đợi Amazon SQS FIFO—chẳng hạn khi hàm Lambda ghi vào DynamoDB thành công nhưng bị timeout trước khi xóa message—bằng cách phân biệt cơ chế chống trùng lặp ở tầng queue (cửa sổ 5 phút, SHA-256 chỉ tính trên message body) với hiệu ứng nghiệp vụ đầu-cuối, đồng thời trình bày cơ chế retry at-least-once của Lambda, idempotency (`ConditionExpression` trên `PutItem`), tác vụ phụ bên ngoài, `ReportBatchItemFailures` trên hàng đợi FIFO, lưu ý khi redrive từ FIFO DLQ và 4 câu hỏi thiết kế hệ thống bất đồng bộ cốt lõi.
 
 ### [Blog 2 - AWS KMS & ENVELOPE ENCRYPTION: MÃ HÓA DỮ LIỆU ĐÃ ĐỦ AN TOÀN CHƯA?](3.2-Blog2/)
 Bài viết phân tích cơ chế envelope encryption trên S3 SSE-KMS (`GenerateDataKey`, data key và KMS key), lý do mã hóa dữ liệu lưu trữ không thay thế phân quyền, vai trò của encryption context (AAD không bí mật), và tác động của S3 Bucket Keys khi giảm chi phí gọi KMS (tới 99%) nhưng đổi mặc định `aws:s3:arn` từ object ARN sang bucket ARN cũng như ảnh hưởng đến việc đánh giá KMS key policy và độ chi tiết CloudTrail.

@@ -10,8 +10,8 @@ pre: " <b> 3. </b> "
 
 This section lists and introduces the blogs posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj), focusing on AWS security mechanics, least privilege, data protection, and incident response.
 
-### [Blog 1 - ...](3.1-Blog1/)
-Add a brief summary for Blog 1 here once its source post is finalized in the series.
+### [Blog 1 - DOES SQS FIFO REALLY GUARANTEE “EXACTLY-ONCE PROCESSING”?](3.1-Blog1/)
+This blog clarifies why duplicate processing can still happen on Amazon SQS FIFO queues—such as when a Lambda function writes to DynamoDB and times out before deleting the message—by distinguishing queue-level deduplication (5-minute window, SHA-256 on message body only) from end-to-end business effects, while covering Lambda at-least-once retries, idempotency (`ConditionExpression` on `PutItem`), external side effects, `ReportBatchItemFailures` on FIFO queues, FIFO DLQ redrive trade-offs, and four core async design questions.
 
 ### [Blog 2 - AWS KMS & ENVELOPE ENCRYPTION: IS DATA ENCRYPTION ALREADY SECURE ENOUGH?](3.2-Blog2/)
 This blog examines how S3 SSE-KMS uses envelope encryption (`GenerateDataKey` and data keys vs. KMS keys), why encryption at rest does not replace authorization, how encryption context works as non-secret AAD, and how S3 Bucket Keys reduce KMS request costs (up to 99%) while shifting default `aws:s3:arn` from object ARN to bucket ARN and affecting KMS policy evaluation and CloudTrail granularity.
