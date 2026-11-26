@@ -4,9 +4,12 @@ weight: 1
 chapter: false
 ---
 
-![PhishGuard AWS architecture with evidence storage and an approval callback](/images/phishguard/architecture.png)
+![PhishGuard AWS architecture with evidence storage and an approval callback](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/PhishGuard-Architecture.png)
 
-[draw.io](/downloads/PhishGuard-Architecture.drawio) · [XML](/downloads/PhishGuard-Architecture.xml) · [SVG](/images/phishguard/architecture.svg)
+[draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio) · [XML](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.xml) · [SVG](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture.svg)
+
+1. Trình duyệt tải React qua CloudFront, đăng nhập Cognito và gửi JWT đến HTTP API. Reporter API và Admin API đọc/ghi DynamoDB để tra hồ sơ, kiểm quyền và ghi quyết định.
+2. Với ảnh hoặc EML, trình duyệt nhận form ký rồi POST trực tiếp đến S3. Với văn bản và mẫu demo, Reporter API ghi hoặc sao chép file. Cả ba đường web tạo `uploads/{uuid}/raw`, sự kiện S3 gọi Ingest. Email đi đường riêng: SES lưu MIME vào `inbound/` rồi gọi Ingest kèm thông tin xác thực lần nhận.
 
 1. The browser loads React through CloudFront. Cognito issues a JWT. The HTTP API validates it for the Reporter and Admin APIs. The APIs use DynamoDB to check ownership, read incidents and record decisions.
 2. A browser uploads an image or EML directly to S3 using a presigned POST returned by the Reporter API. For pasted text or a demo fixture the Reporter API writes/copies the object. All three web paths produce `uploads/{uuid}/raw`. An S3 ObjectCreated notification calls Ingest. SES uses a separate receipt rule: store the original MIME in `inbound/`, then invoke Ingest with receipt verdicts.

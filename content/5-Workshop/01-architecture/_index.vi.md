@@ -4,9 +4,12 @@ weight: 1
 chapter: false
 ---
 
-![PhishGuard AWS architecture with evidence storage and an approval callback](/images/phishguard/PhishGuard-Architecture.png)
+![PhishGuard AWS architecture with evidence storage and an approval callback](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/PhishGuard-Architecture.png)
 
-[draw.io](/downloads/PhishGuard-Architecture.drawio) · [XML](/downloads/PhishGuard-Architecture.xml) · [SVG](/images/phishguard/architecture.svg)
+[draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio) · [XML](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.xml) · [SVG](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture.svg)
+
+1. Trình duyệt tải React qua CloudFront, đăng nhập Cognito và gửi JWT đến HTTP API. Reporter API và Admin API đọc/ghi DynamoDB để tra hồ sơ, kiểm quyền và ghi quyết định.
+2. Với ảnh hoặc EML, trình duyệt nhận form ký rồi POST trực tiếp đến S3. Với văn bản và mẫu demo, Reporter API ghi hoặc sao chép file. Cả ba đường web tạo `uploads/{uuid}/raw`, sự kiện S3 gọi Ingest. Email đi đường riêng: SES lưu MIME vào `inbound/` rồi gọi Ingest kèm thông tin xác thực lần nhận.
 
 1. Trình duyệt tải React qua CloudFront, đăng nhập Cognito và gửi JWT đến HTTP API. Reporter API và Admin API đọc/ghi DynamoDB để tra hồ sơ, kiểm quyền và ghi quyết định.
 2. Với ảnh hoặc EML, trình duyệt nhận form ký rồi POST trực tiếp đến S3. Với văn bản và mẫu demo, Reporter API ghi hoặc sao chép file. Cả ba đường web tạo `uploads/{uuid}/raw`, sự kiện S3 gọi Ingest. Email đi đường riêng: SES lưu MIME vào `inbound/` rồi gọi Ingest kèm thông tin xác thực lần nhận.
