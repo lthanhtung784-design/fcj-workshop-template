@@ -36,7 +36,6 @@ Object Lock Governance protects a raw version for seven days subject to authoriz
 
 For a 30-day month with 300 reports, 90 images and 60 inbound emails, the model estimates **USD 9.37**, including the permanent WAF rules and one hosted zone. The Cost Explorer report for 1–23 November 2026 rounds to **USD 0.00** within its export scope. Before extending the pilot, compare time to triage, false alerts, missed cases and manual review against the current mailbox process using an independently labelled set.
 
-![Deployed architecture](/images/phishguard/architecture-final.png)
+![Deployed architecture]({{< asset "images/phishguard/architecture-final.png" >}})
 
 [Architecture walkthrough](../5-workshop/overview/) · [Cost model and billing evidence](../5-workshop/cost/)
-
