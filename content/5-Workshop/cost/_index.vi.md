@@ -1,9 +1,9 @@
----
+﻿---
 title: "5.7 · COST · Dự toán và chi phí thực tế"
 weight: 7
 chapter: false
 aliases:
-- /vi/5-workshop/08-cost/
+  - /vi/5-workshop/08-cost/
 ---
 
 Với **300 báo cáo trong 30 ngày**, ngân sách dự kiến cho PhishGuard là **9,37 USD**, trước thuế và phí gia hạn tên miền. Cùng khối lượng đó, bản xuất AWS Pricing Calculator cộng ba khoản tính riêng cho kết quả **9,21 USD**. Mục 3 giải thích phần chênh lệch. Tổng trong phạm vi báo cáo Cost Explorer từ **01–23/11/2026** là **0,00 USD** khi làm tròn đến cent (mục 4).
@@ -37,10 +37,11 @@ Bảng lấy biểu WAF theo ACL/rule áp dụng cho kỳ workshop tháng 11/202
 
 Bảng sử dụng giá niêm yết cho phần lớn dịch vụ, dành riêng hai giả định về hạn mức cho CloudFront và Cognito. Credit, ưu đãi còn lại, phí truy vấn Billing và thuế phụ thuộc tài khoản. Nếu DNS dùng chung và không phân bổ phần nào cho lab, tổng cơ sở còn **8,87 USD**. Nếu thực sự dùng thêm một dashboard trả phí và một custom metric, cộng khoảng **3,30 USD/tháng** theo giá niêm yết để ra **12,67 USD**. Phí tên miền quy đổi theo **giá gia hạn thực tế mỗi năm ÷ 12**. [CloudFront PAYG](https://aws.amazon.com/cloudfront/faqs/) · [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/) · [Route 53](https://aws.amazon.com/route53/pricing/)
 
-[Tải bảng tính từng đơn vị và nguồn giá (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-cost-inputs.csv)
+[Tải bảng tính từng đơn vị và nguồn giá (CSV)](/downloads/phishguard-cost-inputs.csv)
+
 ## 3. Đối chiếu với AWS Pricing Calculator
 
-Bản xuất ghi **8,82 USD/tháng**. Trong đó đã có Titan Text Embeddings V2 (130.000 token đầu vào), S3 Vectors (300 truy vấn) và SNS (90 lần publish, 90 email thông báo). Ba khoản dưới đây được cộng riêng để tính đủ chi phí cho kịch bản 30 ngày. [Tải bản xuất gốc từ AWS Pricing Calculator (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-pricing-calculator.csv)
+Bản xuất ghi **8,82 USD/tháng**. Trong đó đã có Titan Text Embeddings V2 (130.000 token đầu vào), S3 Vectors (300 truy vấn) và SNS (90 lần publish, 90 email thông báo). Ba khoản dưới đây được cộng riêng để tính đủ chi phí cho kịch bản 30 ngày. [Tải bản xuất gốc từ AWS Pricing Calculator (CSV)](/downloads/phishguard-pricing-calculator.csv)
 
 | Khoản | Cách tính cho 30 ngày | USD/tháng |
 |---|---|---:|
@@ -66,11 +67,11 @@ Ba dòng trên giải thích khoảng 0,1437 USD chênh lệch. Phần còn lạ
 
 **DynamoDB.** Biểu mẫu ghi 6.000 lượt ghi và 30.000 lượt đọc mỗi tháng, với 100% lượt đọc ở chế độ nhất quán cuối cùng (eventually consistent). Nếu mỗi lượt đọc một item 1 KB, AWS tính nửa đơn vị đọc (RRU) cho mỗi lượt, tổng cộng **15.000 RRU**. Bảng dự toán dùng **30.000 RRU**, tương đương 60.000 lượt đọc cùng loại. Bảng này còn dự trù 0,05 GB-tháng lưu bảng và 0,05 GB-tháng cho PITR. Bản xuất xác nhận dung lượng bảng. Ảnh và CSV chưa cho biết Calculator đã tính PITR hay chưa. [Cách DynamoDB tính đơn vị đọc](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/read-write-operations.html) · [Biểu giá DynamoDB](https://aws.amazon.com/dynamodb/pricing/on-demand/)
 
-![DynamoDB Calculator hiển thị 0,006 triệu lượt ghi, 0,03 triệu lượt đọc và 100% đọc ở chế độ nhất quán cuối cùng.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cost-calculator-dynamodb.png)
+![DynamoDB Calculator hiển thị 0,006 triệu lượt ghi, 0,03 triệu lượt đọc và 100% đọc ở chế độ nhất quán cuối cùng.](/images/phishguard/cost-calculator-dynamodb.png)
 
 **S3 Vectors.** Biểu mẫu có một index, 1.024 vector, 1.024 chiều, **ghi lại 100% số vector mỗi tháng** và **300 truy vấn/tháng**. Mỗi vector có khóa 0,2 KB, metadata dùng để lọc 1 KB và metadata không dùng để lọc 5 KB. Index được cấu hình 1.024 chiều. Số vector và dung lượng metadata là giả định để mô phỏng khoảng 0,01 GB lưu và 0,01 GB ghi. Bản xuất ghi giá trị tỷ lệ là `(1)`. Ảnh bên dưới hiển thị giá trị theo phần trăm. [Biểu giá S3 Vectors](https://aws.amazon.com/s3/pricing/)
 
-![S3 Vectors Calculator hiển thị thông số index, tỷ lệ ghi lại 100% mỗi tháng và 300 truy vấn mỗi tháng.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cost-calculator-s3-vectors.png)
+![S3 Vectors Calculator hiển thị thông số index, tỷ lệ ghi lại 100% mỗi tháng và 300 truy vấn mỗi tháng.](/images/phishguard/cost-calculator-s3-vectors.png)
 
 ### Nhập lại thông số trên Calculator
 
@@ -97,7 +98,7 @@ File `costs.csv` xuất theo ngày và nhóm theo **Service**, có 20 cột dị
 | Cột Bedrock ngày 23/11 | `-0` |
 | Bedrock / Bedrock Managed Knowledge Base cả kỳ | 0 USD / 0 USD |
 
-Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-cost-observed.csv)
+Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)](/downloads/phishguard-cost-observed.csv)
 
 ### Cách đối chiếu với hóa đơn tài khoản
 
@@ -110,3 +111,4 @@ Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của fi
 - **WAF chiếm khoảng 75% mức cơ sở.** Với lab ít request, giữ probe trong thời gian kiểm thử cần thiết và dùng alarm đã có để theo dõi lỗi. Chỉ thêm dashboard trả phí khi có người sử dụng thường xuyên.
 - **Đo AI và OCR ở đúng bước.** Tách ảnh khỏi văn bản khi đo `Billed Duration` của Extract. Với Synthesize, đo token thực tế và số ca thật sự tới bước này trước khi chỉnh độ dài ngữ cảnh hoặc đổi model. Hai lớp kiểm soát dễ bị tính sót là Guardrails và truy vấn KB. [Lambda](https://aws.amazon.com/lambda/pricing/) · [Bedrock](https://aws.amazon.com/bedrock/pricing/) · [S3 Vectors](https://aws.amazon.com/s3/pricing/)
 - **Dọn theo vòng đời dữ liệu.** Kiểm tra log retention, các phiên bản object cũ và bucket intake sau demo. Giữ thời hạn bảo toàn bằng chứng của bucket evidence. So sánh lại dự toán khi có số đo dung lượng hoặc thời lượng OCR mới. [S3](https://aws.amazon.com/s3/pricing/) · [KMS](https://aws.amazon.com/kms/pricing/)
+

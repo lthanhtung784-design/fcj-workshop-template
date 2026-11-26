@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.1 · Bài toán và kiến trúc"
 weight: 1
 chapter: false
@@ -8,9 +8,9 @@ aliases:
 
 Một nhân viên chuyển tiếp thư nghi lừa đảo, còn đồng nghiệp gửi ảnh chụp cùng chiến dịch. SecOps cần giữ bản gốc của từng báo cáo, biết ai được xem và truy lại lý do xử lý. Workshop dựng quy trình này tại US East (N. Virginia).
 
-![Kiến trúc PhishGuard tại us-east-1](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png)
+![Kiến trúc PhishGuard tại us-east-1](/images/phishguard/architecture-final.png)
 
-[Mở sơ đồ đúng độ phân giải](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png) · [draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio)
+[Mở sơ đồ đúng độ phân giải](/images/phishguard/architecture-final.png) · [draw.io](/downloads/PhishGuard-Architecture.drawio)
 
 ### Cách đọc sơ đồ
 
@@ -22,3 +22,4 @@ Một nhân viên chuyển tiếp thư nghi lừa đảo, còn đồng nghiệp 
 6. Admin quyết định trên web. Admin API kiểm quyền, kiểm trạng thái rồi gửi `SendTaskSuccess` mang kết quả về workflow. Từ chối thành `REJECTED`, quá hạn thành `ESCALATED_TIMEOUT`. Duyệt ở chế độ `DRY_RUN` ghi kết quả mô phỏng và audit; mục blocklist nếu có chỉ có hiệu lực trong ứng dụng.
 
 **Hai ranh giới cần chỉ được trên hình.** PhishGuardEdge kiểm lưu lượng đi qua CloudFront. File đi thẳng đến S3 bằng form ký sẵn. Lambda dùng mạng do AWS quản lý trong template SAM này. Khung Region và nhóm dịch vụ thể hiện vị trí và trách nhiệm. Bước QR đọc URL ngay trong ảnh, lược query và fragment khi hiển thị, rồi chuyển chỉ dấu cho Triage. Callback thuộc chính Task của Step Functions gọi PrepareApproval.
+

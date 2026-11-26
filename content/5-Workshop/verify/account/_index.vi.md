@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.5.1 · Tài nguyên và giám sát"
 weight: 1
 chapter: false
@@ -32,7 +32,7 @@ Với tài khoản lab khác, thay `--recipient`. Nếu stack chưa lưu distrib
 | **CloudWatch → Alarms, Metrics** | Hai alarm có actions trỏ topic SecOps. Ảnh dưới đây xác nhận trạng thái tại thời điểm chụp. Chứng minh gửi thư thực tế bằng thư SNS khớp incident hoặc lịch sử alarm nếu đã có lần chuyển trạng thái. | Ảnh hai alarm, metric `PhishGuard / UnverifiedSender` từ H06, log có mốc thời gian. |
 | **Billing and Cost Management → Budgets** | Kiểm cost budget theo tháng, phạm vi và địa chỉ nhận cảnh báo. Có thể dùng ngưỡng thực tế 80% và dự báo 100% trên ngân sách phù hợp với estimate của nhóm. | Tên budget, ngưỡng và trạng thái notification. Budget chỉ cảnh báo; chi phí vẫn có thể tăng. |
 
-![PhishGuard-Workflow-Failed và PhishGuard-Ingest-DLQ-NotEmpty hiện OK và Actions enabled](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/alarms.png)
+![PhishGuard-Workflow-Failed và PhishGuard-Ingest-DLQ-NotEmpty hiện OK và Actions enabled](/images/phishguard/alarms.png)
 
 *Ảnh thực tế của hai CloudWatch alarm. Trạng thái OK tại thời điểm chụp và việc bật action là hai dữ kiện nhìn thấy trong ảnh.*
 
@@ -43,3 +43,4 @@ Trong JSON, `MATCH` là giá trị đã đọc khớp phép kiểm ghi trong cô
 ### Minh chứng bổ sung ngày 23–24/11
 
 Web ACL riêng đã được gắn và probe cho 200/403. Hai GET có và không có header sau khi tắt probe đều trả 200. Lần sync KB quét 5, thêm 2 và lỗi 0. Portal ghi bốn ca ảnh tại 5.5.3. Giữ các lần đối chiếu có ngày này cạnh snapshot cũ. AccessDenied của danh tính đọc ở lần đầu vẫn được ghi chưa xác minh cho chính phép gọi API đó.
+

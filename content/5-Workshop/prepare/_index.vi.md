@@ -1,4 +1,4 @@
----
+﻿---
 title: "5.2 · Chuẩn bị môi trường"
 weight: 2
 chapter: false
@@ -11,7 +11,7 @@ Dùng một tài khoản lab mà người triển khai được phép quản lý
 - Cài Git, Python 3.12 x64, Node.js 22 LTS, AWS CLI v2 và AWS SAM CLI. Docker chỉ cần cho phương án build trong container Linux. Người triển khai cần quyền quản lý stack, đóng gói S3 và triển khai các tài nguyên trong template, gồm quyền chuyển đúng role cho dịch vụ. Người phụ trách Billing cần đọc Bills, Cost Explorer và quản lý Budgets.
 - Chuẩn bị quyền chỉnh DNS trên một domain hoặc subdomain nhận thư. Dùng ba địa chỉ kiểm thử do nhóm sở hữu, riêng cho reporter, admin, auditor; thêm một tài khoản reporter thứ hai để kiểm thử phân tách người dùng.
 - Cấu hình profile AWS tên `phishguard` bằng cơ chế đăng nhập của tài khoản. Profile này chọn danh tính AWS của người triển khai. Các tài khoản `demo-*` đăng nhập ứng dụng bằng Cognito.
-- Giải nén [PhishGuard-Lab.zip](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Lab.zip). Thư mục `lab/` chứa mã thực hành, `tools/` chứa công cụ đọc cấu hình. Các đoạn PowerShell phía dưới dùng chung một cửa sổ terminal trong `lab/`.
+- Giải nén [PhishGuard-Lab.zip](/downloads/PhishGuard-Lab.zip). Thư mục `lab/` chứa mã thực hành, `tools/` chứa công cụ đọc cấu hình. Các đoạn PowerShell phía dưới dùng chung một cửa sổ terminal trong `lab/`.
 
 ```powershell
 Set-Location .\lab
@@ -35,3 +35,4 @@ Trong cùng cửa sổ, kiểm tra layer QR và tài liệu đi kèm bộ lab đ
 Test-Path .\layers\qr-py312-x86_64.zip
 (Get-ChildItem .\kb-docs\playbooks\*.txt).Count
 ```
+
