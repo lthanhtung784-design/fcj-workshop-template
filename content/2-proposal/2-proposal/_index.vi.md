@@ -36,6 +36,6 @@ Object Lock Governance bảo vệ phiên bản raw trong bảy ngày với ngo�
 
 Với 300 báo cáo trong 30 ngày, gồm 90 ảnh và 60 email đến, dự toán là **9,37 USD**, đã tính WAF và một hosted zone. Báo cáo Cost Explorer từ 1–23/11/2026 làm tròn thành **0,00 USD** trong phạm vi bản xuất. Trước khi mở rộng, dùng tập mẫu được gán nhãn độc lập để so thời gian phân loại, số báo nhầm, số bỏ sót và tỷ lệ cần người xem với quy trình xử lý qua hộp thư.
 
-![Kiến trúc triển khai]({{< asset "images/phishguard/architecture-final.png" >}})
+![Kiến trúc triển khai](/images/phishguard/architecture-final.png)
 
 [Giải thích sơ đồ](../5-workshop/overview/) · [Dự toán và minh chứng chi phí](../5-workshop/cost/)
