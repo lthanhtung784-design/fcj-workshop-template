@@ -37,8 +37,7 @@ The baseline uses the ACL/rule tariff for the November 2026 workshop. Check the 
 
 Most lines use list rates. CloudFront and Cognito assume an eligible allowance is available. Credits, other free allowances, billing query fees and tax depend on the account. If DNS is shared and no DNS cost is allocated to the lab, the baseline is **USD 8.87**. One billable dashboard and one billable custom metric would add about **USD 3.30**, bringing the original full-zone scenario to **USD 12.67**. Add the registrar’s **actual annual renewal divided by 12** to budget for the domain. [CloudFront PAYG](https://aws.amazon.com/cloudfront/faqs/) · [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/) · [Route 53](https://aws.amazon.com/route53/pricing/)
 
-[Download the unit-by-unit estimate with rate sources (CSV)]({{< asset "downloads/phishguard-cost-inputs.csv" >}})
-
+[Download the unit-by-unit estimate with rate sources (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-cost-inputs.csv)
 ## 3. AWS Pricing Calculator results
 
 The exported monthly subtotal is **USD 8.82**. It includes Titan Text Embeddings V2 (130,000 input tokens), S3 Vectors (300 queries), and SNS (90 publishes and 90 email deliveries). The three items below complete the estimate. [Download the original AWS Pricing Calculator export (CSV)]({{< asset "downloads/phishguard-pricing-calculator.csv" >}})
