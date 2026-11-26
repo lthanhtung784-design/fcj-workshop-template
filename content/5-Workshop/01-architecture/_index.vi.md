@@ -4,7 +4,7 @@ weight: 1
 chapter: false
 ---
 
-![PhishGuard AWS architecture with evidence storage and an approval callback](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/PhishGuard-Architecture.png)
+![PhishGuard AWS architecture with evidence storage and an approval callback](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png)
 
 [draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio) · [XML](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.xml) · [SVG](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture.svg)
 
