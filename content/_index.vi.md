@@ -17,7 +17,7 @@ chapter: false
 
 &emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** FACJ-FPT-Season 4
+&emsp; **Lớp:** CloudSecurityFPT
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
