@@ -10,10 +10,10 @@ Choose a dedicated receiving subdomain and verify the identity/DKIM records in S
 
 The SES identity shows DKIM configuration Successful and signatures Enabled. Next, verify the receipt rule in the active rule set and trace one forwarded email to an incident.
 
-![Verify the receiving domain]({{< asset "images/phishguard/mail-dkim.png" >}})
+![Verify the receiving domain](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/mail-dkim.png)
 
 ### Invoke Ingest after the S3 action
 
 In step 2 of the receipt rule, choose PhishGuard-Ingest and Event invocation. The preceding action must have written the MIME object to inbound/. The screenshot shows the selected settings during setup.
 
-![Invoke Ingest after the S3 action]({{< asset "images/phishguard/ses-invoke.png" >}})
+![Invoke Ingest after the S3 action](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/ses-invoke.png)

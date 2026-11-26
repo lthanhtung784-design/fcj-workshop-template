@@ -8,9 +8,9 @@ aliases:
 
 An employee forwards a suspicious email while a colleague submits a screenshot of the same campaign. SecOps needs to preserve both originals, establish who can read each report and record the reason for a decision. This lab builds that process in US East (N. Virginia).
 
-![PhishGuard architecture in us-east-1]({{< asset "images/phishguard/architecture-final.png" >}})
+![PhishGuard architecture in us-east-1](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png)
 
-[Open the full-resolution diagram]({{< asset "images/phishguard/architecture-final.png" >}}) · [draw.io]({{< asset "downloads/PhishGuard-Architecture.drawio" >}})
+[Open the full-resolution diagram](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png) · [draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio)
 
 ### How to read the diagram
 

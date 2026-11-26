@@ -3,7 +3,7 @@ title: "5.7 · COST · Estimate and billing"
 weight: 7
 chapter: false
 aliases:
-  - /5-workshop/08-cost/
+- /5-workshop/08-cost/
 ---
 
 For **300 reports in 30 days**, PhishGuard’s planning budget is **USD 9.37** before tax and domain renewal. The AWS Pricing Calculator export plus three separately priced items gives **USD 9.21** for the same workload. Section 3 reconciles the two estimates. The total in the Cost Explorer extract for **1–23 November 2026** rounds to **USD 0.00**. Section 4 explains the scope of that account report.
@@ -40,7 +40,7 @@ Most lines use list rates. CloudFront and Cognito assume an eligible allowance i
 [Download the unit-by-unit estimate with rate sources (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-cost-inputs.csv)
 ## 3. AWS Pricing Calculator results
 
-The exported monthly subtotal is **USD 8.82**. It includes Titan Text Embeddings V2 (130,000 input tokens), S3 Vectors (300 queries), and SNS (90 publishes and 90 email deliveries). The three items below complete the estimate. [Download the original AWS Pricing Calculator export (CSV)]({{< asset "downloads/phishguard-pricing-calculator.csv" >}})
+The exported monthly subtotal is **USD 8.82**. It includes Titan Text Embeddings V2 (130,000 input tokens), S3 Vectors (300 queries), and SNS (90 publishes and 90 email deliveries). The three items below complete the estimate. [Download the original AWS Pricing Calculator export (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-pricing-calculator.csv)
 
 | Component | Calculation for 30 days | USD/month |
 |---|---|---:|
@@ -66,11 +66,11 @@ These three differences account for about USD 0.1437. The remaining USD 0.0142 s
 
 **DynamoDB.** The form shows 6,000 writes and 30,000 reads per month with 100% eventual consistency. For individual 1 KB items, each eventually consistent read uses half a read request unit (RRU), giving **15,000 RRUs**. The planning budget uses **30,000 RRUs**, equivalent to 60,000 such reads. It also budgets 0.05 GB-month of table storage and 0.05 GB-month of PITR. The export confirms the table size. The screenshot and export do not establish whether PITR was included in the Calculator. [DynamoDB read units](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/read-write-operations.html) · [DynamoDB pricing](https://aws.amazon.com/dynamodb/pricing/on-demand/)
 
-![DynamoDB Calculator showing 0.006 million writes, 0.03 million reads and 100% eventual consistency.]({{< asset "images/phishguard/cost-calculator-dynamodb.png" >}})
+![DynamoDB Calculator showing 0.006 million writes, 0.03 million reads and 100% eventual consistency.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cost-calculator-dynamodb.png)
 
 **S3 Vectors.** The form shows one index, 1,024 vectors, 1,024 dimensions, **100% overwritten per month**, and **300 queries per month**. The key is 0.2 KB per vector, with 1 KB of filterable and 5 KB of non-filterable metadata. The index is configured for 1,024 dimensions. The vector count and metadata sizes approximate the budget of 0.01 GB stored and 0.01 GB written. The export displays the overwrite value as `(1)`. The form below shows it as 100%. [S3 Vectors pricing](https://aws.amazon.com/s3/pricing/)
 
-![S3 Vectors Calculator showing the index inputs, 100% monthly overwrite and 300 queries per month.]({{< asset "images/phishguard/cost-calculator-s3-vectors.png" >}})
+![S3 Vectors Calculator showing the index inputs, 100% monthly overwrite and 300 queries per month.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cost-calculator-s3-vectors.png)
 
 ### Reproducing the Calculator inputs
 
@@ -97,7 +97,7 @@ The daily `costs.csv` export is grouped by **Service**. It has 20 service/catego
 | Bedrock column, 23 November | `-0` |
 | Bedrock / Bedrock Managed Knowledge Base, period total | 0 USD / 0 USD |
 
-Summing the 23 daily totals reproduces the export’s *Service total*. At cent precision the reported amount is **USD 0.00**. The file groups by service and does not record the selected cost metric, tag filters, token counts or credit breakdown. This is the **total within the exported report’s scope**. The exact project attribution and the reason for the tiny negative balance require further billing detail. [Download the relevant rows extracted from the report (CSV)]({{< asset "downloads/phishguard-cost-observed.csv" >}})
+Summing the 23 daily totals reproduces the export’s *Service total*. At cent precision the reported amount is **USD 0.00**. The file groups by service and does not record the selected cost metric, tag filters, token counts or credit breakdown. This is the **total within the exported report’s scope**. The exact project attribution and the reason for the tiny negative balance require further billing detail. [Download the relevant rows extracted from the report (CSV)](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/phishguard-cost-observed.csv)
 
 ### Checking the estimate against the account bill
 

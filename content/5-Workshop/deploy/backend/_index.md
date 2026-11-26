@@ -18,7 +18,7 @@ sam deploy --template-file .aws-sam/build/template.yaml --stack-name $pgStack --
 if ($LASTEXITCODE -ne 0) { throw 'Kiem tra su kien CloudFormation.' }
 ```
 
-![Inspect Operation and Replacement in the CloudFormation change set.]({{< asset "images/phishguard/sam-changeset.png" >}})
+![Inspect Operation and Replacement in the CloudFormation change set.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/sam-changeset.png)
 
 Review the change set. A fresh stack creates resources. For an update, examine replacements and removals of buckets/tables before confirming. If native dependencies fail to build, use Docker with `sam build --use-container` and deploy that build.
 

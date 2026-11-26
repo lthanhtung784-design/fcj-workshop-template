@@ -32,7 +32,7 @@ Với tài khoản lab khác, thay `--recipient`. Nếu stack chưa lưu distrib
 | **CloudWatch → Alarms, Metrics** | Hai alarm có actions trỏ topic SecOps. Ảnh dưới đây xác nhận trạng thái tại thời điểm chụp. Chứng minh gửi thư thực tế bằng thư SNS khớp incident hoặc lịch sử alarm nếu đã có lần chuyển trạng thái. | Ảnh hai alarm, metric `PhishGuard / UnverifiedSender` từ H06, log có mốc thời gian. |
 | **Billing and Cost Management → Budgets** | Kiểm cost budget theo tháng, phạm vi và địa chỉ nhận cảnh báo. Có thể dùng ngưỡng thực tế 80% và dự báo 100% trên ngân sách phù hợp với estimate của nhóm. | Tên budget, ngưỡng và trạng thái notification. Budget chỉ cảnh báo; chi phí vẫn có thể tăng. |
 
-![PhishGuard-Workflow-Failed và PhishGuard-Ingest-DLQ-NotEmpty hiện OK và Actions enabled]({{< asset "images/phishguard/alarms.png" >}})
+![PhishGuard-Workflow-Failed và PhishGuard-Ingest-DLQ-NotEmpty hiện OK và Actions enabled](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/alarms.png)
 
 *Ảnh thực tế của hai CloudWatch alarm. Trạng thái OK tại thời điểm chụp và việc bật action là hai dữ kiện nhìn thấy trong ảnh.*
 

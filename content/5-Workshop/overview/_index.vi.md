@@ -8,9 +8,9 @@ aliases:
 
 Một nhân viên chuyển tiếp thư nghi lừa đảo, còn đồng nghiệp gửi ảnh chụp cùng chiến dịch. SecOps cần giữ bản gốc của từng báo cáo, biết ai được xem và truy lại lý do xử lý. Workshop dựng quy trình này tại US East (N. Virginia).
 
-![Kiến trúc PhishGuard tại us-east-1]({{< asset "images/phishguard/architecture-final.png" >}})
+![Kiến trúc PhishGuard tại us-east-1](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png)
 
-[Mở sơ đồ đúng độ phân giải]({{< asset "images/phishguard/architecture-final.png" >}}) · [draw.io]({{< asset "downloads/PhishGuard-Architecture.drawio" >}})
+[Mở sơ đồ đúng độ phân giải](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/architecture-final.png) · [draw.io](https://lthanhtung784-design.github.io/fcj-workshop-template/downloads/PhishGuard-Architecture.drawio)
 
 ### Cách đọc sơ đồ
 

@@ -15,11 +15,11 @@ Dùng reporter của lab. Mở portal qua CloudFront, chọn **tải file** và 
 
 Bảng xếp sự cố mới nhất ở trên. Dòng dưới cùng là ảnh trắng. Dòng thứ hai từ dưới lên là ca QR chứa URL.
 
-![Bốn ảnh theo thứ tự gửi, cũ nhất ở cuối bảng.]({{< asset "images/phishguard/qr-results.png" >}})
+![Bốn ảnh theo thứ tự gửi, cũ nhất ở cuối bảng.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/qr-results.png)
 
 Mở sự cố `INC-9d7627a043af`. Trong bản đã che thông tin, dòng `QR:` hiển thị `hxxps://example[.]org/workshop/qr`. Đó là URL PhishGuard đã đọc từ mã QR. Bộ giải mã xử lý ngay tại Lambda, không mở trang đích.
 
-![Chi tiết sự cố QR có URL đã giải mã, 0/100 và FALLBACK.]({{< asset "images/phishguard/qr-url-detail.png" >}})
+![Chi tiết sự cố QR có URL đã giải mã, 0/100 và FALLBACK.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/qr-url-detail.png)
 
 Trong cùng hồ sơ, Policy Engine ghi 0/100 vì chưa có luật nào khớp. Uy tín của miền vẫn chưa được xác minh. Nhãn `FALLBACK` cho biết phần tóm tắt của lượt này được tạo từ kết quả theo luật. Ảnh không ghi nguyên nhân fallback.
 

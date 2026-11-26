@@ -31,7 +31,7 @@ curl.exe -s -o NUL -w "Probe: %{http_code}\n" -H "x-phishguard-workshop: verify-
 4. Giữ nguyên `COUNT BLOCK`, đăng nhập reporter. Gửi văn bản (202), tải file PNG thật (presign 201, POST S3 204), gửi fixture EML, mở incident và dashboard admin. Xem tên metric cấu hình cho CommonRules trong template. Nếu chưa có điểm dữ liệu, ghi rõ điều quan sát được. Nếu có khớp hợp lệ, xác định subrule trước khi chuyển chế độ.
 5. Khi các giao dịch hợp lệ đạt, chạy `Set-PgWaf ENFORCE OFF`. Managed group sử dụng hành động của subrule, luật rate có ngưỡng cấu hình 120/IP trong cửa sổ 60 giây trên hai route POST nộp báo cáo và xin presign. Lặp lại giao dịch và hai GET, cả hai GET kỳ vọng 200. Nếu gặp lỗi nghiệp vụ do WAF, chạy `Set-PgWaf COUNT OFF` rồi kiểm tra luật đã khớp.
 
-![CloudWatch ghi một lượt bị chặn trong một phút ở bài thử header.]({{< asset "images/phishguard/waf-probe-block.png" >}})
+![CloudWatch ghi một lượt bị chặn trong một phút ở bài thử header.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/waf-probe-block.png)
 
 Trong lần demo, hai GET lần lượt trả 200/403 khi probe ở Block, sau đó 200/200 khi probe tắt. Chỉ số trong hình minh họa lượt bị chặn; chưa có kết quả đo ngưỡng rate trên portal. [Hướng dẫn kiểm thử WAF](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html)
 

@@ -15,11 +15,11 @@ Sign in as a lab reporter. Open the portal through CloudFront and use **file upl
 
 The newest submission appears first. The bottom row is the blank image. The second row from the bottom is the QR code containing a URL.
 
-![Four submissions with the oldest at the bottom.]({{< asset "images/phishguard/qr-results.png" >}})
+![Four submissions with the oldest at the bottom.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/qr-results.png)
 
 Open incident `INC-9d7627a043af`. Its redacted evidence contains the line `QR: hxxps://example[.]org/workshop/qr`. This confirms which URL the Lambda decoded. The decoder processes the image locally without visiting the destination.
 
-![QR incident detail showing the decoded URL, a zero score and FALLBACK.]({{< asset "images/phishguard/qr-url-detail.png" >}})
+![QR incident detail showing the decoded URL, a zero score and FALLBACK.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/qr-url-detail.png)
 
 The policy engine scored this report 0/100 because it found no matching rule. The domain’s reputation remains unverified. The FALLBACK badge identifies a rule-based summary for this run. The screenshot does not show the fallback reason.
 

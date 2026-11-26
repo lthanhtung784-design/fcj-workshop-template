@@ -27,7 +27,7 @@ $recipient = Read-Host 'SES lab recipient'
 .\.venv\Scripts\python.exe ..\tools\audit_phishguard.py --profile $pgProfile --region us-east-1 --stack phishguard-ai --recipient $recipient --output .\phishguard-account.json
 ```
 
-![Both PhishGuard alarms were OK with actions enabled at the time of capture.]({{< asset "images/phishguard/alarms.png" >}})
+![Both PhishGuard alarms were OK with actions enabled at the time of capture.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/alarms.png)
 
 An OK alarm confirms current state. To attest email delivery, retain an actual notification matched to the incident. To attest model traffic, use the runtime metrics in the cost chapter.
 

@@ -14,7 +14,7 @@ aliases:
 | `Default (*)` | Bucket web, endpoint S3 REST, OAC ký request, redirect HTTP sang HTTPS | Cache tối ưu cho static asset. Nếu dùng deep link, publish CloudFront Function `frontend/deploy/cloudfront-spa-router.js` và liên kết **viewer-request** riêng ở behavior này. |
 | `/api/*` | Host `…execute-api.us-east-1.amazonaws.com`, HTTPS only, Origin path rỗng vì stage là `$default` | Cho phép mọi HTTP method của preset để có POST; chọn **CachingDisabled** và **AllViewerExceptHostHeader**. JWT từ trình duyệt đi đến HTTP API. Đặt behavior này trước default. |
 
-![Ô nhập prefix đăng nhập Cognito tại us-east-1]({{< asset "images/phishguard/cognito-domain.png" >}})
+![Ô nhập prefix đăng nhập Cognito tại us-east-1](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cognito-domain.png)
 
 *Nhập phần prefix, sau đó dùng toàn bộ hostname do Cognito cấp khi build frontend.*
 
@@ -85,4 +85,4 @@ aws cloudfront create-invalidation --distribution-id $pgDist --paths "/" "/index
 
 Trong Behaviors, mở /api/*. Ảnh cho thấy origin phishguard-api nhận POST, dùng CachingDisabled và AllViewerExceptHostHeader. Đây là ba mục cần đối chiếu khi web đã mở được nhưng gửi báo cáo lỗi.
 
-![Kiểm tra đường API]({{< asset "images/phishguard/cf-api.png" >}})
+![Kiểm tra đường API](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cf-api.png)

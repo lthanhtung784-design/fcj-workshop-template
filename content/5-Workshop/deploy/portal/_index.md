@@ -8,7 +8,7 @@ aliases:
 
 1. In Cognito, open the PhishGuard user pool, create an available domain prefix and use the public Web app client with authorization code + PKCE. Managed login v2 requires branding for the client.
 
-![Choose a unique Cognito domain prefix.]({{< asset "images/phishguard/cognito-domain.png" >}})
+![Choose a unique Cognito domain prefix.](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cognito-domain.png)
 
 2. Configure the CloudFront default root object as `index.html`. Add the two origins and behaviors below.
 
@@ -82,4 +82,4 @@ Sign in via CloudFront. Submit an ordinary text report and observe POST /api/rep
 
 In Behaviors open /api/*. In this capture phishguard-api receives POST requests, caching is disabled and AllViewerExceptHostHeader forwards viewer headers. Compare these values if the portal loads but submitting a report fails.
 
-![Route the API separately]({{< asset "images/phishguard/cf-api.png" >}})
+![Route the API separately](https://lthanhtung784-design.github.io/fcj-workshop-template/images/phishguard/cf-api.png)
