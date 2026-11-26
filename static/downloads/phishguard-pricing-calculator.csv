@@ -1,0 +1,33 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,8.819999999999999,105.84,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,AWS Web Application Firewall (WAF),0,7.01,84.12,USD,,"Number of Web Access Control Lists (Web ACLs) utilized (1 per month), Number of Rules added per Web ACL (1 per month), Number of Rule Groups per Web ACL (0 per month), Number of Rules inside each Rule Group (0 per month), Number of Managed Rule Groups per Web ACL (1 per month)"
+My Estimate,US East (N. Virginia),,AWS Key Management Service,0,1.0072,12.09,USD,,"Number of customer managed Customer Master Keys (CMK) (1), Number of symmetric requests (2400)"
+My Estimate,US East (N. Virginia),,Amazon Route 53,0,0.5,6.00,USD,,Hosted Zones (1)
+My Estimate,US East (N. Virginia),,Amazon CloudWatch,0,0.25045,3.01,USD,,"Number of mobile OTEL events and spans or spans per visit (70), Mobile sampling rate (1), Number of Metrics (includes detailed and custom metrics) (), Standard Logs: Data Ingested (0.1 GB), Number of Standard Resolution Alarm Metrics (2)"
+My Estimate,US East (N. Virginia),,Amazon CloudFront,0,0,0.00,USD,,"Data transfer out to internet (0 GB per month), Number of requests (HTTPS) (0 per month)"
+My Estimate,US East (N. Virginia),,Amazon API Gateway,0,0.012,0.14,USD,,"HTTP API requests units (millions), Average size of each request (34 KB), REST API request units (millions), Cache memory size (GB) (None), WebSocket message units (thousands), Average message size (32 KB), Requests (0.012 per month), Requests (0 per month), Messages (0 per second)"
+My Estimate,US East (N. Virginia),,Step Functions - Standard Workflows,0,0,0.00,USD,,"Workflow requests (300 per month), State transitions per workflow (12)"
+My Estimate,US East (N. Virginia),Reporter API + Admin API,AWS Lambda,0,0,0.00,USD,,"Invoke Mode (Buffered), Architecture (x86), Architecture (x86), Number of requests (12000 per month), Amount of ephemeral storage allocated (512 MB)"
+My Estimate,US East (N. Virginia),Ingest + Triage,AWS Lambda,0,0,0.00,USD,,"Invoke Mode (Buffered), Architecture (x86), Architecture (x86), Number of requests (600 per month), Amount of ephemeral storage allocated (512 MB)"
+My Estimate,US East (N. Virginia),Extract,AWS Lambda,0,0,0.00,USD,,"Architecture (x86), Architecture (x86), Invoke Mode (Buffered), Amount of ephemeral storage allocated (512 MB), Number of requests (90 per month)"
+My Estimate,US East (N. Virginia),Extract2,AWS Lambda,0,0,0.00,USD,,"Architecture (x86), Architecture (x86), Invoke Mode (Buffered), Amount of ephemeral storage allocated (512 MB), Number of requests (210 per month)"
+My Estimate,US East (N. Virginia),Synthesize,AWS Lambda,0,0,0.00,USD,,"Architecture (x86), Architecture (x86), Invoke Mode (Buffered), Amount of ephemeral storage allocated (512 MB), Number of requests (300 per month)"
+My Estimate,US East (N. Virginia),PrepareApproval + Containment,AWS Lambda,0,0,0.00,USD,,"Architecture (x86), Architecture (x86), Invoke Mode (Buffered), Amount of ephemeral storage allocated (512 MB), Number of requests (180 per month)"
+My Estimate,US East (N. Virginia),,S3 Standard,0.00032,0.03,0.36,USD,,"S3 Standard storage (1 GB per month), S3 Standard Average Object Size (16 MB), PUT, COPY, POST, LIST requests to S3 Standard (1500), GET, SELECT, and all other requests from S3 Standard (6000)"
+My Estimate,US East (N. Virginia),,DynamoDB on-demand capacity,0,0.01,0.12,USD,,"Table class (Standard), Average item size (all attributes) (1 KB), Data storage size (0.05 GB)"
+My Estimate,US East (N. Virginia),,Amazon Simple Queue Service (SQS),0,0,0.00,USD,,"Standard queue requests (0.001 million per month), FIFO queue requests (0 million per month)"
+My Estimate,US East (N. Virginia),,Amazon Cognito,0,0,0.00,USD,,"Optimization Rate for Token Requests (0), Optimization Rate for App Clients (0), Multi-region replication add-on (Disabled), Multi-region replication add-on (Disabled), Number of monthly active users (MAU) (10)"
+My Estimate,US East (N. Virginia),,Amazon,0,0,0.00,USD,,"Select your inference route (In-Region), Select your inference type (On Demand - Standard), Number of documents per month (130), Average tokens per document (1000)"
+My Estimate,US East (N. Virginia),,S3 Vectors,0,0,0.00,USD,,"Number of indexes (1), Vector Dimensions (1024), Key size (KB) per vector (0.2 KB), Percentage of vectors overwritten per month (1), Number of vectors per index (1024), Filterable metadata (KB) per vector (1 KB), Non-filterable metadata (KB) per vector (5 KB), Total number of queries per month (across all indexes) (300 per month)"
+My Estimate,US East (N. Virginia),,Standard topics,0,0,0.00,USD,,"Requests (90 per month), EMAIL/EMAIL-JSON Notifications (90 per month)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

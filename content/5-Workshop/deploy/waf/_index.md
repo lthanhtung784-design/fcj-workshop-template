@@ -1,4 +1,4 @@
-﻿---
+---
 title: "5.3.3 · Protect CloudFront with WAF"
 weight: 3
 chapter: false
@@ -31,9 +31,8 @@ curl.exe -s -o NUL -w "Probe: %{http_code}\n" -H "x-phishguard-workshop: verify-
 4. With `COUNT BLOCK`, sign in as a reporter. Submit text (202), upload an actual PNG file (presign 201 and S3 POST 204), submit an EML fixture, open its incident, then check the admin dashboard. Inspect the metric name configured for CommonRules. Record missing datapoints as such. Investigate any legitimate match at subrule level before enforcement.
 5. After representative transactions pass, run `Set-PgWaf ENFORCE OFF`. The managed group uses its subrule actions. The configured rate is 120 per IP in a 60-second evaluation window on the two POST routes for reports and presigning. Repeat the business checks and both GETs. Both GETs should now return 200. If WAF disrupts a legitimate operation, use `Set-PgWaf COUNT OFF` while investigating the matching rule.
 
-![CloudWatch shows one blocked request in the minute of the header test.](/images/phishguard/waf-probe-block.png)
+![CloudWatch shows one blocked request in the minute of the header test.]({{< asset "images/phishguard/waf-probe-block.png" >}})
 
 The demo returned 200/403 with the probe in Block and 200/200 once the probe was off. The graph records a header-rule match. The submission rate threshold was not measured in this test. [AWS WAF testing guide](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html)
 
 [Knowledge base and playbooks](../../integrations/knowledge-base/) · [Image regression](../../verify/images/)
-

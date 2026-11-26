@@ -1,4 +1,4 @@
-﻿---
+---
 title: "5.1 · Problem and architecture"
 weight: 1
 chapter: false
@@ -8,9 +8,9 @@ aliases:
 
 An employee forwards a suspicious email while a colleague submits a screenshot of the same campaign. SecOps needs to preserve both originals, establish who can read each report and record the reason for a decision. This lab builds that process in US East (N. Virginia).
 
-![PhishGuard architecture in us-east-1](/images/phishguard/architecture-final.png)
+![PhishGuard architecture in us-east-1]({{< asset "images/phishguard/architecture-final.png" >}})
 
-[Open the full-resolution diagram](/images/phishguard/architecture-final.png) · [draw.io](/downloads/PhishGuard-Architecture.drawio)
+[Open the full-resolution diagram]({{< asset "images/phishguard/architecture-final.png" >}}) · [draw.io]({{< asset "downloads/PhishGuard-Architecture.drawio" >}})
 
 ### How to read the diagram
 
@@ -22,5 +22,3 @@ An employee forwards a suspicious email while a colleague submits a screenshot o
 6. An admin reads the proposal and submits a decision. Admin API checks state and role, then calls `SendTaskSuccess` with the decision. Rejection ends at `REJECTED`. Expiry follows the timeout path to `ESCALATED_TIMEOUT`. An approval in the observed `DRY_RUN` mode records the simulated result and audit trail. Any blocklist entry is internal. External mail/firewall enforcement is outside this deployment.
 
 **Two boundaries to point out.** PhishGuardEdge protects traffic through CloudFront. The signed upload goes directly to S3. Lambda uses AWS-managed networking in this SAM template. The region and the service groups indicate placement and responsibility. QR extraction reads a URL locally, strips query and fragment for display, and supplies an indicator to Triage. The approval callback belongs to the Step Functions task that invokes PrepareApproval.
-
-

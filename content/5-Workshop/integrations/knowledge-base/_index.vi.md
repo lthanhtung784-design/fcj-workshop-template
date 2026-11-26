@@ -1,4 +1,4 @@
-﻿---
+---
 title: "5.4.2 · Playbook và Bedrock"
 weight: 2
 chapter: false
@@ -52,5 +52,4 @@ Khi job báo Complete, xem số tài liệu thêm và số lỗi. Trong ảnh de
 
 Ghi lại tên file và đoạn nguồn trả về. Sau đó mở H05/H11 trên portal, xem nguồn trích thực tế và lý do fallback nếu có. Kết quả của câu hỏi thử KB và câu truy vấn do ứng dụng tự tạo có thể khác nhau.
 
-![Lượt đồng bộ gần nhất quét 5 tài liệu, thêm 2, lỗi 0.](/images/phishguard/kb-sync.png)
-
+![Lượt đồng bộ gần nhất quét 5 tài liệu, thêm 2, lỗi 0.]({{< asset "images/phishguard/kb-sync.png" >}})

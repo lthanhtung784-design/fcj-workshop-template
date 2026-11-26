@@ -1,4 +1,4 @@
-﻿---
+---
 title: "5.7 · COST · Dự toán và chi phí thực tế"
 weight: 7
 chapter: false
@@ -6,11 +6,11 @@ aliases:
   - /vi/5-workshop/08-cost/
 ---
 
-Với **300 báo cáo trong 30 ngày**, chi phí dịch vụ dự kiến của PhishGuard là **9,37 USD/tháng**, trước thuế và phí gia hạn tên miền. Dữ liệu Cost Explorer ngày **01–23/11/2026** cho kết quả **0,00 USD** khi làm tròn đến cent. Dự toán giả định WAF hoạt động đủ tháng. Trong kỳ đo, ngày 23/11 mới có phép thử WAF được lưu làm minh chứng. Hai con số trả lời hai câu hỏi khác nhau: cần dự trù bao nhiêu để duy trì hệ thống và báo cáo tài khoản đã ghi nhận bao nhiêu trong kỳ lab.
+Với **300 báo cáo trong 30 ngày**, ngân sách dự kiến cho PhishGuard là **9,37 USD**, trước thuế và phí gia hạn tên miền. Cùng khối lượng đó, bản xuất AWS Pricing Calculator cộng ba khoản tính riêng cho kết quả **9,21 USD**. Mục 3 giải thích phần chênh lệch. Tổng trong phạm vi báo cáo Cost Explorer từ **01–23/11/2026** là **0,00 USD** khi làm tròn đến cent (mục 4).
 
 ## 1. Phạm vi của dự toán
 
-Ứng dụng chạy ở **US East (N. Virginia), `us-east-1`**, với CloudFront **Pay-as-you-go**. Web ACL `PhishGuardEdge` bảo vệ distribution. Mô hình dùng một AWS managed rule group tiêu chuẩn và một rate-based rule. Probe dùng để chứng minh 403 đã tắt trong cấu hình cuối. Hai alarm theo dõi workflow thất bại và hàng đợi lỗi của Ingest. Việc xem biểu đồ WAF trên console không tạo thêm một custom metric trong dự toán này.
+Ứng dụng chạy ở **US East (N. Virginia), `us-east-1`**, với CloudFront **Pay-as-you-go**. Web ACL `PhishGuardEdge` bảo vệ distribution. Mô hình dùng một AWS managed rule group tiêu chuẩn và một rate-based rule. Dự toán tháng chỉ tính hai luật trên. Header probe được dùng trong lần thử phản hồi 403. Hai alarm theo dõi workflow thất bại và hàng đợi lỗi của Ingest. Việc xem biểu đồ WAF trên console không tạo thêm một custom metric trong dự toán này.
 
 Giả định tải gồm **90 ảnh, 60 email đến qua SES và 90 ca đi đến bước quyết định** trong tổng số 300 báo cáo. Các nhóm này có thể giao nhau. Portal phát sinh 12.000 HTTP API request và distribution phục vụ 20.000 HTTPS request, 1 GB tới người xem. Để dự trù phần AI, mô hình tính một lượt tổng hợp và một truy vấn KB cho mỗi báo cáo. Thực tế có ca dừng sớm vì thiếu bằng chứng. File POST trực tiếp tới S3 không đi qua WAF.
 
@@ -37,15 +37,45 @@ Bảng lấy biểu WAF theo ACL/rule áp dụng cho kỳ workshop tháng 11/202
 
 Bảng sử dụng giá niêm yết cho phần lớn dịch vụ, dành riêng hai giả định về hạn mức cho CloudFront và Cognito. Credit, ưu đãi còn lại, phí truy vấn Billing và thuế phụ thuộc tài khoản. Nếu DNS dùng chung và không phân bổ phần nào cho lab, tổng cơ sở còn **8,87 USD**. Nếu thực sự dùng thêm một dashboard trả phí và một custom metric, cộng khoảng **3,30 USD/tháng** theo giá niêm yết để ra **12,67 USD**. Phí tên miền quy đổi theo **giá gia hạn thực tế mỗi năm ÷ 12**. [CloudFront PAYG](https://aws.amazon.com/cloudfront/faqs/) · [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/) · [Route 53](https://aws.amazon.com/route53/pricing/)
 
-[Tải bảng tính từng đơn vị và nguồn giá (CSV)](/downloads/phishguard-cost-inputs.csv)
+[Tải bảng tính từng đơn vị và nguồn giá (CSV)]({{< asset "downloads/phishguard-cost-inputs.csv" >}})
 
-## 3. Lập lại dự toán trong AWS Pricing Calculator
+## 3. Đối chiếu với AWS Pricing Calculator
 
-1. Mở **AWS Pricing Calculator → Create estimate → Add service**. Đặt nhóm `PhishGuard | 300 reports`. Chọn **US East (N. Virginia)** cho các dịch vụ theo vùng. Với CloudFront, chọn PAYG và khu vực người xem phù hợp.
-2. Nhập WAF, KMS, CloudWatch và Route 53 trước. Riêng WAF có **một** managed group tiêu chuẩn và **một** rate rule. Giữ probe ở 0. Với ô yêu cầu tính theo triệu, 20.000 request nhập **0.02**. Nhập tiếp các dịch vụ còn lại theo bảng và CSV.
-3. Với Lambda, chọn **on-demand, x86**. Tách thành sáu dòng dưới đây khi ô nhập yêu cầu một cặp RAM và thời gian. OCR Tesseract và giải mã QR đã nằm trong thời gian chạy Extract. Step Functions giữ trạng thái chờ phê duyệt, nên thời gian chờ 48 giờ không được cộng vào thời lượng Lambda.
-4. Với Bedrock, chọn **Amazon Nova Lite v1**, on-demand. Nhập **300** lượt/tháng, mỗi lượt **2.000 input token, 1.000 output token**, hoặc nhập trực tiếp **600.000/300.000** token tháng theo giao diện. Với dịch vụ hay bộ lọc chưa có ô tương ứng, ghi riêng số tiền tính tay từ CSV. Tổng trình bày bằng subtotal Calculator cộng các dòng thủ công chưa được tính.
-5. Ở **My Estimate**, dùng **Share/Save** và xuất PDF. Đặt link hoặc PDF cạnh bảng. Ghi rõ Calculator có áp dụng hạn mức miễn phí nào và dòng nào cộng tay nếu tổng khác 9,37 USD. [AWS Pricing Calculator](https://calculator.aws/) · [Cách lưu và chia sẻ](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/save-share-estimate.html)
+Bản xuất ghi **8,82 USD/tháng**. Trong đó đã có Titan Text Embeddings V2 (130.000 token đầu vào), S3 Vectors (300 truy vấn) và SNS (90 lần publish, 90 email thông báo). Ba khoản dưới đây được cộng riêng để tính đủ chi phí cho kịch bản 30 ngày. [Tải bản xuất gốc từ AWS Pricing Calculator (CSV)]({{< asset "downloads/phishguard-pricing-calculator.csv" >}})
+
+| Khoản | Cách tính cho 30 ngày | USD/tháng |
+|---|---|---:|
+| AWS Pricing Calculator | Tổng chi phí tháng trong bản xuất | 8,8200 |
+| Amazon Nova Lite v1 | 300 lượt gọi, mỗi lượt 2.000 token vào và 1.000 token ra. Chi phí đầu vào là 0,036 USD và đầu ra là 0,072 USD. | 0,1080 |
+| Amazon Bedrock Guardrails | 1.800 đơn vị văn bản (text unit) qua bộ lọc nội dung × 0,15 USD/1.000 đơn vị | 0,2700 |
+| Amazon SES nhận thư | 60 thư đến × 0,10 USD/1.000 thư, cộng 60 khối dữ liệu chịu phí × 0,09 USD/1.000 khối | 0,0114 |
+| **Dự toán sau khi bổ sung** | **8,8200 + 0,3894** | **9,2094 ≈ 9,21** |
+
+Biểu mẫu Nova yêu cầu số nguyên ở cả hai ô lượt gọi/phút và giờ/ngày. Với 10 lượt gọi mỗi ngày, workshop tính tiền trực tiếp từ tổng token. Dòng Guardrails tính phí bộ lọc nội dung gắn với lượt gọi model. PhishGuard nhận thư bằng receipt rule của SES. Phần nhận thư trên Calculator hiển thị Mail Manager, nên chi phí receipt rule được tính riêng. Số 60 khối dữ liệu chịu phí là giả định về dung lượng thư. [Biểu giá Amazon Bedrock](https://aws.amazon.com/bedrock/pricing/) · [Biểu giá Amazon SES](https://aws.amazon.com/ses/pricing/)
+
+### Vì sao ngân sách dự kiến cao hơn khoảng 0,16 USD?
+
+| Dịch vụ | Bản xuất Calculator | Bảng dự toán | Căn cứ đối chiếu |
+|---|---:|---:|---|
+| Step Functions Standard | 0,00 USD | 0,0900 USD | 300 lần chạy × 12 lần chuyển trạng thái = 3.600. Số này nằm trong hạn mức 4.000 lần/tháng nếu tài khoản còn đủ hạn mức. Bảng dự toán tính theo đơn giá cho toàn bộ 3.600 lần. |
+| Lambda, tổng sáu dòng | 0,00 USD | 0,0337 USD | Bảng dự toán tính 13.380 lượt gọi và 1.860 GB-giây theo đơn giá on-demand x86. |
+| DynamoDB | 0,01 USD | 0,0300 USD | Biểu mẫu nhận số lượt đọc. Bảng dự toán dùng số đơn vị đọc chịu phí và dự trù cả khôi phục theo thời điểm (PITR). |
+
+Ba dòng trên giải thích khoảng 0,1437 USD chênh lệch. Phần còn lại khoảng 0,0142 USD đến từ các dòng dịch vụ khác và độ chính xác của số tiền trong bản xuất. [Biểu giá Step Functions](https://aws.amazon.com/step-functions/pricing/) · [Biểu giá Lambda](https://aws.amazon.com/lambda/pricing/)
+
+### Thông số DynamoDB và S3 Vectors
+
+**DynamoDB.** Biểu mẫu ghi 6.000 lượt ghi và 30.000 lượt đọc mỗi tháng, với 100% lượt đọc ở chế độ nhất quán cuối cùng (eventually consistent). Nếu mỗi lượt đọc một item 1 KB, AWS tính nửa đơn vị đọc (RRU) cho mỗi lượt, tổng cộng **15.000 RRU**. Bảng dự toán dùng **30.000 RRU**, tương đương 60.000 lượt đọc cùng loại. Bảng này còn dự trù 0,05 GB-tháng lưu bảng và 0,05 GB-tháng cho PITR. Bản xuất xác nhận dung lượng bảng. Ảnh và CSV chưa cho biết Calculator đã tính PITR hay chưa. [Cách DynamoDB tính đơn vị đọc](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/read-write-operations.html) · [Biểu giá DynamoDB](https://aws.amazon.com/dynamodb/pricing/on-demand/)
+
+![DynamoDB Calculator hiển thị 0,006 triệu lượt ghi, 0,03 triệu lượt đọc và 100% đọc ở chế độ nhất quán cuối cùng.]({{< asset "images/phishguard/cost-calculator-dynamodb.png" >}})
+
+**S3 Vectors.** Biểu mẫu có một index, 1.024 vector, 1.024 chiều, **ghi lại 100% số vector mỗi tháng** và **300 truy vấn/tháng**. Mỗi vector có khóa 0,2 KB, metadata dùng để lọc 1 KB và metadata không dùng để lọc 5 KB. Index được cấu hình 1.024 chiều. Số vector và dung lượng metadata là giả định để mô phỏng khoảng 0,01 GB lưu và 0,01 GB ghi. Bản xuất ghi giá trị tỷ lệ là `(1)`. Ảnh bên dưới hiển thị giá trị theo phần trăm. [Biểu giá S3 Vectors](https://aws.amazon.com/s3/pricing/)
+
+![S3 Vectors Calculator hiển thị thông số index, tỷ lệ ghi lại 100% mỗi tháng và 300 truy vấn mỗi tháng.]({{< asset "images/phishguard/cost-calculator-s3-vectors.png" >}})
+
+### Nhập lại thông số trên Calculator
+
+Trong AWS Pricing Calculator, chọn **US East (N. Virginia)** cho các dịch vụ theo vùng rồi nhập tải tháng ở mục 2. Với WAF, dùng một web ACL, một managed rule group tiêu chuẩn, một rate rule và 0,02 triệu request. Với Lambda, tạo sáu dòng on-demand x86 theo bộ nhớ và thời lượng bên dưới. Thời gian Extract đã gồm OCR và giải mã QR. Step Functions giữ callback trong lúc chờ phê duyệt, nên khoảng chờ tối đa 48 giờ không phát sinh thời gian chạy Lambda. [AWS Pricing Calculator](https://calculator.aws/)
 
 | Dòng Lambda | Lần/tháng | MiB | Thời lượng giả định mỗi lần |
 |---|---:|---:|---:|
@@ -68,9 +98,9 @@ File `costs.csv` xuất theo ngày và nhóm theo **Service**, có 20 cột dị
 | Cột Bedrock ngày 23/11 | `-0` |
 | Bedrock / Bedrock Managed Knowledge Base cả kỳ | 0 USD / 0 USD |
 
-Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)](/downloads/phishguard-cost-observed.csv)
+Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của file. Khi báo cáo đến cent, tổng là **0,00 USD**. File nhóm theo dịch vụ, không ghi bộ lọc tag, chỉ số chi phí đã chọn, số token hay chi tiết credit. Vì vậy, workshop ghi đây là **tổng trong phạm vi báo cáo đã xuất**. Chi phí tách riêng cho PhishGuard và nguyên nhân số dư âm rất nhỏ vẫn cần đối chiếu Billing. [Tải các dòng dùng để đối chiếu (CSV trích từ báo cáo)]({{< asset "downloads/phishguard-cost-observed.csv" >}})
 
-### Chốt phần chỉ chủ tài khoản nhìn thấy
+### Cách đối chiếu với hóa đơn tài khoản
 
 - Mở lại **Billing and Cost Management → Cost Explorer**, chọn cùng kỳ, **Daily → Group by Service → Unblended cost**. Giữ tất cả region để thấy cả dịch vụ global. Lưu ảnh có ngày, metric và bộ lọc. Bảng dưới biểu đồ có nút **Download CSV**. Khi chia sẻ, có thể che tên tài khoản và mã định danh. [Hướng dẫn xuất CSV](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-download-csv.html)
 - Tạo một góc nhìn thứ hai **Group by → Charge type** và đối chiếu với **Bills → November 2026 → Charges by service / Credits**. Ghi usage trước điều chỉnh, credit/refund và thuế theo những dòng thực sự xuất hiện. Với tài khoản dùng chung, dùng tag phân bổ chi phí đã được kích hoạt nếu có. Nếu không thể phân bổ một khoản, ghi là chi phí dùng chung. Xuất lại sau khi tháng đóng sổ nếu cần số cuối kỳ.
@@ -81,4 +111,3 @@ Cộng 23 giá trị ngày được đúng bằng dòng *Service total* của fi
 - **WAF chiếm khoảng 75% mức cơ sở.** Với lab ít request, giữ probe trong thời gian kiểm thử cần thiết và dùng alarm đã có để theo dõi lỗi. Chỉ thêm dashboard trả phí khi có người sử dụng thường xuyên.
 - **Đo AI và OCR ở đúng bước.** Tách ảnh khỏi văn bản khi đo `Billed Duration` của Extract. Với Synthesize, đo token thực tế và số ca thật sự tới bước này trước khi chỉnh độ dài ngữ cảnh hoặc đổi model. Hai lớp kiểm soát dễ bị tính sót là Guardrails và truy vấn KB. [Lambda](https://aws.amazon.com/lambda/pricing/) · [Bedrock](https://aws.amazon.com/bedrock/pricing/) · [S3 Vectors](https://aws.amazon.com/s3/pricing/)
 - **Dọn theo vòng đời dữ liệu.** Kiểm tra log retention, các phiên bản object cũ và bucket intake sau demo. Giữ thời hạn bảo toàn bằng chứng của bucket evidence. So sánh lại dự toán khi có số đo dung lượng hoặc thời lượng OCR mới. [S3](https://aws.amazon.com/s3/pricing/) · [KMS](https://aws.amazon.com/kms/pricing/)
-
