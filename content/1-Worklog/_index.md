@@ -31,3 +31,5 @@ Weekly overview:
 **Week 9:** [Docker and Amazon ECS security, CodePipeline CI/CD, SQS and SNS, and X-Ray tracing](1.9-week9/)
 
 **Week 10:** [Savings Plans and Reserved Instances, cost visualization and anomaly detection, Glue and Athena, account security review, and 10-week review](1.10-week10/)
+
+**Week 11:** [PhishGuard workshop architecture, S3 evidence lock, Step Functions approval callbacks, Bedrock synthesis, and final submission](1.11-week11/)

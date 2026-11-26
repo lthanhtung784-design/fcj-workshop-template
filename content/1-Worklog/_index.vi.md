@@ -32,4 +32,4 @@ Nội dung từng tuần:
 
 **Tuần 10:** [Savings Plans và Reserved Instances, xem chi phí và phát hiện bất thường, Glue và Athena, rà soát bảo mật tài khoản và tổng kết 10 tuần](1.10-week10/)
 
-
+**Tuần 11:** [Kiến trúc workshop PhishGuard, bảo toàn bằng chứng trên S3, phê duyệt qua Step Functions, tổng hợp Bedrock và hoàn thiện bài nộp](1.11-week11/)
