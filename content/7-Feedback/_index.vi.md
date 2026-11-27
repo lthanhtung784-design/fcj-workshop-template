@@ -27,19 +27,20 @@ Bên cạnh kiến thức chuyên môn, chương trình còn giúp mình rèn lu
 Các buổi workshop, meetup và sự kiện cộng đồng là những trải nghiệm đáng nhớ đối với mình. Đây là cơ hội để lắng nghe kinh nghiệm từ những người trong ngành, tiếp cận nhiều góc nhìn mới và hiểu hơn về yêu cầu thực tế của lĩnh vực công nghệ.
 
 **6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có sự hỗ trợ và tạo điều kiện cho thực tập sinh trong quá trình làm việc. Môi trường làm việc giúp thực tập sinh có cơ hội tiếp cận công việc thực tế, học hỏi kinh nghiệm và trao đổi với các anh chị trong công ty để cải thiện kiến thức, kỹ năng chuyên môn.
+Chương trình hỗ trợ và tạo điều kiện thuận lợi cho thực tập sinh trong quá trình làm việc. Môi trường học tập giúp thực tập sinh tiếp cận công việc thực tế, học hỏi kinh nghiệm và trao đổi với các anh chị đi trước để nâng cao kiến thức và kỹ năng chuyên môn.
 
 
 ### Một số câu hỏi khác
-- Điều mình hài lòng nhất
-
+- Điều bạn hài lòng nhất trong thời gian thực tập?
 Mình hài lòng nhất khi chương trình kết hợp giữa học lý thuyết và thực hành, đồng thời tạo cơ hội để các thành viên cùng xây dựng dự án. Quá trình phát triển PhishGuard AI giúp mình tích lũy thêm kinh nghiệm làm việc nhóm, giải quyết vấn đề và tiếp cận sản phẩm dưới góc độ thực tế.
 
+- Điều bạn nghĩ công ty cần cải thiện cho các thực tập sinh sau?
 Bên cạnh đó, các hoạt động cộng đồng cũng giúp mình học hỏi thêm nhiều điều ngoài phạm vi học tập tại trường. 
-- Theo góc nhìn cá nhân, mình mong chương trình có thêm các buổi trao đổi chuyên sâu về những vấn đề thực tế như lựa chọn kiến trúc, quản lý chi phí AWS, xử lý sự cố và đánh giá bảo mật hệ thống.
+Theo góc nhìn cá nhân, mình mong chương trình có thêm các buổi trao đổi chuyên sâu về những vấn đề thực tế như lựa chọn kiến trúc, quản lý chi phí AWS, xử lý sự cố và đánh giá bảo mật hệ thống.
 
+- Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không? Vì sao?
 Ngoài ra, các buổi chia sẻ tiến độ hoặc review sản phẩm giữa các nhóm sẽ tạo cơ hội để học viên tham khảo cách làm của nhau và nhận thêm góp ý hoàn thiện dự án.
-- Mình sẵn sàng giới thiệu FCAJ đến những bạn quan tâm đến Cloud và AI, đặc biệt là những bạn muốn học hỏi thông qua thực hành. Theo mình, giá trị của chương trình không chỉ nằm ở kiến thức mà còn ở trải nghiệm tự tìm hiểu, làm việc nhóm và kết nối cộng đồng.
+Mình sẵn sàng giới thiệu FCAJ đến những bạn quan tâm đến Cloud và AI, đặc biệt là những bạn muốn học hỏi thông qua thực hành. Theo mình, giá trị của chương trình không chỉ nằm ở kiến thức mà còn ở trải nghiệm tự tìm hiểu, làm việc nhóm và kết nối cộng đồng.
 
 
 ### Đề xuất & mong muốn
