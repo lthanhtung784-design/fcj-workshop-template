@@ -20,7 +20,7 @@ chapter: false
 
 &emsp; **Major:** Information Assurance 
 
-&emsp; **Class:** CloudSecurityFPT
+&emsp; **Class:** FACJ - FPT - Season 4
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
